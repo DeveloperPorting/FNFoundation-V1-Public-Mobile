@@ -1,0 +1,113 @@
+{
+	"songs": [
+		[
+			"Evaluation",
+			"ulgrin",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Locked In",
+			"173",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Terminated",
+			"sammy",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Vivisection",
+			"049",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Captivated",
+			"valerie",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"My World",
+			"106",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Harlequin",
+			"035",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Scopophobia",
+			"096",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Recontainment",
+			"ryan",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Disgusting",
+			"face",
+			[
+				160,
+				180,
+				180
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Containment Breach",
+	"weekName": "Breach",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

@@ -1,0 +1,307 @@
+var preloadies = [
+    "dbf",
+    "096-crying",
+    "096"
+];
+
+var rage:Float = 0;
+var maxRage:Float = 9;
+var lastRage:Float = 0;
+var clipConvert:Float = 300/maxRage;
+var mechMisses:Int = 0;
+var doRage:Bool = false;
+var rageAdd:Float = ClientPrefs.easyMechanics ? 1 : 3.5;
+
+var darkColor = 0xFF111111;
+
+function onLoad() {
+    for (pre in preloadies) {
+        Character.preload(pre);
+        var preloads = PlayState.instance.returnCharacterPreload(pre);
+        for (load in preloads) {
+            Paths.image(load.path);
+        }
+    }
+
+    firstBG = new FlxSprite(0, -200).loadGraphic(Paths.image('stages/096/ScooperCalmBG'));
+    firstBG.antialiasing = ClientPrefs.globalAntialiasing;
+    firstBG.scale.set(0.6, 0.6);
+    firstBG.updateHitbox();
+    firstBG.color = FlxColor.BLACK;
+    add(firstBG);
+
+    firstLight = new FlxSprite(0, -200).loadGraphic(Paths.image('stages/096/ScoppyCalmOverlay'));
+    firstLight.antialiasing = ClientPrefs.globalAntialiasing;
+    firstLight.color = FlxColor.BLACK;
+    foreground.add(firstLight);
+
+    secondBG = new FlxSprite(0, -200).loadGraphic(Paths.image('stages/096/cafeteria'));
+    secondBG.antialiasing = ClientPrefs.globalAntialiasing;
+    secondBG.scale.set(0.75, 0.75);
+    secondBG.updateHitbox();
+    secondBG.visible = false;
+    add(secondBG);
+
+    secondLight = new FlxSprite(0, -200).loadGraphic(Paths.image('stages/096/Jorked096Overies'));
+    secondLight.antialiasing = ClientPrefs.globalAntialiasing;
+    secondLight.scale.set(0.75, 0.75);
+    secondLight.updateHitbox();
+    secondLight.visible = false;
+    foreground.add(secondLight);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("stages/096/096Shadow"));
+    foreground.add(oppShadow);
+
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    // blackout.visible = false;
+    add(blackout);
+
+    transition = new PsychVideoSprite();
+    transition.scale.set(0.7, 0.675);
+    transition.addCallback('onFormat',()->{
+        transition.cameras = [game.camOther];
+        transition.updateHitbox();
+        transition.screenCenter();
+    });
+    transition.addCallback('onEnd',()->{
+		transition.kill();
+        game.camOther.flash(FlxColor.BLACK, 1);
+        blackout.visible = false;
+    });
+    transition.load(Paths.video('transitions/ScopophobiaTransition'), [PsychVideoSprite.muted]);
+    transition.antialiasing = ClientPrefs.globalAntialiasing;
+    transition.alpha = 0;
+    add(transition);
+    // transition.play();
+    // transition.pause();
+    // transition.visible = false;
+
+    if (ClientPrefs.cutscenes) {
+        introCutscene = new PsychVideoSprite();
+        introCutscene.canSkip = true;
+        introCutscene.scale.set(0.7, 0.675);
+        introCutscene.addCallback('onFormat',()->{
+            introCutscene.cameras = [game.camOther];
+            introCutscene.updateHitbox();
+            introCutscene.screenCenter();
+        });
+        introCutscene.addCallback('onEnd',()->{
+            game.camHUD.visible = true;
+            game.camGame.visible = true;
+            game.startCountdown();
+            introCutscene.kill();
+        });
+        introCutscene.load(Paths.video('cutscenes/ScopophobiaIntro'));
+        introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    }
+}
+
+function onCreatePost() {
+    game.gf.visible = false;
+
+    game.boyfriend.color = FlxColor.BLACK;
+    // game.dad.color = FlxColor.BLACK;
+
+    PlayState.instance.isCameraOnForcedPos = true;
+    PlayState.instance.snapCamFollowToPos(1300, 500);
+
+    rageClip = new FlxRect(0, 0, 0, 100);
+
+	rageBar = new FlxSprite(65, ClientPrefs.downScroll ? 25 : FlxG.height - 190);
+	rageBar.scale.set(0.5, 0.5);
+	rageBar.frames = Paths.getSparrowAtlas("stages/096/Ragebar");
+	rageBar.animation.addByPrefix("bar", "ragebarfill0", 1, true);
+	rageBar.animation.play("bar", true);
+	rageBar.cameras = [game.camHUD];
+	rageBar.alpha = 0.5;
+	rageBar.clipRect = rageClip;
+	rageBar.clipRect = rageBar.clipRect;
+	add(rageBar);
+
+	rageBG = new FlxSprite(rageBar.x - 4, rageBar.y - 86);
+	rageBG.antialiasing = ClientPrefs.globalAntialiasing;
+	rageBG.scale.set(0.5, 0.5);
+	rageBG.frames = Paths.getSparrowAtlas("stages/096/Ragebar");
+	rageBG.animation.addByPrefix("bg", "ragebar0", 1, true);
+	rageBG.animation.play("bg", true);
+	rageBG.cameras = [game.camHUD];
+	rageBG.alpha = 0.5;
+	add(rageBG);
+
+    rageIcon = new FlxSprite(rageBG.x + 190, rageBG.y + 50);
+    rageIcon.antialiasing = ClientPrefs.globalAntialiasing;
+	rageIcon.scale.set(0.35, 0.35);
+	rageIcon.frames = Paths.getSparrowAtlas("stages/096/Ragebar");
+	rageIcon.animation.addByPrefix("phase1", "096-1", 24, true);
+    rageIcon.animation.addByPrefix("phase2", "096-2", 24, true);
+    rageIcon.animation.addByPrefix("phase3", "096-3", 24, true);
+	rageIcon.animation.play("phase1", true);
+	rageIcon.cameras = [game.camHUD];
+	rageIcon.alpha = 0.5;
+	add(rageIcon);
+
+    rageBar.visible = false;
+    rageIcon.visible = false;
+    rageBG.visible = false;
+}
+
+function onSongStart() {
+    game.camHUD.visible = false;
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "scopophobia" + Std.string(FlxG.random.int(1, 2));
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+    return Function_Continue;
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        add(introCutscene);
+        
+        game.camHUD.visible = false;
+        game.camGame.visible = false;
+
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onUpdate(elapsed:Float) {
+    if (doRage) {
+        if (rage > maxRage) rage = maxRage;
+        rageClip.width = rage * clipConvert;
+        rageBar.clipRect = rageBar.clipRect;
+
+        if (rage >= 8.95)
+            game.health = -1;
+
+        rage -= elapsed * 0.25;
+
+        // if (lastRage - rage >= 4)
+        //     mechMisses = 0;
+
+        if (rage < 3 && rageIcon.animation.name != "phase1")
+            rageIcon.animation.play("phase1", true);
+        else if (rage > 3 && rage < 6 && rageIcon.animation.name != "phase2")
+            rageIcon.animation.play("phase2", true);
+        else if (rage > 6 && rageIcon.animation.name != "phase3")
+            rageIcon.animation.play("phase3", true);
+
+        if (rage >= 5 && rageIcon.alpha != 1) {
+			FlxTween.tween(rageIcon, {"alpha": 1}, 0.5);
+			FlxTween.tween(rageBar , {"alpha": 1}, 0.5);
+            FlxTween.tween(rageBG , {"alpha": 1}, 0.5);
+		}
+		else if (rage < 5 && rageIcon.alpha != 0.5) {
+			FlxTween.tween(rageIcon, {"alpha": 0.5}, 0.5);
+			FlxTween.tween(rageBar , {"alpha": 0.5}, 0.5);
+            FlxTween.tween(rageBG , {"alpha": 0.5}, 0.5);
+		}
+
+    }
+}
+
+// potentially recode this in the future so the actual rage instantly changes and the visual rage lerps to the value? -xeight
+function noteMiss() {
+    if (doRage) {
+        mechMisses += 1;
+        function tweenUp(newPos) {
+            rage = newPos.value;
+        }
+
+        if (mechMisses >= 3) {
+            lastRage = rage + rageAdd;
+            mechMisses = 0;
+            FlxTween.num(rage, rage + rageAdd, 0.35, {ease: FlxEase.quartOut, onUpdate: tweenUp});
+        }
+    }
+}
+
+function onMoveCamera() {
+    if(PlayState.instance.whosTurn == "dad")
+        PlayState.instance.defaultCamZoom = 0.55;
+    else
+        PlayState.instance.defaultCamZoom = 0.7;
+}
+
+function onEvent(n, v1, v2) {
+    if (n == "Song Events") {
+        switch (v1) {
+            case "makeBludAppear":
+                FlxTween.tween(blackout, {"alpha": 0}, 5);
+                FlxTween.color(game.dad, 1, FlxColor.BLACK, FlxColor.WHITE);
+
+                game.dad.load("096-crying");
+                game.dad.specialAnim = true;
+                game.dad.playAnim("idle", true);
+
+                FlxTween.color(firstBG, 5, FlxColor.BLACK, darkColor);
+                FlxTween.color(firstLight, 5, FlxColor.BLACK, darkColor);
+            case "startSongBruh":
+                game.dad.load("096-calm");
+                game.dad.playAnim("idle", true);
+
+                FlxTween.color(firstBG, 3, darkColor, FlxColor.WHITE);
+                FlxTween.color(firstLight, 3, darkColor, FlxColor.WHITE);
+                FlxTween.color(game.boyfriend, 3, FlxColor.BLACK, FlxColor.WHITE);
+                game.camHUD.visible = true;
+            case "startTransition":
+                blackout.visible = true;
+                blackout.alpha = 0;
+                FlxTween.tween(blackout, {"alpha": 1}, 1, {onComplete: (t) -> {
+                    firstBG.visible = false;
+                    firstLight.visible = false;
+                    secondBG.visible = true;
+                    secondLight.visible = true;
+
+                    bfShadow.visible = true;
+                    gfShadow.visible = true;
+                    oppShadow.visible = true;
+    
+                    game.boyfriend.load("dbf");
+                    game.dad.load("096");
+                    game.boyfriend.playAnim("idle", true);
+                    game.dad.playAnim("idle", true);
+    
+                    game.boyfriend.y += 850;
+                    game.boyfriend.x += 600;
+                    game.dad.x += 600;
+                    game.dad.y -= 400;
+
+                    bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-350);
+                    gfShadow.setPosition(game.gf.x+150, game.gf.y+game.gf.frameHeight-150);
+                    oppShadow.setPosition(game.dad.x+100, game.dad.y+game.dad.frameHeight-500);
+    
+                    game.gf.visible = true;
+    
+                    PlayState.instance.isCameraOnForcedPos = false;
+                }});
+                transition.visible = true;
+                transition.play();
+                FlxTween.tween(transition, {"alpha": 1}, 1, {startDelay: 1});   
+            case "startAggro":
+                rageBar.visible = true;
+                rageIcon.visible = true;
+                rageBG.visible = true;
+                doRage = true;
+            case "black":
+                blackout.visible = true;
+        }
+    }
+}

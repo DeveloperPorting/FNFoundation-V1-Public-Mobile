@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rightside.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="rightside_off0000" x="5" y="5" width="788" height="731"/>
+	<SubTexture name="rightside_on0000" x="798" y="5" width="788" height="731"/>
+	<SubTexture name="rightside_on0001" x="5" y="741" width="788" height="731"/>
+</TextureAtlas>

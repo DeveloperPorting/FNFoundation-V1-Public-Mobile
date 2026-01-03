@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="HopelessHP.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="HP_bar0000" x="5" y="5" width="644" height="169"/>
+	<SubTexture name="HP_fill0000" x="5" y="179" width="489" height="120"/>
+</TextureAtlas>

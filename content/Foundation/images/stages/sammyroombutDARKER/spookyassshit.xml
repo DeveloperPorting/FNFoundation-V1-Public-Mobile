@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="049-2.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="049-2_dies0000" x="5" y="5" width="1805" height="972" frameX="-143" frameY="-115" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0001" x="1815" y="5" width="1865" height="988" frameX="-113" frameY="-94" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0002" x="3685" y="5" width="1805" height="972" frameX="-143" frameY="-115" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0003" x="5495" y="5" width="1865" height="988" frameX="-113" frameY="-94" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0004" x="5" y="998" width="1805" height="972" frameX="-143" frameY="-115" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0005" x="1815" y="998" width="1865" height="988" frameX="-113" frameY="-94" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0006" x="3685" y="998" width="1805" height="972" frameX="-143" frameY="-115" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0007" x="5495" y="998" width="1865" height="988" frameX="-113" frameY="-94" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0008" x="5" y="1991" width="1805" height="972" frameX="-143" frameY="-115" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0009" x="1815" y="1991" width="1865" height="988" frameX="-113" frameY="-94" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0010" x="3685" y="1991" width="1854" height="1118" frameX="-104" frameY="-72" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0011" x="5544" y="1991" width="2044" height="1122" frameX="-10" frameY="-19" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0012" x="5" y="3118" width="2088" height="1179" frameX="0" frameY="0" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0013" x="2098" y="3118" width="2068" height="1162" frameX="-10" frameY="-39" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0014" x="4171" y="3118" width="2088" height="1179" frameX="0" frameY="0" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0015" x="4171" y="3118" width="2088" height="1179" frameX="0" frameY="0" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0016" x="6264" y="3118" width="1882" height="744" frameX="-181" frameY="-278" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0017" x="6264" y="3118" width="1882" height="744" frameX="-181" frameY="-278" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0018" x="5" y="4302" width="2021" height="650" frameX="-160" frameY="-368" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0019" x="5" y="4302" width="2021" height="650" frameX="-160" frameY="-368" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0020" x="2031" y="4302" width="1869" height="620" frameX="-330" frameY="-407" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0021" x="2031" y="4302" width="1869" height="620" frameX="-330" frameY="-407" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0022" x="3905" y="4302" width="1816" height="606" frameX="-402" frameY="-422" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0023" x="3905" y="4302" width="1816" height="606" frameX="-402" frameY="-422" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0024" x="5726" y="4302" width="0" height="0" frameX="-295" frameY="-594" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0025" x="5726" y="4302" width="0" height="0" frameX="-295" frameY="-594" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0026" x="5726" y="4302" width="0" height="0" frameX="-295" frameY="-594" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0027" x="5726" y="4302" width="0" height="0" frameX="-295" frameY="-594" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0028" x="5726" y="4302" width="0" height="0" frameX="-295" frameY="-594" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_dies0029" x="5726" y="4302" width="0" height="0" frameX="-295" frameY="-594" frameWidth="2218" frameHeight="1201"/>
+	<SubTexture name="049-2_idle0000" x="5731" y="4302" width="2278" height="1027" frameX="0" frameY="0" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0001" x="5731" y="4302" width="2278" height="1027" frameX="0" frameY="0" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0002" x="5" y="5334" width="2178" height="961" frameX="-50" frameY="-2" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0003" x="5" y="5334" width="2178" height="961" frameX="-50" frameY="-2" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0004" x="2188" y="5334" width="2278" height="918" frameX="0" frameY="-36" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0005" x="2188" y="5334" width="2278" height="918" frameX="0" frameY="-36" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0006" x="4471" y="5334" width="1940" height="982" frameX="-169" frameY="-116" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0007" x="4471" y="5334" width="1940" height="982" frameX="-169" frameY="-116" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0008" x="5" y="6321" width="1866" height="978" frameX="-206" frameY="-127" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0009" x="5" y="6321" width="1866" height="978" frameX="-206" frameY="-127" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0010" x="1876" y="6321" width="1854" height="927" frameX="-212" frameY="-130" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0011" x="1876" y="6321" width="1854" height="927" frameX="-212" frameY="-130" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0012" x="3735" y="6321" width="1860" height="965" frameX="-209" frameY="-130" frameWidth="2278" frameHeight="1105"/>
+	<SubTexture name="049-2_idle0013" x="3735" y="6321" width="1860" height="965" frameX="-209" frameY="-130" frameWidth="2278" frameHeight="1105"/>
+</TextureAtlas>

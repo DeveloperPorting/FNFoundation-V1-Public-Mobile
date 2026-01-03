@@ -1,0 +1,529 @@
+addHaxeLibrary('FlxSpriteUtil', 'flixel.util');
+
+var introCutscene:PsychVideoSprite;
+var introTransition:PsychVideoSprite;
+
+var preloadies:Array<String> = [
+    "ulgrinlines",
+    "bfturneval",
+    "bfTurning",
+    "bfShocked"
+];
+var turning:Bool = false;
+
+// this mechanic fucking sucks -xeight
+var mechanicBG:FlxSprite;
+var stunned:Bool = false;
+var shock_choices = [];
+var shock_notes = [];
+var choices:Array<String> = ["left", "down", "up", "right"];
+var offsets:Array<Float> = [0, -15, -15, 0];
+var current_note:Int = 0;
+var required_note:Int = 0;
+var canBeHit:Bool = true;
+var forcedShock:Bool = false;
+var cantSing:Bool = false;
+var shockSound:FlxSound = FlxG.sound.load(Paths.sound("eval/shockedLOL"));
+
+var justLetHimGoBruh:Bool = false;
+var easyTimer:FlxTimer = null;
+
+function onLoad() {
+    for (pre in preloadies) {
+        Character.preload(pre);
+        var preloads = PlayState.instance.returnCharacterPreload(pre);
+        for (load in preloads) {
+            Paths.image(load.path);
+        }
+    }
+
+    Paths.sound("eval/ulgrinCharge");
+    Paths.sound("eval/shockedLOL");
+    Paths.sound("eval/ulgrinSmack1");
+    Paths.sound("eval/ulgrinSmack2");
+    Paths.sound("eval/ulgrinSmack3");
+
+    var sky:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/evalroom/sky"));
+    sky.antialiasing = ClientPrefs.globalAntialiasing;
+    add(sky);
+
+    var buildings:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/evalroom/buildings"));
+    buildings.antialiasing = ClientPrefs.globalAntialiasing;
+    add(buildings);
+
+    var buildings2:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/evalroom/buildings2"));
+    buildings2.antialiasing = ClientPrefs.globalAntialiasing;
+    add(buildings2);
+
+    var buildings3:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/evalroom/holyshitwhyaretheresomany"));
+    buildings3.antialiasing = ClientPrefs.globalAntialiasing;
+    add(buildings3);
+    
+    var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/evalroom/bg"));
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+    bg.scale.set(1, 1);
+    bg.updateHitbox();
+    add(bg);
+
+    if (!ClientPrefs.lowQuality) {
+        aviva = new FlxSprite(1100,680);
+        aviva.antialiasing = ClientPrefs.globalAntialiasing;
+        aviva.frames = Paths.getSparrowAtlas("stages/evalroom/aviva");
+        aviva.animation.addByPrefix("idle", 'aviva', 24, false);
+        add(aviva);
+
+        dart = new FlxSprite(700,680);
+        dart.antialiasing = ClientPrefs.globalAntialiasing;
+        dart.frames = Paths.getSparrowAtlas("stages/evalroom/dart");
+        dart.animation.addByPrefix("idle", 'dart', 24, false);
+        add(dart);
+
+        salty = new FlxSprite(3500,700);
+        salty.antialiasing = ClientPrefs.globalAntialiasing;
+        salty.frames = Paths.getSparrowAtlas("stages/evalroom/salty");
+        salty.animation.addByPrefix("idle", 'salty', 24, false);
+        add(salty);
+
+        zenko = new FlxSprite(2400,520);
+        zenko.antialiasing = ClientPrefs.globalAntialiasing;
+        zenko.frames = Paths.getSparrowAtlas("stages/evalroom/zenko");
+        zenko.animation.addByPrefix("idle", 'zenko', 24, false);
+        add(zenko);
+
+        bongbong = new FlxSprite(2000,700);
+        bongbong.antialiasing = ClientPrefs.globalAntialiasing;
+        bongbong.frames = Paths.getSparrowAtlas("stages/evalroom/bongbong");
+        bongbong.animation.addByPrefix("idle", 'bong', 24, false);
+        add(bongbong);
+    }
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(oppShadow);
+
+    willyShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(willyShadow);
+
+    willy = new Character(2500, 675, "willy");
+    willy.antialiasing = ClientPrefs.globalAntialiasing;
+    add(willy);
+    
+    var overlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/evalroom/overlay"));
+    overlay.antialiasing = ClientPrefs.globalAntialiasing;
+    foreground.add(overlay);
+
+    blackoutGame = new FlxSprite(-5000, -5000).makeGraphic(1, 1, FlxColor.BLACK);
+    blackoutGame.setGraphicSize(10000, 10000);
+    blackoutGame.visible = true;
+    foreground.add(blackoutGame);
+    
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    blackout.visible = false;
+    add(blackout);
+
+    if (ClientPrefs.cutscenes) {
+        introCutscene = new PsychVideoSprite();
+        introCutscene.canSkip = true;
+        introCutscene.scale.set(0.7, 0.675);
+        introCutscene.addCallback('onFormat',()->{
+            introCutscene.cameras = [game.camOther];
+            introCutscene.updateHitbox();
+            introCutscene.screenCenter();
+        });
+        introCutscene.addCallback('onEnd',()->{
+            game.camHUD.visible = true;
+            // game.camGame.visible = true;
+            game.startCountdown();
+            introCutscene.kill();
+        });
+        introCutscene.load(Paths.video('cutscenes/EvaluationIntro'));
+        introCutscene.antialiasing = true;
+    }
+
+    introTransition = new PsychVideoSprite();
+    introTransition.canSkip = false;
+    introTransition.scale.set(0.7, 0.675);
+    introTransition.addCallback('onFormat',()->{
+      introTransition.cameras = [game.camOther];
+      introTransition.updateHitbox();
+      introTransition.screenCenter();
+    });
+    introTransition.addCallback('onEnd',()->{
+        game.camHUD.visible = true;
+        introTransition.kill();
+    });
+    introTransition.load(Paths.video('transitions/EvaluationTransition'), [PsychVideoSprite.muted]);
+    introTransition.antialiasing = ClientPrefs.globalAntialiasing;
+    add(introTransition);
+    // introTransition.play();
+    // introTransition.pause();
+    // introTransition.visible = false;
+
+    PlayState.instance.useSingArrays = true;
+    FoundationGameOverSubstate.videoOverride = "evaluation";
+}
+
+function onCreatePost() {
+    mechanicBG = new FlxSprite(ClientPrefs.middleScroll ? 275 : 575, ClientPrefs.downScroll ? FlxG.height - 175 : 35);
+    mechanicBG.antialiasing = ClientPrefs.globalAntialiasing;
+    mechanicBG.cameras = [game.camHUD];
+    mechanicBG.frames = Paths.getSparrowAtlas("stages/evalroom/shocked_notes");
+    mechanicBG.animation.addByPrefix("idle", "bar", 24);
+    mechanicBG.animation.play("idle");
+    mechanicBG.updateHitbox();
+    
+    // mechanicBG.x = .x;
+    // mechanicBG.x = PlayState.instance.playerStrums.baseX - PlayState.instance.playerStrums.swagWidth * 3.3;
+    // mechanicBG.y = PlayState.instance.playerStrums.y;
+    mechanicBG.alpha = 0;
+
+    game.camHUD.visible = false;
+    game.camGame.visible = false;
+
+    game.camHUD.alpha = 0;
+
+    bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-100);
+    oppShadow.setPosition(game.dad.x-200, game.dad.y+game.dad.frameHeight-150);
+    willyShadow.setPosition(willy.x, willy.y+willy.frameHeight-150);
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+        // game.camGame.visible = false;
+
+        add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "evaluation";
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+    return Function_Continue;
+}
+
+function onCountdownTick(swagCounter) {
+    if (swagCounter % 2 == 0) {
+        animateBG();
+        willy.playAnim("idle");
+    }
+}
+
+function onSongStart() {
+    introTransition.visible = true;
+    introTransition.play();
+}  
+
+function onBeatHit() {
+    if (game.curBeat % 2 == 0) animateBG();
+
+    if (game.curBeat % 2 == 0 && willy.animation.curAnim != null && !StringTools.startsWith(willy.animation.curAnim.name, 'sing')) willy.playAnim("idle");
+}
+
+function onUpdate(elapsed:Float) {
+    if (stunned) {
+        var notes:Array<Int> = [
+            PlayState.instance.controls.NOTE_LEFT_P,
+            PlayState.instance.controls.NOTE_DOWN_P,
+            PlayState.instance.controls.NOTE_UP_P,
+            PlayState.instance.controls.NOTE_RIGHT_R,
+        ];
+
+        required_note = shock_choices[current_note];
+
+        if (notes[required_note]) {
+            FlxSpriteUtil.setBrightness(shock_notes[current_note], 0);
+            shock_notes[current_note].visible = false;
+            current_note += 1;
+            if (shock_notes[current_note] != null)
+                FlxSpriteUtil.setBrightness(shock_notes[current_note], 0.25);
+        }
+        else
+        {
+            for (i in 0...4) {
+                if (notes[i]) {
+                    current_note = 0;
+                    for (i in 0...4) {
+                        shock_notes[i].visible = true;
+                        FlxSpriteUtil.setBrightness(shock_notes[i], 0);
+                    }
+                }
+            }
+
+            FlxSpriteUtil.setBrightness(shock_notes[0], 0.25);
+        }
+
+        if (current_note >= 4 || justLetHimGoBruh) {
+            if (easyTimer != null && easyTimer.active)
+                easyTimer.cancel();
+
+            justLetHimGoBruh = false;
+            stunned = false;
+            boyfriend.stunned = false;
+            for (note in shock_notes)
+                note.destroy();
+
+            shock_notes = [];
+            shock_choices = [];
+
+            current_note = 0;
+            required_note = 0;
+
+            boyfriend.playAnim("free", true);
+            boyfriend.animation.finishCallback = (a) -> {
+                boyfriend.load("dbf");
+                boyfriend.playAnim("idle", true);
+                cantSing = false;
+                boyfriend.hasMissAnimations = true;
+                boyfriend.animation.finishCallback = null;
+            }
+            
+            shockSound.fadeOut(0.25);
+
+            FlxTween.tween(mechanicBG, {"alpha": 0}, 0.5);
+            FlxTween.tween(playerStrums, {"alpha": 1}, 0.25);
+            if (ClientPrefs.middleScroll)
+                FlxTween.tween(opponentStrums, {"alpha": 1}, 0.25);
+        }
+    }
+}
+
+function goodNoteHitAnim() {
+    if (cantSing || turning) return Function_Stop;
+}
+
+// technically not needed but i have a feeling it causes him to 
+// like move slightly 50% of the time and i dont like that 
+// and dont feel like testing for real -xeight
+function opponentNoteHitAnim() {
+    if (dad.voicelining) return Function_Stop;
+}
+
+function createShockNotes() {
+    if (!forcedShock && (turning || !canBeHit || StringTools.startsWith(boyfriend.animation.curAnim.name, 'sing'))) {
+        new FlxTimer().start(0.1, (t) -> createShockNotes());
+        return;
+    }
+
+    FlxG.sound.play(Paths.sound("eval/ulgrinSmack" + Std.string(FlxG.random.int(1, 3))));
+
+    shockSound.volume = 1;
+    shockSound.play(true);
+
+    forcedShock = false;
+
+    if (shock_notes.length > 0) return;
+
+    if (ClientPrefs.easyMechanics)
+        easyTimer = new FlxTimer().start(4, (t) -> justLetHimGoBruh = true);
+
+    for (note in shock_notes)
+        note.destroy();
+
+    shock_notes = [];
+    shock_choices = [];
+
+    current_note = 0;
+    required_note = 0;
+
+    add(mechanicBG);
+    FlxTween.tween(mechanicBG, {"alpha": 1}, 0.5);
+
+    FlxTween.tween(playerStrums, {"alpha": 0}, 0.25);
+    if (ClientPrefs.middleScroll)
+        FlxTween.tween(opponentStrums, {"alpha": 0}, 0.25);
+
+    stunned = true;
+    boyfriend.stunned = true;
+    cantSing = true;
+    boyfriend.load("bfShocked");
+    boyfriend.playAnim("shock", true);
+    boyfriend.hasMissAnimations = false;
+
+    for (i in 0...4) {
+        var intChoice:Int = FlxG.random.int(0, 3);
+        var choice:String = choices[intChoice];
+
+        shock_choices[i] = intChoice;
+
+        var shockNote:FlxSprite = new FlxSprite(mechanicBG.x + 65 + i*150, mechanicBG.y);
+        shockNote.y += offsets[i];
+        shockNote.cameras = [game.camHUD];
+        shockNote.antialiasing = ClientPrefs.globalAntialiasing;
+        shockNote.frames = Paths.getSparrowAtlas("stages/evalroom/shocked_notes");
+        shockNote.animation.addByPrefix("idle", "shock_"+choice, 24);
+        shockNote.animation.play("idle");
+        shockNote.scale.set(0.75, 0.75);
+        shockNote.updateHitbox();
+        add(shockNote);
+
+        FlxTween.tween(shockNote, {"alpha": 1}, 0.75);
+
+        shock_notes.push(shockNote);
+    }
+
+    FlxSpriteUtil.setBrightness(shock_notes[0], 0.25);
+}
+
+function animateBG() {
+    if (ClientPrefs.lowQuality) return;
+    
+    aviva.animation.play("idle");
+    dart.animation.play("idle");
+    salty.animation.play("idle");
+    zenko.animation.play("idle");
+    bongbong.animation.play("idle", true);
+}
+
+function onSectionHit() {
+    var bfTurn = PlayState.SONG.notes[curSection].mustHitSection;
+    canBeHit = !bfTurn;
+}
+
+function doEvent(name, ?args) {
+    switch (name) {
+        case "camIntro":
+            game.camHUD.visible = true;
+            FlxTween.tween(introTransition, {"alpha": 0}, 0.5);
+            FlxTween.tween(camHUD, {"alpha": 1}, 0.5);
+        case "camGameIntro":
+            blackoutGame.visible = false;
+            game.camGame.visible = true;
+            game.camOther.flash(FlxColor.BLACK, 3);
+        case "lynch":
+            dad.playAnim("attack", true);
+            dad.specialAnim = true;
+            new FlxTimer().start(0.4, (t) -> FlxG.sound.play(Paths.sound("eval/ulgrinCharge")));
+            new FlxTimer().start(0.8, (t) -> createShockNotes());
+        case "killThatBoy":
+            forcedShock = true;
+        case "lookBuddy":
+            dad.voicelining = true;
+            dad.load("ulgrinlines");
+            dad.playAnim("buddy", true);
+            dad.specialAnim = true;
+            dad.animation.finishCallback = (a) -> {
+                dad.load("ulgrin");
+                dad.playAnim("idle");
+                dad.voicelining = false;
+                dad.animation.finishCallback = null;
+            };
+        case "probablyBeFine":
+            dad.voicelining = true;
+            dad.load("ulgrinlines");
+            dad.playAnim("fine", true);
+            dad.specialAnim = true;
+            dad.animation.finishCallback = (a) -> {
+                dad.load("ulgrin");
+                dad.playAnim("idle");
+                dad.voicelining = false;
+                dad.animation.finishCallback = null;
+            };
+        // i dont want to ever do anything close to this again -xeight
+        case "turnToWilly":
+            if (turning) return;
+            if (cantSing) {
+                new FlxTimer().start(0.1, (t) -> doEvent("turnToWilly"));
+                return;
+            }
+            turning = true;
+
+            boyfriend.x += 5;
+            boyfriend.y -= 163;
+            boyfriend.load("bfTurning");
+            boyfriend.playAnim("willy", true);
+            boyfriend.specialAnim = true;
+            boyfriend.hasMissAnimations = false;
+            boyfriend.animation.finishCallback = (a) -> {
+                // boyfriend.y += 75;
+                boyfriend.y += 163;
+                boyfriend.x -= 5;
+                boyfriend.x += 50;
+                boyfriend.y += 5;
+
+                boyfriend.load("bfturneval");
+                boyfriend.playAnim("idle", true);
+
+                turning = false;
+                boyfriend.hasMissAnimations = true;
+                boyfriend.animation.finishCallback = null;
+            };
+        case "turnToUlgrin":
+            if (turning) return;
+            if (cantSing) {
+                new FlxTimer().start(0.1, (t) -> doEvent("turnToUlgrin"));
+                return;
+            }
+
+            turning = true;
+
+            boyfriend.x -= 50;
+            boyfriend.y -= 5;
+            boyfriend.y -= 163;
+            boyfriend.x += 5;
+            boyfriend.load("bfTurning");
+            boyfriend.playAnim("ulgrin", true);
+            boyfriend.specialAnim = true;
+            boyfriend.hasMissAnimations = false;
+            boyfriend.animation.finishCallback = (a) -> {
+                boyfriend.x -= 5;
+                boyfriend.y += 163;
+                boyfriend.load("dbf");
+                boyfriend.playAnim("idle", true);
+                
+                turning = false;
+                boyfriend.hasMissAnimations = true;
+                boyfriend.animation.finishCallback = null;
+            };
+        case "black":
+            blackout.visible = true;
+            blackout.alpha = 0;
+            FlxTween.tween(blackout, {"alpha": 1}, 2);
+    }
+}
+
+function onEvent(n, v1, v2) {
+    if (n == "Song Events") doEvent(v1, v2);
+    if (n == "Change Singers") {
+        var rawSingers = v2.split(",");
+        var singers = [];
+
+        switch singers[0] {
+            case "ulgrin":
+                FoundationGameOverSubstate.videoOverride = "evaluation";
+            case "willy":
+                FoundationGameOverSubstate.videoOverride = "evaluation-willy";
+        }
+
+        for (sing in rawSingers) {
+            switch (sing) {
+                case "ulgrin":
+                    singers.push(dad);
+                case "willy":
+                    singers.push(willy);
+            }
+        }
+
+        if (v1 == "0") 
+            PlayState.instance.opponentSingArray = singers;
+        else if (v1 == "1")
+            PlayState.instance.playerSingArray = singers;
+    }
+}

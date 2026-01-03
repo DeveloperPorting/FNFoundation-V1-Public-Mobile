@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Settings.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="advanced0000" x="2" y="2" width="322" height="102"/>
+	<SubTexture name="advanced_select0000" x="326" y="2" width="342" height="121"/>
+	<SubTexture name="audio0000" x="670" y="2" width="322" height="102"/>
+	<SubTexture name="audio_select0000" x="2" y="125" width="342" height="121"/>
+	<SubTexture name="check_empty0000" x="346" y="125" width="148" height="157"/>
+	<SubTexture name="check_select0000" x="496" y="125" width="148" height="157"/>
+	<SubTexture name="controls0000" x="646" y="125" width="322" height="102"/>
+	<SubTexture name="controls_select0000" x="2" y="284" width="342" height="121"/>
+	<SubTexture name="graphics0000" x="346" y="284" width="322" height="102"/>
+	<SubTexture name="graphics_select0000" x="670" y="284" width="342" height="121"/>
+	<SubTexture name="rmptysh0000" x="2" y="407" width="322" height="102"/>
+	<SubTexture name="sliderbar0000" x="326" y="407" width="493" height="112"/>
+	<SubTexture name="slidingthinguclickanddrag0000" x="821" y="407" width="60" height="106"/>
+</TextureAtlas>

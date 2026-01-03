@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="computer.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="computer_off0000" x="5" y="5" width="737" height="591"/>
+	<SubTexture name="computer_on0000" x="747" y="5" width="737" height="608"/>
+	<SubTexture name="computer_on0001" x="5" y="618" width="737" height="608"/>
+</TextureAtlas>

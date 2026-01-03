@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="endingquiz.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="check0000" x="5" y="5" width="59" height="50"/>
+	<SubTexture name="emptycheck0000" x="69" y="5" width="59" height="50"/>
+	<SubTexture name="textbar0000" x="133" y="5" width="769" height="49"/>
+	<SubTexture name="tv0000" x="907" y="5" width="1922" height="1425"/>
+	<SubTexture name="tv0001" x="5" y="1435" width="1922" height="1425"/>
+</TextureAtlas>

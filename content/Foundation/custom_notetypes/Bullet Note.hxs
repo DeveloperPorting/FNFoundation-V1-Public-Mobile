@@ -1,0 +1,6 @@
+function setupNote(note) {
+    note.texture = "notes/gunNOTE";
+    note.offsetX -= 60;
+    if (!ClientPrefs.downScroll)
+        note.offsetY -= 85;
+}

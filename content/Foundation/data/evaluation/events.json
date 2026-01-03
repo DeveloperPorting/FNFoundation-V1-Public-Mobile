@@ -1,0 +1,308 @@
+{
+	"song": {
+		"events": [
+			[
+				1826.08695652174,
+				[
+					[
+						"Subtitle",
+						"ulgrin:I'm not in the mood for this shit!",
+						"2"
+					]
+				],
+				null,
+				""
+			],
+			[
+				4043.47826086957,
+				[
+					[
+						"Subtitle",
+						"ulgrin:I have no problem putting a bullet in your head-",
+						"2"
+					]
+				],
+				null,
+				""
+			],
+			[
+				6130.4347826087,
+				[
+					[
+						"Subtitle",
+						"ulgrin:-if you don't start cooperating.",
+						"2"
+					]
+				],
+				null,
+				""
+			],
+			[
+				7173.91304347826,
+				[
+					[
+						"Song Events",
+						"camIntro",
+						""
+					]
+				]
+			],
+			[
+				8347.82608695652,
+				[
+					[
+						"Song Events",
+						"camGameIntro",
+						""
+					]
+				]
+			],
+			[
+				15260.8695652174,
+				[
+					[
+						"Song Events",
+						"lynch",
+						""
+					]
+				]
+			],
+			[
+				16043.4782608696,
+				[
+					[
+						"Song Events",
+						"killThatBoy",
+						""
+					]
+				]
+			],
+			[
+				24260.8695652174,
+				[
+					[
+						"Song Events",
+						"lynch",
+						""
+					]
+				],
+				null,
+				""
+			],
+			[
+				25043.4782608696,
+				[
+					[
+						"Song Events",
+						"killThatBoy",
+						""
+					]
+				]
+			],
+			[
+				27782.6086956522,
+				[
+					[
+						"Song Events",
+						"lookBuddy",
+						""
+					]
+				]
+			],
+			[
+				27913.0434782609,
+				[
+					[
+						"Subtitle",
+						"ulgrin:Look, buddy, I don't have all day.",
+						"1.5"
+					]
+				]
+			],
+			[
+				40826.0869565217,
+				[
+					[
+						"Song Events",
+						"lynch",
+						""
+					]
+				]
+			],
+			[
+				42260.8695652174,
+				[
+					[
+						"Song Events",
+						"killThatBoy",
+						""
+					]
+				],
+				null,
+				""
+			],
+			[
+				49956.5217391304,
+				[
+					[
+						"Change Singers",
+						"0",
+						"willy"
+					]
+				],
+				null,
+				""
+			],
+			[
+				50086.9565217391,
+				[
+					[
+						"Song Events",
+						"turnToWilly",
+						""
+					]
+				],
+				null,
+				""
+			],
+			[
+				66652.1739130435,
+				[
+					[
+						"Change Singers",
+						"0",
+						"ulgrin"
+					]
+				]
+			],
+			[
+				66782.6086956521,
+				[
+					[
+						"Song Events",
+						"turnToUlgrin",
+						""
+					]
+				]
+			],
+			[
+				75000,
+				[
+					[
+						"Change Singers",
+						"0",
+						"willy"
+					]
+				]
+			],
+			[
+				75130.4347826087,
+				[
+					[
+						"Song Events",
+						"turnToWilly",
+						""
+					]
+				]
+			],
+			[
+				83347.8260869565,
+				[
+					[
+						"Change Singers",
+						"0",
+						"ulgrin"
+					]
+				],
+				null,
+				""
+			],
+			[
+				83478.2608695652,
+				[
+					[
+						"Song Events",
+						"turnToUlgrin",
+						""
+					]
+				]
+			],
+			[
+				94565.2173913044,
+				[
+					[
+						"Song Events",
+						"probablyBeFine",
+						""
+					]
+				]
+			],
+			[
+				94956.5217391305,
+				[
+					[
+						"Subtitle",
+						"ulgrin:-probably be fine.",
+						"1"
+					]
+				]
+			],
+			[
+				100043.47826087,
+				[
+					[
+						"Change Singers",
+						"0",
+						"willy"
+					]
+				],
+				null,
+				""
+			],
+			[
+				100173.913043478,
+				[
+					[
+						"Song Events",
+						"turnToWilly",
+						""
+					]
+				],
+				null,
+				""
+			],
+			[
+				107608.695652174,
+				[
+					[
+						"Song Events",
+						"lynch",
+						""
+					]
+				]
+			],
+			[
+				108391.304347826,
+				[
+					[
+						"Change Singers",
+						"0",
+						"ulgrin"
+					]
+				],
+				null,
+				""
+			],
+			[
+				116869.565217391,
+				[
+					[
+						"Song Events",
+						"black",
+						""
+					]
+				]
+			]
+		]
+	}
+}

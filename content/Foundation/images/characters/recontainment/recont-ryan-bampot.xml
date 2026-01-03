@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="recont-ryan-bampot.png" width="6795" height="5977" spritePadding="3" borderPadding="1">
+	<SubTexture name="bampot0000" x="1" y="1" width="722" height="1059" frameX="-54" frameY="-218" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0001" x="1" y="1" width="722" height="1059" frameX="-54" frameY="-218" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0002" x="726" y="1" width="721" height="1058" frameX="-55" frameY="-219" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0003" x="726" y="1" width="721" height="1058" frameX="-55" frameY="-219" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0004" x="1450" y="1" width="720" height="1047" frameX="-59" frameY="-230" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0005" x="1450" y="1" width="720" height="1047" frameX="-59" frameY="-230" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0006" x="2173" y="1" width="724" height="1048" frameX="-60" frameY="-229" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0007" x="2173" y="1" width="724" height="1048" frameX="-60" frameY="-229" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0008" x="2900" y="1" width="714" height="1049" frameX="-72" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0009" x="2900" y="1" width="714" height="1049" frameX="-72" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0010" x="3617" y="1" width="704" height="1049" frameX="-83" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0011" x="3617" y="1" width="704" height="1049" frameX="-83" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0012" x="4324" y="1" width="701" height="1049" frameX="-86" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0013" x="4324" y="1" width="701" height="1049" frameX="-86" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0014" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0015" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0016" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0017" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0018" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0019" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0020" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0021" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0022" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0023" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0024" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0025" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0026" x="5028" y="1" width="697" height="1049" frameX="-90" frameY="-228" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0027" x="5728" y="1" width="693" height="1043" frameX="-90" frameY="-234" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0028" x="5728" y="1" width="693" height="1043" frameX="-90" frameY="-234" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0029" x="1" y="1063" width="718" height="1060" frameX="-87" frameY="-217" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0030" x="1" y="1063" width="718" height="1060" frameX="-87" frameY="-217" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0031" x="722" y="1063" width="753" height="1064" frameX="-90" frameY="-213" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0032" x="722" y="1063" width="753" height="1064" frameX="-90" frameY="-213" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0033" x="1478" y="1063" width="701" height="1116" frameX="-91" frameY="-161" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0034" x="2182" y="1063" width="710" height="1114" frameX="-91" frameY="-163" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0035" x="2895" y="1063" width="700" height="1135" frameX="-92" frameY="-142" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0036" x="3598" y="1063" width="700" height="1116" frameX="-92" frameY="-161" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0037" x="4301" y="1063" width="709" height="1114" frameX="-92" frameY="-163" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0038" x="5013" y="1063" width="700" height="1135" frameX="-92" frameY="-142" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0039" x="5716" y="1063" width="764" height="1116" frameX="-92" frameY="-161" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0040" x="1" y="2201" width="919" height="1020" frameX="-118" frameY="-258" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0041" x="923" y="2201" width="696" height="1005" frameX="-197" frameY="-273" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0042" x="1622" y="2201" width="674" height="1005" frameX="-210" frameY="-273" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0043" x="2299" y="2201" width="608" height="1017" frameX="-276" frameY="-261" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0044" x="2910" y="2201" width="644" height="1017" frameX="-240" frameY="-261" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0045" x="3557" y="2201" width="651" height="1016" frameX="-227" frameY="-262" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0046" x="4211" y="2201" width="647" height="1016" frameX="-231" frameY="-262" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0047" x="4861" y="2201" width="646" height="1016" frameX="-230" frameY="-262" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0048" x="5510" y="2201" width="627" height="1016" frameX="-249" frameY="-262" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0049" x="6140" y="2201" width="654" height="998" frameX="-222" frameY="-280" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0050" x="6140" y="2201" width="654" height="998" frameX="-222" frameY="-280" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0051" x="1" y="3224" width="662" height="1004" frameX="-206" frameY="-274" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0052" x="1" y="3224" width="662" height="1004" frameX="-206" frameY="-274" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0053" x="666" y="3224" width="621" height="981" frameX="-168" frameY="-296" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0054" x="666" y="3224" width="621" height="981" frameX="-168" frameY="-296" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0055" x="1290" y="3224" width="727" height="1014" frameX="-117" frameY="-263" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0056" x="1290" y="3224" width="727" height="1014" frameX="-117" frameY="-263" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0057" x="2020" y="3224" width="748" height="1021" frameX="-92" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0058" x="2020" y="3224" width="748" height="1021" frameX="-92" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0059" x="2771" y="3224" width="771" height="1021" frameX="-70" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0060" x="2771" y="3224" width="771" height="1021" frameX="-70" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0061" x="3545" y="3224" width="785" height="1021" frameX="-56" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0062" x="3545" y="3224" width="785" height="1021" frameX="-56" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0063" x="4333" y="3224" width="793" height="1021" frameX="-49" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0064" x="4333" y="3224" width="793" height="1021" frameX="-49" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0065" x="5129" y="3224" width="797" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0066" x="5929" y="3224" width="797" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0067" x="1" y="4249" width="797" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0068" x="801" y="4249" width="793" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0069" x="1597" y="4249" width="793" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0070" x="2393" y="4249" width="776" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0071" x="2393" y="4249" width="776" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0072" x="3172" y="4249" width="720" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0073" x="3172" y="4249" width="720" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0074" x="3895" y="4249" width="720" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0075" x="3895" y="4249" width="720" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0076" x="4618" y="4249" width="720" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0077" x="5341" y="4249" width="715" height="1022" frameX="-45" frameY="-256" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0078" x="6059" y="4249" width="715" height="1020" frameX="-45" frameY="-258" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0079" x="1" y="5274" width="1020" height="702" rotated="true" frameX="-45" frameY="-258" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0080" x="1024" y="5274" width="1020" height="702" rotated="true" frameX="-45" frameY="-258" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0081" x="2047" y="5274" width="1019" height="676" rotated="true" frameX="-45" frameY="-259" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0082" x="2047" y="5274" width="1019" height="676" rotated="true" frameX="-45" frameY="-259" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0083" x="3069" y="5274" width="1018" height="631" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0084" x="4090" y="5274" width="1018" height="631" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0085" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0086" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0087" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0088" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0089" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0090" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0091" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0092" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0093" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0094" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+	<SubTexture name="bampot0095" x="5111" y="5274" width="1018" height="612" rotated="true" frameX="-45" frameY="-260" frameWidth="1112" frameHeight="1301"/>
+</TextureAtlas>

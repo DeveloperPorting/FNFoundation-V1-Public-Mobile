@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				122,
+				-122
+			],
+			"anim": "huh",
+			"fps": 24,
+			"name": "Huh",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				122,
+				-87
+			],
+			"anim": "notbad",
+			"fps": 24,
+			"name": "Not fair",
+			"indices": []
+		},
+		{
+			"offsets": [
+				120,
+				-110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				284,
+				-33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				102,
+				423
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				93,
+				265
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				24,
+				-128
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				169,
+				210
+			],
+			"anim": "laugh",
+			"fps": 24,
+			"name": "ha",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Thomson",
+	"position": [
+		0,
+		-80
+	],
+	"healthicon": "thomson",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		104,
+		83
+	],
+	"camera_position": [
+		-5,
+		-160
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

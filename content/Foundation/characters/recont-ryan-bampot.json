@@ -1,0 +1,38 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				20,
+				200
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "bampot",
+			"loop": false,
+			"name": "bampot"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/recontainment/recont-ryan-bampot",
+	"position": [
+		-280,
+		-350
+	],
+	"healthicon": "ryan",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		153,
+		51
+	],
+	"camera_position": [
+		50,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

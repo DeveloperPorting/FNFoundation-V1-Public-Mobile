@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="goodtesla.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="goodtesla0000" x="5" y="5" width="1706" height="2496" frameX="-11" frameY="0" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0001" x="1717" y="5" width="1417" height="2311" frameX="-211" frameY="-10" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0002" x="1717" y="5" width="1417" height="2311" frameX="-211" frameY="-10" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0003" x="3140" y="5" width="1720" height="2202" frameX="0" frameY="-77" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0004" x="3140" y="5" width="1720" height="2202" frameX="0" frameY="-77" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0005" x="4866" y="5" width="1662" height="2420" frameX="-71" frameY="-80" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0006" x="4866" y="5" width="1662" height="2420" frameX="-71" frameY="-80" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0007" x="5" y="2507" width="1674" height="2330" frameX="-64" frameY="-109" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0008" x="5" y="2507" width="1674" height="2330" frameX="-64" frameY="-109" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0009" x="1685" y="2507" width="1465" height="272" frameX="-273" frameY="-2025" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0010" x="1685" y="2507" width="1465" height="272" frameX="-273" frameY="-2025" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0011" x="3156" y="2507" width="0" height="0" frameX="92" frameY="-1727" frameWidth="1738" frameHeight="2500"/>
+	<SubTexture name="goodtesla0012" x="3156" y="2507" width="0" height="0" frameX="92" frameY="-1727" frameWidth="1738" frameHeight="2500"/>
+</TextureAtlas>

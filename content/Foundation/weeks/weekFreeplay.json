@@ -1,0 +1,59 @@
+{
+	"storyName": "Foundation Freeplay",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Mayhem",
+			"face",
+			[
+				160,
+				180,
+				180
+			]
+		],
+		[
+			"Hopeless",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Ballin",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Vasectomy",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "SCPFreeplay"
+}

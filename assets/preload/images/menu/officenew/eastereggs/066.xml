@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="066.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle_off0000" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0001" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0002" x="631" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0003" x="631" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0004" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0005" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0006" x="631" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0007" x="1257" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0008" x="1883" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0009" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0010" x="631" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0011" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0012" x="631" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0013" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0014" x="631" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0015" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0016" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0017" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0018" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0019" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0020" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0021" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0022" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0023" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0024" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0025" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0026" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0027" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0028" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0029" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0030" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0031" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0032" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0033" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0034" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0035" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0036" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0037" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0038" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0039" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0040" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0041" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0042" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0043" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0044" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0045" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0046" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0047" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0048" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0049" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0050" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0051" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0052" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0053" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0054" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0055" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0056" x="2509" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0057" x="631" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0058" x="3135" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0059" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0060" x="3135" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0061" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0062" x="3135" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0063" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0064" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0065" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0066" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0067" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0068" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_off0069" x="5" y="5" width="621" height="661"/>
+	<SubTexture name="idle_on0000" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0001" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0002" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0003" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0004" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0005" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0006" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0007" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0008" x="1257" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0009" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0010" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0011" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0012" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0013" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0014" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0015" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0016" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0017" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0018" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0019" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0020" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0021" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0022" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0023" x="1883" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0024" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0025" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0026" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0027" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0028" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0029" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0030" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0031" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0032" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0033" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0034" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0035" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0036" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0037" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0038" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0039" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0040" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0041" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0042" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0043" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0044" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0045" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0046" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0047" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0048" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0049" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0050" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0051" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0052" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0053" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0054" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0055" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0056" x="2509" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0057" x="2509" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0058" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0059" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0060" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0061" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0062" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0063" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0064" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0065" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0066" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0067" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0068" x="5" y="671" width="621" height="661"/>
+	<SubTexture name="idle_on0069" x="631" y="671" width="621" height="661"/>
+	<SubTexture name="squish_off0000" x="3135" y="671" width="645" height="639" frameX="0" frameY="-20" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0001" x="3135" y="671" width="645" height="639" frameX="0" frameY="-20" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0002" x="5" y="1337" width="616" height="670" frameX="-15" frameY="0" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0003" x="5" y="1337" width="616" height="670" frameX="-15" frameY="0" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0004" x="626" y="1337" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0005" x="626" y="1337" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0006" x="1252" y="1337" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0007" x="1252" y="1337" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0008" x="1252" y="1337" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_off0009" x="1878" y="1337" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0000" x="2504" y="1337" width="645" height="639" frameX="0" frameY="-20" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0001" x="2504" y="1337" width="645" height="639" frameX="0" frameY="-20" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0002" x="3154" y="1337" width="616" height="670" frameX="-15" frameY="0" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0003" x="3154" y="1337" width="616" height="670" frameX="-15" frameY="0" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0004" x="5" y="2012" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0005" x="5" y="2012" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0006" x="631" y="2012" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0007" x="631" y="2012" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0008" x="1257" y="2012" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+	<SubTexture name="squish_on0009" x="1257" y="2012" width="621" height="661" frameX="-12" frameY="-6" frameWidth="645" frameHeight="670"/>
+</TextureAtlas>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pauseshit.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Options0000" x="2" y="2" width="566" height="158"/>
+	<SubTexture name="Options_select0000" x="570" y="2" width="602" height="193"/>
+	<SubTexture name="Quit0000" x="1174" y="2" width="566" height="158"/>
+	<SubTexture name="Quit_select0000" x="2" y="197" width="602" height="193"/>
+	<SubTexture name="Restart0000" x="606" y="197" width="566" height="158"/>
+	<SubTexture name="Restart_select0000" x="1174" y="197" width="602" height="193"/>
+	<SubTexture name="Resume0000" x="2" y="392" width="566" height="158"/>
+	<SubTexture name="Resume_select0000" x="570" y="392" width="602" height="193"/>
+	<SubTexture name="Skip0000" x="1174" y="392" width="96" height="80"/>
+	<SubTexture name="Skip_button0000" x="1272" y="392" width="285" height="137"/>
+	<SubTexture name="Skipping0000" x="1559" y="392" width="173" height="82" frameX="0" frameY="0" frameWidth="201" frameHeight="82"/>
+	<SubTexture name="Skipping0001" x="1559" y="392" width="173" height="82" frameX="0" frameY="0" frameWidth="201" frameHeight="82"/>
+	<SubTexture name="Skipping0002" x="1559" y="392" width="173" height="82" frameX="0" frameY="0" frameWidth="201" frameHeight="82"/>
+	<SubTexture name="Skipping0003" x="1734" y="392" width="186" height="82" frameX="0" frameY="0" frameWidth="201" frameHeight="82"/>
+	<SubTexture name="Skipping0004" x="1734" y="392" width="186" height="82" frameX="0" frameY="0" frameWidth="201" frameHeight="82"/>
+	<SubTexture name="Skipping0005" x="1734" y="392" width="186" height="82" frameX="0" frameY="0" frameWidth="201" frameHeight="82"/>
+	<SubTexture name="Skipping0006" x="2" y="587" width="201" height="82"/>
+	<SubTexture name="Skipping0007" x="2" y="587" width="201" height="82"/>
+	<SubTexture name="Skipping0008" x="2" y="587" width="201" height="82"/>
+	<SubTexture name="Skipping_button0000" x="205" y="587" width="294" height="106" frameX="0" frameY="-20" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0001" x="205" y="587" width="294" height="106" frameX="0" frameY="-20" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0002" x="501" y="587" width="264" height="126" frameX="-14" frameY="0" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0003" x="501" y="587" width="264" height="126" frameX="-14" frameY="0" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0004" x="767" y="587" width="266" height="122" frameX="-13" frameY="-4" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0005" x="767" y="587" width="266" height="122" frameX="-13" frameY="-4" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0006" x="767" y="587" width="266" height="122" frameX="-13" frameY="-4" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0007" x="767" y="587" width="266" height="122" frameX="-13" frameY="-4" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0008" x="767" y="587" width="266" height="122" frameX="-13" frameY="-4" frameWidth="294" frameHeight="126"/>
+	<SubTexture name="Skipping_button0009" x="767" y="587" width="266" height="122" frameX="-13" frameY="-4" frameWidth="294" frameHeight="126"/>
+</TextureAtlas>

@@ -1,0 +1,38 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				70,
+				1360
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "hur",
+			"loop": false,
+			"name": "bananloop"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/106/106PBJ",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

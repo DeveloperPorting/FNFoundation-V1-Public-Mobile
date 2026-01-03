@@ -1,0 +1,152 @@
+{
+    "tabs": [
+        {
+            "name": "graphics",
+            "values": [
+                {
+                    "x": 250,
+                    "y": 150,
+
+                    "label": "Show FPS",
+                    "control": "check",
+                    "value": "showFPS"
+                },
+                {
+                    "x": 250,
+                    "y": 225,
+
+                    "label": "Antialiasing",
+                    "control": "check",
+                    "value": "globalAntialiasing"
+                },
+                {
+                    "x": 250,
+                    "y": 300,
+
+                    "label": "Shaders",
+                    "control": "check",
+                    "value": "shaders"
+                },
+                {
+                    "x": 250,
+                    "y": 375,
+
+                    "label": "Cutscenes",
+                    "control": "check",
+                    "value": "cutscenes"
+                },
+                {
+                    "x": 250,
+                    "y": 450,
+
+                    "label": "Low Quality",
+                    "control": "check",
+                    "value": "lowQuality"
+                }
+            ]
+        },
+        {
+            "name": "audio",
+            "values": [
+                {
+                    "x": 250,
+                    "y": 150,
+
+                    "label": "Subtitles",
+                    "control": "check",
+                    "value": "subtitles"
+                }
+            ]
+        },
+        {
+            "name": "controls",
+            "values": [
+                {
+                    "x": 250,
+                    "y": 150,
+
+                    "label": "Downscroll",
+                    "control": "check",
+                    "value": "downScroll"
+                },
+                {
+                    "x": 650,
+                    "y": 150,
+
+                    "label": "Middlescroll",
+                    "control": "check",
+                    "value": "middleScroll"
+                },
+                {
+                    "x": 250,
+                    "y": 225,
+
+                    "label": "Ghost Tapping",
+                    "control": "check",
+                    "value": "ghostTapping"
+                },
+                {
+                    "x": 250,
+                    "y": 300,
+
+                    "label": "Disable Reset Key",
+                    "control": "check",
+                    "value": "noReset"
+                },
+                {
+                    "x": 250,
+                    "y": 375,
+
+                    "label": "Change Controls",
+                    "control": "button",
+                    "value": "changeControls"
+                },
+                {
+                    "x": 250,
+                    "y": 450,
+
+                    "label": "Adjust Offsets",
+                    "control": "button",
+                    "value": "changeOffset"
+                }
+            ]
+        },
+        {
+            "name": "advanced",
+            "values": [
+                {
+                    "x": 250,
+                    "y": 150,
+
+                    "label": "GPU Caching",
+                    "control": "check",
+                    "value": "gpuCaching"
+                },
+                {
+                    "x": 250,
+                    "y": 225,
+
+                    "label": "Open Old Options Menu",
+                    "control": "button",
+                    "value": "oldOptions"
+                },
+                {
+                    "x": 250,
+                    "y": 275,
+
+                    "label": "Mechanic Explanations",
+                    "control": "check",
+                    "value": "mechanicExplanations"
+                },
+                {
+                    "x": 250,
+                    "y": 350,
+
+                    "label": "Euclid Mode",
+                    "control": "check",
+                    "value": "easyMechanics"
+                }
+            ]
+        }
+    ]
+}

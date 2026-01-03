@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFmop.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gfmopbreakout0000" x="2" y="2" width="521" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0001" x="2" y="2" width="521" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0002" x="525" y="2" width="522" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0003" x="525" y="2" width="522" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0004" x="525" y="2" width="522" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0005" x="525" y="2" width="522" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0006" x="1049" y="2" width="522" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0007" x="1049" y="2" width="522" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0008" x="1573" y="2" width="523" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0009" x="1573" y="2" width="523" height="809" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0010" x="2098" y="2" width="573" height="852" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0011" x="2098" y="2" width="573" height="852" frameX="0" frameY="0" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0012" x="2673" y="2" width="573" height="850" frameX="0" frameY="-2" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0013" x="3248" y="2" width="565" height="838" frameX="0" frameY="-2" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0014" x="3815" y="2" width="565" height="837" frameX="0" frameY="-3" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0015" x="3815" y="2" width="565" height="837" frameX="0" frameY="-3" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0016" x="4382" y="2" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0017" x="4382" y="2" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0018" x="4946" y="2" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0019" x="5510" y="2" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0020" x="6085" y="2" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0021" x="6085" y="2" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0022" x="6660" y="2" width="565" height="836" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0023" x="6660" y="2" width="565" height="836" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0024" x="7227" y="2" width="565" height="836" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0025" x="2" y="856" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0026" x="566" y="856" width="739" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0027" x="1307" y="856" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0028" x="1871" y="856" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0029" x="1871" y="856" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0030" x="1871" y="856" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0031" x="2446" y="856" width="565" height="836" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0032" x="2446" y="856" width="565" height="836" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0033" x="2446" y="856" width="565" height="836" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0034" x="1307" y="856" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0035" x="1307" y="856" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0036" x="1307" y="856" width="562" height="831" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0037" x="1871" y="856" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0038" x="1871" y="856" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopbreakout0039" x="1871" y="856" width="573" height="848" frameX="0" frameY="-4" frameWidth="739" frameHeight="852"/>
+	<SubTexture name="gfmopcombobreak0000" x="3013" y="856" width="535" height="806" frameX="0" frameY="-3" frameWidth="535" frameHeight="809"/>
+	<SubTexture name="gfmopcombobreak0001" x="3013" y="856" width="535" height="806" frameX="0" frameY="-3" frameWidth="535" frameHeight="809"/>
+	<SubTexture name="gfmopcombobreak0002" x="3550" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopcombobreak0003" x="3550" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopcombobreak0004" x="4087" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopcombobreak0005" x="4087" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopcombobreak0006" x="4624" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopcombobreak0007" x="4624" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopcombobreak0008" x="4624" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopcombobreak0009" x="4624" y="856" width="535" height="809"/>
+	<SubTexture name="gfmopdance0000" x="5161" y="856" width="541" height="834" frameX="-39" frameY="0" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0001" x="5161" y="856" width="541" height="834" frameX="-39" frameY="0" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0002" x="5704" y="856" width="549" height="818" frameX="-27" frameY="-7" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0003" x="5704" y="856" width="549" height="818" frameX="-27" frameY="-7" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0004" x="6255" y="856" width="576" height="820" frameX="-8" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0005" x="6255" y="856" width="576" height="820" frameX="-8" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0006" x="6833" y="856" width="581" height="820" frameX="-3" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0007" x="6833" y="856" width="581" height="820" frameX="-3" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0008" x="7416" y="856" width="579" height="820" frameX="-1" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0009" x="7416" y="856" width="579" height="820" frameX="-1" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0010" x="2" y="1706" width="578" height="820" frameX="0" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0011" x="2" y="1706" width="578" height="820" frameX="0" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0012" x="582" y="1706" width="537" height="816" frameX="-39" frameY="-1" frameWidth="584" frameHeight="834"/>
+	<SubTexture name="gfmopdance0013" x="582" y="1706" width="537" height="816" frameX="-39" frameY="-1" frameWidth="584" frameHeight="834"/>
+</TextureAtlas>

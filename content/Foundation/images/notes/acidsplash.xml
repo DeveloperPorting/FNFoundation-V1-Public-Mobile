@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="acidsplash.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DOWNsplash0000" x="2" y="2" width="143" height="83" frameX="-69" frameY="-59" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0001" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0002" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0003" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0004" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0005" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0006" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0007" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0008" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0009" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0010" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0011" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0012" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0013" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="DOWNsplash0014" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0000" x="2" y="2" width="143" height="83" frameX="-69" frameY="-59" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0001" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0002" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0003" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0004" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0005" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0006" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0007" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0008" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0009" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0010" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0011" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0012" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0013" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="UPsplash0014" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0000" x="2" y="2" width="143" height="83" frameX="-69" frameY="-59" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0001" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0002" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0003" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0004" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0005" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0006" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0007" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0008" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0009" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0010" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0011" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0012" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0013" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="LEFTsplash0014" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0000" x="2" y="2" width="143" height="83" frameX="-69" frameY="-59" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0001" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0002" x="147" y="2" width="223" height="127" frameX="-13" frameY="-17" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0003" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0004" x="2" y="131" width="244" height="147" frameX="0" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0005" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0006" x="248" y="131" width="242" height="147" frameX="-1" frameY="-1" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0007" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0008" x="2" y="280" width="240" height="145" frameX="-1" frameY="-2" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0009" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0010" x="244" y="280" width="232" height="83" frameX="0" frameY="0" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0011" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0012" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0013" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+	<SubTexture name="RIGHTsplash0014" x="478" y="280" width="0" height="0" frameX="-92" frameY="-94" frameWidth="244" frameHeight="148"/>
+</TextureAtlas>

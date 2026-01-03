@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="HarleyNOTE_splash.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="splash0000" x="2" y="2" width="194" height="88" frameX="-41" frameY="-53" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0001" x="198" y="2" width="205" height="117" frameX="-36" frameY="-16" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0002" x="198" y="2" width="205" height="117" frameX="-36" frameY="-16" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0003" x="2" y="121" width="234" height="99" frameX="-12" frameY="-4" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0004" x="2" y="121" width="234" height="99" frameX="-12" frameY="-4" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0005" x="238" y="121" width="252" height="90" frameX="0" frameY="-1" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0006" x="238" y="121" width="252" height="90" frameX="0" frameY="-1" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0007" x="2" y="222" width="239" height="75" frameX="-11" frameY="0" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0008" x="2" y="222" width="239" height="75" frameX="-11" frameY="0" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0009" x="243" y="222" width="245" height="84" frameX="-8" frameY="0" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0010" x="243" y="222" width="245" height="84" frameX="-8" frameY="0" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0011" x="490" y="222" width="0" height="0" frameX="155" frameY="-96" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0012" x="490" y="222" width="0" height="0" frameX="155" frameY="-96" frameWidth="253" frameHeight="141"/>
+	<SubTexture name="splash0013" x="490" y="222" width="0" height="0" frameX="155" frameY="-96" frameWidth="253" frameHeight="141"/>
+</TextureAtlas>

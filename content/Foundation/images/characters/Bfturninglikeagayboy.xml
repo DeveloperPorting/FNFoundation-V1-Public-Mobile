@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Bfturninglikeagayboy.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="turn_ulgrin0000" x="5" y="5" width="447" height="486" frameX="-80" frameY="-9" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0001" x="457" y="5" width="447" height="486" frameX="-80" frameY="-9" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0002" x="909" y="5" width="451" height="488" frameX="-80" frameY="-7" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0003" x="1365" y="5" width="451" height="488" frameX="-80" frameY="-7" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0004" x="1821" y="5" width="457" height="487" frameX="-69" frameY="-9" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0005" x="2283" y="5" width="457" height="487" frameX="-69" frameY="-9" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0006" x="2745" y="5" width="475" height="469" frameX="-11" frameY="-3" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0007" x="3225" y="5" width="475" height="469" frameX="-11" frameY="-3" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0008" x="5" y="498" width="463" height="471" frameX="-3" frameY="-1" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0009" x="473" y="498" width="463" height="471" frameX="-3" frameY="-1" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0010" x="941" y="498" width="460" height="472" frameX="0" frameY="0" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0011" x="1406" y="498" width="460" height="472" frameX="0" frameY="0" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0012" x="1871" y="498" width="457" height="472" frameX="0" frameY="0" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_ulgrin0013" x="2333" y="498" width="457" height="472" frameX="0" frameY="0" frameWidth="531" frameHeight="496"/>
+	<SubTexture name="turn_willy0000" x="2795" y="498" width="457" height="472" frameX="-2" frameY="-11" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0001" x="3257" y="498" width="457" height="472" frameX="-2" frameY="-11" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0002" x="5" y="975" width="462" height="473" frameX="0" frameY="-10" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0003" x="472" y="975" width="462" height="473" frameX="0" frameY="-10" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0004" x="939" y="975" width="461" height="465" frameX="-2" frameY="-18" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0005" x="1405" y="975" width="461" height="465" frameX="-2" frameY="-18" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0006" x="1871" y="975" width="447" height="483" frameX="-25" frameY="0" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0007" x="2323" y="975" width="447" height="483" frameX="-25" frameY="0" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0008" x="2775" y="975" width="456" height="489" frameX="-65" frameY="-17" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0009" x="3236" y="975" width="456" height="489" frameX="-65" frameY="-17" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0010" x="5" y="1469" width="449" height="486" frameX="-79" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0011" x="459" y="1469" width="449" height="486" frameX="-79" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0012" x="913" y="1469" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0013" x="1365" y="1469" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0014" x="1817" y="1469" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0015" x="2269" y="1469" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0016" x="2721" y="1469" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0017" x="3173" y="1469" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0018" x="3625" y="1469" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+	<SubTexture name="turn_willy0019" x="5" y="1960" width="447" height="486" frameX="-82" frameY="-20" frameWidth="529" frameHeight="506"/>
+</TextureAtlas>

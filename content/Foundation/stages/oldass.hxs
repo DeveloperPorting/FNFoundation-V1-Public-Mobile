@@ -1,0 +1,447 @@
+var introCutscene:PsychVideoSprite;
+var transition:PsychVideoSprite;
+var ending:PsychVideoSprite;
+
+var bg:FlxSprite;
+var light:FlxSprite;
+var light2:FlxSprite;
+var wall:FlxSprite;
+var bridge:FlxSprite;
+var spikes:FlxSprite;
+var bridgeBg:FlxSprite;
+var spin:FlxSprite;
+
+var overlay:FlxSprite;
+var darkOverlay:FlxSprite;
+var blackoutGame:FlxSprite;
+var blackout:FlxSprite;
+
+var splitBGTop:FlxSprite;
+var splitBGBottom:FlxSprite;
+var splitTop:FlxSprite;
+var splitBottom:FlxSprite;
+var splitSeperator:FlxSprite;
+
+var spinTween:FlxTween;
+
+var preloadies = [
+	"106-2",
+    "106-Back",
+	"106-PBJ",
+	"106-Hump",
+	"106-Split",
+
+	"dbfcum"
+	"dbfsplit",
+
+	"myworldgf"
+
+];
+
+var doPdDrain:Bool = false;
+var pdDrainStrength = ClientPrefs.easyMechanics ? 100 : 65;
+
+function onLoad() {
+
+	if (ClientPrefs.lowQuality) 
+		preloadies = [
+			"106-2",
+			"106-Split",
+			"dbfcum",
+			"dbfsplit",
+			"myworldgf"
+		];
+
+	for (pre in preloadies) {
+        var preloads = PlayState.instance.returnCharacterPreload(pre);
+		Character.preload(pre);
+        for (load in preloads) {
+            Paths.image(load.path);
+        }
+    }
+
+	// PHASE 1 BG
+	bg = new FlxSprite(-900, -425).loadGraphic(Paths.image("stages/larry/larry"));
+	bg.antialiasing = ClientPrefs.globalAntialiasing;
+	add(bg);
+
+	light = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/larry/alsogradient"));
+	light.antialiasing = ClientPrefs.globalAntialiasing;
+	foreground.add(light);
+
+	light2 = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/larry/light"));
+	light2.antialiasing = ClientPrefs.globalAntialiasing;
+	foreground.add(light2);
+
+	bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+	// PHASE 2 SPLIT
+	splitBGTop = new FlxSprite(500).makeGraphic(1, 1, FlxColor.fromString("#070906"));
+	splitBGTop.setGraphicSize(4000, 1000);
+	splitBGTop.visible = false;
+	add(splitBGTop);
+
+	splitBGBottom = new FlxSprite(500, 1000).makeGraphic(1, 1, FlxColor.fromString("#040603"));
+	splitBGBottom.setGraphicSize(4000, 1000);
+	splitBGBottom.visible = false;
+	add(splitBGBottom);
+
+	splitTop = new FlxSprite(-1200, -700).loadGraphic(Paths.image("stages/larry/pdSplitUp"));
+	splitTop.antialiasing = ClientPrefs.globalAntialiasing;
+	splitTop.visible = false;
+	add(splitTop);
+
+	splitBottom = new FlxSprite(-600, 500).loadGraphic(Paths.image("stages/larry/pdSplitDown"));
+	splitBottom.antialiasing = ClientPrefs.globalAntialiasing;
+	splitBottom.visible = false;
+	add(splitBottom);
+
+	splitSeperator = new FlxSprite(-1200, 300);
+	splitSeperator.antialiasing = ClientPrefs.globalAntialiasing;
+	splitSeperator.frames = Paths.getSparrowAtlas("stages/larry/linething");
+	splitSeperator.animation.addByPrefix("idle", "linething", 24);
+	splitSeperator.animation.play("idle");
+	splitSeperator.scale.set(3, 3);
+	splitSeperator.updateHitbox();
+	splitSeperator.visible = false;
+	foreground.add(splitSeperator);
+
+	// PHASE 2 BG
+	wall = new FlxSprite(-1400, -700).loadGraphic(Paths.image("stages/larry/wall"));
+	wall.antialiasing = ClientPrefs.globalAntialiasing;
+	wall.alpha = 0;
+	add(wall);
+
+	spin = new FlxSprite(0, -100).loadGraphic(Paths.image("stages/larry/MWspinnything"));
+	spin.antialiasing = ClientPrefs.globalAntialiasing;
+	spin.scale.set(2.5, 2.5);
+	spin.updateHitbox();
+	spin.alpha = 0;
+	add(spin);
+
+	bridgeBg = new FlxSprite(-1400, -700);
+	bridgeBg.antialiasing = ClientPrefs.globalAntialiasing;
+	bridgeBg.frames = Paths.getSparrowAtlas("stages/larry/boilstage");
+	bridgeBg.animation.addByPrefix("idle", "boilstage", 24, true);
+	bridgeBg.animation.play("idle");
+	bridgeBg.alpha = 0;
+	add(bridgeBg);
+
+	spikes = new FlxSprite(-1400, -700).loadGraphic(Paths.image("stages/larry/spikes"));
+	spikes.antialiasing = ClientPrefs.globalAntialiasing;
+	spikes.alpha = 0;
+	add(spikes);
+
+	bridge = new FlxSprite(-1400, -700).loadGraphic(Paths.image("stages/larry/bridge"));
+	bridge.antialiasing = ClientPrefs.globalAntialiasing;
+	bridge.alpha = 0;
+	add(bridge);
+
+	overlay = new FlxSprite().loadGraphic(Paths.image("stages/larry/overlay"));
+	overlay.antialiasing = ClientPrefs.globalAntialiasing;
+	overlay.scale.set(0.7, 0.7);
+	overlay.updateHitbox();
+	overlay.alpha = 0;
+	overlay.cameras = [game.camOther];
+	add(overlay);
+
+	darkOverlay = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/larry/darkOverlay"));
+	darkOverlay.antialiasing = ClientPrefs.globalAntialiasing;
+	foreground.add(darkOverlay);
+
+	blackoutGame = new FlxSprite(-3000, -3000).makeGraphic(100, 1, FlxColor.BLACK);
+    blackoutGame.setGraphicSize(100000, 100000);
+	blackoutGame.updateHitbox();
+    blackoutGame.visible = false;
+    foreground.add(blackoutGame);
+
+	if (ClientPrefs.cutscenes) {
+		introCutscene = new PsychVideoSprite();
+		introCutscene.canSkip = true;
+		introCutscene.scale.set(0.7, 0.675);
+		introCutscene.addCallback('onFormat',()->{
+			introCutscene.cameras = [game.camOther];
+			introCutscene.updateHitbox();
+			introCutscene.screenCenter();
+		});
+		introCutscene.addCallback('onEnd',()->{
+			game.camHUD.visible = true;
+			game.camGame.visible = true;
+			game.startCountdown();
+			introCutscene.kill();
+		});
+		introCutscene.load(Paths.video('cutscenes/MyWorldIntro'));
+		introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+	}
+
+	ending = new PsychVideoSprite();
+	ending.scale.set(0.7, 0.675);
+    ending.addCallback('onFormat',()->{
+        ending.cameras = [game.camOther];
+        ending.updateHitbox();
+        ending.screenCenter();
+    });
+    ending.addCallback('onEnd',()->{
+		ending.kill();
+    });
+    ending.load(Paths.video('transitions/MyWorldEnding'), [PsychVideoSprite.muted]);
+    ending.antialiasing = ClientPrefs.globalAntialiasing;
+    add(ending);
+	// ending.play();
+	// ending.pause();
+	// ending.visible = false;
+
+	transition = new PsychVideoSprite();
+	transition.scale.set(0.7, 0.675);
+    transition.addCallback('onFormat',()->{
+        transition.cameras = [game.camHUD];
+        transition.updateHitbox();
+        transition.screenCenter();
+    });
+    transition.addCallback('onEnd',()->{
+		transition.kill();
+    });
+    transition.load(Paths.video('transitions/MyWorldTransition'), [PsychVideoSprite.muted]);
+    transition.antialiasing = ClientPrefs.globalAntialiasing;
+    add(transition);
+	// transition.play();
+	// transition.pause();
+	// transition.visible = false;
+
+	blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    blackout.visible = false;
+    add(blackout);
+}
+
+function onCreatePost(){
+	game.gf.scale.set(0.9, 0.9);
+
+	bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-150);
+
+	if (ClientPrefs.lowQuality)
+		dad.load("106-2");
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+		game.camGame.visible = false;
+
+		add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "my world" + Std.string(FlxG.random.int(1, 2));
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+	return Function_Continue;
+}
+
+function onUpdate(delta:Float) {
+	spin.angle -= delta * 150;
+	if (doPdDrain)  {
+		game.health -= delta / pdDrainStrength;
+		overlay.alpha = 1.75 - game.health;
+	}
+}
+
+function onEvent(name, value1, value2) {
+	if (name == "Song Events") {
+		switch (value1) {
+			case "larry-cane":
+				if (ClientPrefs.lowQuality) return;
+
+				dad.load("106-Back");
+				dad.playAnim("ouch", true);
+				dad.specialAnim = true;
+				dad.animation.finishCallback = (s) -> {
+					dad.load("106-2");
+					dad.playAnim("idle", true);
+					dad.animation.finishCallback = null;
+				}
+			case "larry-pbj":
+				if (ClientPrefs.lowQuality) return;
+				
+				dad.load("106-PBJ");
+				dad.playAnim("hur", true);
+				dad.specialAnim = true;
+				dad.animation.finishCallback = (s) -> {
+					dad.load("106-2");
+					dad.playAnim("idle", true);
+					dad.animation.finishCallback = null;
+					if (doPdDrain)
+						dad.cameraPosition[0] += 650;
+				}
+			case "larry-hump":
+				if (ClientPrefs.lowQuality) return;
+
+				dad.load("106-Hump");
+				dad.playAnim("hur", true);
+				dad.specialAnim = true;
+				dad.animation.finishCallback = (s) -> {
+					dad.load("106-2");
+					dad.playAnim("idle", true);
+					dad.animation.finishCallback = null;
+					if (doPdDrain)
+						dad.cameraPosition[0] += 650;
+				}
+			case "startTransitionFade":
+				blackoutGame.visible = true;
+				blackoutGame.alpha = 0;
+				FlxTween.tween(blackoutGame, {"alpha": 1}, 0.25);
+			case "startTransition":
+				transition.visible = true;
+				transition.play();
+			case "midscroll":
+				if (ClientPrefs.middleScroll) return;
+
+				for (i in 0...4) {
+					function updateNotePosition(newPos) {
+						game.modManager.setValue("transform" + Std.string(i) + "X", newPos.value, 0);
+						game.modManager.setValue("transform" + Std.string(i) + "X", newPos.value - 500, 1);
+					}
+
+					FlxTween.num(game.modManager.getValue("transform" + Std.string(i) + "X"), 
+						game.modManager.getValue("transform" + Std.string(i) + "X", 0) - 300, 1, 
+						{ease: FlxEase.expoOut, onUpdate: updateNotePosition});
+
+					
+				}
+			case "unmidscroll":
+				if (ClientPrefs.middleScroll) return;
+
+				for (i in 0...4) {
+					function updateNotePosition(newPos) {
+						game.modManager.setValue("transform" + Std.string(i) + "X", newPos.value, 0);
+						game.modManager.setValue("transform" + Std.string(i) + "X", newPos.value, 1);
+					}
+
+					FlxTween.num(game.modManager.getValue("transform" + Std.string(i) + "X"), 
+						game.modManager.getValue("transform" + Std.string(i) + "X", 0) + 300, 10, 
+						{ease: FlxEase.expoOut, onUpdate: updateNotePosition});
+				}
+			case "blackflash":
+				game.camOther.flash(FlxColor.BLACK, 1);
+			case "changeStage":
+				game.defaultCamZoom = 0.4;
+
+				darkOverlay.visible = false;
+
+				FoundationGameOverSubstate.videoOverride = "my world-pd";
+
+				PlayState.instance.isCameraOnForcedPos = true;
+				PlayState.instance.camFollow.x = 500;
+				PlayState.instance.camFollow.y = 500;
+
+				game.camGame.zoom = 0.4;
+				game.camGame.focusOn(PlayState.instance.camFollow);
+
+				boyfriend.x = 850;
+				boyfriend.y = 600;
+
+				dad.x = -750;
+				dad.y = -320;
+
+				boyfriend.load("dbfsplit");
+				boyfriend.playAnim("idle", true);
+
+				bg.visible = false;
+				light.visible = false;
+				light2.visible = false;
+
+				bfShadow.visible = false;
+				gfShadow.visible = false;
+
+				if (spinTween != null) spinTween.cancel();
+
+				wall.alpha = 0;
+				spin.alpha = 0;
+				bridgeBg.alpha = 0;
+				bridge.alpha = 0;
+				spikes.alpha = 0;
+
+				splitBGTop.visible = true;
+				splitBGBottom.visible = true;
+				splitTop.visible = true;
+				splitBottom.visible = true;
+				splitSeperator.visible = true;
+
+				dad.load("106-Split");
+				dad.playAnim("idle", true);
+
+				gf.visible = false;
+			case "changeStage2":
+				game.camOther.flash(FlxColor.BLACK, 1);
+
+				PlayState.instance.isCameraOnForcedPos = false;
+
+				boyfriend.load("dbfcum");
+				boyfriend.playAnim("idle", true);
+
+				dad.load("106-2");
+				dad.playAnim("idle", true);
+
+				splitBGTop.visible = false;
+				splitBGBottom.visible = false;
+				splitTop.visible = false;
+				splitBottom.visible = false;
+				splitSeperator.visible = false;
+
+				wall.alpha = 1;
+				spin.alpha = 1;
+				bridgeBg.alpha = 1;
+				bridge.alpha = 1;
+				spikes.alpha = 1;
+			
+				spinTween = FlxTween.tween(spin, {"alpha": 0.5, "y": 100}, 1, {ease: FlxEase.cubicInOut, type: 4});
+
+				game.defaultCamZoom = 0.3;
+
+				boyfriend.x = 1450;
+				boyfriend.y = 820;
+
+				dad.x = -350;
+				dad.y = 330;
+				dad.cameraPosition[0] += 650;
+
+				gf.load("myworldgf");
+				gf.x += 300;
+				gf.color = 0xFF777777;
+			case "pdStart":
+				game.camOther.flash(FlxColor.BLACK, 1);
+				blackoutGame.visible = false;
+
+				game.health = 2;
+				doPdDrain = true;
+				game.hud.style = "Decay";
+				PlayState.instance.healthGain = 0;
+			case "endingCutscene":
+				ending.visible = true;
+				ending.play();
+				ending.alpha = 0;
+				FlxTween.tween(ending, {"alpha": 1}, 1);
+			case "gfAppear":
+				gf.visible = true;
+				gf.playAnim("teleport", true);
+				gf.specialAnim = true;
+			case "black":
+				blackout.visible = true;
+		}
+	}
+}

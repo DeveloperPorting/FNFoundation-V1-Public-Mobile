@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				52,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "what",
+			"indices": [],
+			"name": "swhat"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				67,
+				3
+			],
+			"anim": "suck",
+			"fps": 24,
+			"name": "suck my dick",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				76,
+				14
+			],
+			"anim": "hate",
+			"fps": 24,
+			"name": "ifhy",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sammy_anims",
+	"position": [
+		-80,
+		-100
+	],
+	"healthicon": "sammy",
+	"flip_x": false,
+	"healthbar_colors": [
+		93,
+		90,
+		192
+	],
+	"camera_position": [
+		30,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

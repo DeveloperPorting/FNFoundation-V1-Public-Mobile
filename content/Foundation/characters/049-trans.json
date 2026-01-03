@@ -1,0 +1,38 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"cameraOffset": [
+				-30,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "shank",
+			"indices": [],
+			"name": "shank"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/049whippinit",
+	"position": [
+		-120,
+		-153
+	],
+	"healthicon": "049",
+	"flip_x": false,
+	"healthbar_colors": [
+		179,
+		36,
+		187
+	],
+	"camera_position": [
+		250,
+		-160
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

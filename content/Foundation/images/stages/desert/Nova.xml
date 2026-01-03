@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Nova.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="nova0000" x="2" y="2" width="530" height="769" frameX="-10" frameY="-12" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0001" x="2" y="2" width="530" height="769" frameX="-10" frameY="-12" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0002" x="534" y="2" width="536" height="781" frameX="0" frameY="-1" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0003" x="534" y="2" width="536" height="781" frameX="0" frameY="-1" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0004" x="1072" y="2" width="530" height="780" frameX="-4" frameY="-1" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0005" x="1072" y="2" width="530" height="780" frameX="-4" frameY="-1" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0006" x="2" y="785" width="526" height="781" frameX="-8" frameY="0" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0007" x="2" y="785" width="526" height="781" frameX="-8" frameY="0" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0008" x="530" y="785" width="520" height="779" frameX="-14" frameY="-2" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0009" x="530" y="785" width="520" height="779" frameX="-14" frameY="-2" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0010" x="530" y="785" width="520" height="779" frameX="-14" frameY="-2" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0011" x="530" y="785" width="520" height="779" frameX="-14" frameY="-2" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0012" x="530" y="785" width="520" height="779" frameX="-14" frameY="-2" frameWidth="540" frameHeight="782"/>
+	<SubTexture name="nova0013" x="530" y="785" width="520" height="779" frameX="-14" frameY="-2" frameWidth="540" frameHeight="782"/>
+</TextureAtlas>

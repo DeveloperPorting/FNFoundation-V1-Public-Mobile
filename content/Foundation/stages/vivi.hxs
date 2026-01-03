@@ -1,0 +1,611 @@
+addHaxeLibrary("FoundationPauseMenuSubstate", "meta.states.substate");
+
+var sammy:Character;
+var sammyDark:Character;
+var trans049:Character;
+
+var creature:FlxSprite;
+
+var singAnimations:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
+var altsingAnimations:Array<String> = ['singLEFT-alt', 'singDOWN-alt', 'singUP-alt', 'singRIGHT-alt'];
+
+var fetch = false;
+var alarm:Bool = false;
+var canFuckingMove:Bool = false;
+var lastTurn:Bool = false;
+
+var blackout:FlxSprite;
+var blackoutGame:FlxSprite;
+var whiteout:FlxSprite;
+var otherwhiteout:FlxSprite;
+
+var light:FlxSprite;
+
+var blackoutBG1:FlxSprite;
+var blackoutBG2:FlxSprite;
+var blackoutBG3:FlxSprite;
+
+var screenflash:FlxSprite;
+var screenEye:FlxSprite;
+var screenNoise:FlxSprite;
+var screenBack:FlxSprite;
+var bg:FlxSprite;
+var bg2:FlxSprite;
+var desk:FlxSprite;
+var flash:FlxSprite;
+
+var introCutscene:PsychVideoSprite;
+var transition:PsychVideoSprite;
+
+var oldBfPos = [];
+
+var preloadies = [
+    "049-trans",
+    "049-2",
+    "zammyIntro",
+    "zammyOut",
+    "zammyProper"
+];
+
+var cureStrength:Float = 0.1;
+var cureStacks = [];
+var needStackUpdate:Bool = false;
+var doCure:Bool = true;
+
+var mainBGColor = 0xFFAAAAAA;
+
+function onLoad() {
+    if (ClientPrefs.lowQuality)
+        preloadies = [
+            "049-2",
+            "zammyIntro",
+            "zammyOut",
+            "zammyProper"
+        ];
+
+    for (pre in preloadies) {
+        Character.preload(pre);
+        var preloads = PlayState.instance.returnCharacterPreload(pre);
+        for (load in preloads) {
+            Paths.image(load.path);
+        }
+    }
+    // Preload note sound
+    Paths.sound('notes/noteCure');
+
+    screenNoise = new FlxSprite(-450, -400);
+    screenNoise.antialiasing = false;
+    screenNoise.frames = Paths.getSparrowAtlas("stages/sammyroombutDARKER/literalnoise");
+    screenNoise.animation.addByPrefix("noise", "noise", 24, !ClientPrefs.highBitrate);
+    screenNoise.animation.play("noise");
+    screenNoise.scale.set(5, 5);
+    screenNoise.updateHitbox();
+    screenNoise.alpha = 0.75;
+    add(screenNoise);
+
+    screenEye = new FlxSprite(200, -500);
+    screenEye.antialiasing = ClientPrefs.globalAntialiasing;
+    screenEye.scale.set(0.85, 0.85);
+    screenEye.updateHitbox();
+    screenEye.frames = Paths.getSparrowAtlas("stages/sammyroombutDARKER/VivisectionEyeShit");
+    screenEye.animation.addByPrefix("049-1", "049_1", 24, false);
+    screenEye.animation.addByPrefix("049-2", "049_2", 24, false);
+    screenEye.animation.addByPrefix("bf", "BF", 24, false);
+    screenEye.animation.addByPrefix("appear", "summon", 24, false);
+    screenEye.animation.addByPrefix("disappear", "leave", 24, false);
+    screenEye.visible = false;
+    add(screenEye);
+
+    blackoutBG1 = new FlxSprite(-1650, -800).loadGraphic(Paths.image("stages/sammyroombutDARKER/blackoutBG1"));
+    blackoutBG1.antialiasing = ClientPrefs.globalAntialiasing;
+    blackoutBG1.visible = false;
+    add(blackoutBG1);
+
+    screenflash = new FlxSprite(-1650, -800);
+    screenflash.antialiasing = ClientPrefs.globalAntialiasing;
+    screenflash.alpha = 0;
+    screenflash.frames = Paths.getSparrowAtlas("stages/sammyroombutDARKER/flashie");
+    screenflash.animation.addByPrefix("flash", "flashie", 24, true);
+    screenflash.animation.play("flash");
+    add(screenflash);
+
+    blackoutBG2 = new FlxSprite(-1650, -800).loadGraphic(Paths.image("stages/sammyroombutDARKER/blackoutBG2"));
+    blackoutBG2.antialiasing = ClientPrefs.globalAntialiasing;
+    blackoutBG2.visible = false;
+    add(blackoutBG2);
+
+    blackoutBG3 = new FlxSprite(-1650, -800).loadGraphic(Paths.image("stages/sammyroombutDARKER/blackoutBG3"));
+    blackoutBG3.antialiasing = ClientPrefs.globalAntialiasing;
+    blackoutBG3.visible = false;
+    add(blackoutBG3);
+
+    screenBack = new FlxSprite(-1300, -650).loadGraphic(Paths.image("stages/sammyroombutDARKER/screenBack"));
+    screenBack.antialiasing = ClientPrefs.globalAntialiasing;
+	screenBack.scale.set(1,1);
+	screenBack.updateHitbox();
+	add(screenBack);
+    
+    bg = new FlxSprite(-1300, -650).loadGraphic(Paths.image("stages/sammyroombutDARKER/theroom"));
+    bg.color = mainBGColor;
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+	add(bg);
+
+	desk = new FlxSprite(50,250);
+    desk.color = mainBGColor;
+    desk.antialiasing = ClientPrefs.globalAntialiasing;
+    desk.frames = Paths.getSparrowAtlas("stages/sammyroom/desk");
+    desk.animation.addByPrefix("idle", 'desk', 24, false);
+    desk.alpha = 1;
+    add(desk);
+
+    otherwhiteout = new FlxSprite(-2000, -2000).makeGraphic(1, 1, FlxColor.WHITE);
+    otherwhiteout.setGraphicSize(10000, 10000);
+    otherwhiteout.alpha = 0;
+    add(otherwhiteout);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(oppShadow);
+
+    sammyShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(sammyShadow);
+
+    if (!ClientPrefs.lowQuality) {
+        trans049 = new Character(-1100, -100, "049-trans");
+        trans049.antialiasing = ClientPrefs.globalAntialiasing;
+        trans049.visible = false;
+        add(trans049);
+
+        creature = new FlxSprite(-825, -500);
+        creature.antialiasing = ClientPrefs.globalAntialiasing;
+        creature.color = 0xFFFF7F81;
+        creature.frames = Paths.getSparrowAtlas("stages/sammyroombutDARKER/spookyassshit");
+        creature.animation.addByPrefix("idle", "049-2_idle", 24, false);
+        creature.animation.addByPrefix("perish", "049-2_dies", 24, false);
+        creature.visible = false;
+        add(creature);
+    }
+
+    sammy = new Character(-1300, 250, "sammyEvil");
+    sammy.color = 0xFF999999;
+    sammy.antialiasing = ClientPrefs.globalAntialiasing;
+    sammy.playAnim('idle', true);
+    foreground.add(sammy);
+
+    sammyDark = new Character(0, 150, "zammyIntro");
+    sammyDark.antialiasing = ClientPrefs.globalAntialiasing;
+    sammyDark.visible = false;
+    add(sammyDark);
+
+    dark = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/sammyroombutDARKER/darkgradient"));
+    dark.antialiasing = ClientPrefs.globalAntialiasing;
+    dark.visible = false;
+    foreground.add(dark);
+
+	light = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/sammyroombutDARKER/gradient"));
+    light.color = mainBGColor;
+    light.antialiasing = ClientPrefs.globalAntialiasing;
+	foreground.add(light);
+    
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    blackout.visible = false;
+    add(blackout);
+
+    blackoutGame = new FlxSprite(-2000, -2000).makeGraphic(1, 1, FlxColor.BLACK);
+    blackoutGame.setGraphicSize(10000, 10000);
+    blackoutGame.visible = false;
+    foreground.add(blackoutGame);
+
+    whiteout = new FlxSprite(-2000, -2000).makeGraphic(1, 1, FlxColor.WHITE);
+    whiteout.setGraphicSize(10000, 10000);
+    whiteout.cameras = [game.camGame];
+    whiteout.alpha = 0;
+    add(whiteout);
+
+    if (ClientPrefs.cutscenes) {
+        introCutscene = new PsychVideoSprite();
+        introCutscene.canSkip = true;
+        introCutscene.scale.set(0.7, 0.675);
+        introCutscene.addCallback('onFormat',()->{
+            introCutscene.cameras = [game.camOther];
+            introCutscene.updateHitbox();
+            introCutscene.screenCenter();
+        });
+        introCutscene.addCallback('onEnd',()->{
+            game.camHUD.visible = true;
+            game.camGame.visible = true;
+            game.startCountdown();
+            introCutscene.kill();
+        });
+        var cutsceneChoice:String = PlayState.SONG.song.toLowerCase() == "vasectomy" ? "cutscenes/VivisectionIntroAlt" : "cutscenes/VivisectionIntro";
+        introCutscene.load(Paths.video(cutsceneChoice));
+        introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    }   
+
+    transition = new PsychVideoSprite();
+    transition.scale.set(0.7, 0.675);
+    transition.addCallback('onFormat',()->{
+        transition.cameras = [game.camHUD];
+        transition.updateHitbox();
+        transition.screenCenter();
+    });
+    transition.addCallback('onEnd',()->{
+		transition.kill();
+    });
+    transition.load(Paths.video('transitions/VivisectionTransition'), [PsychVideoSprite.muted]);
+    transition.antialiasing = ClientPrefs.globalAntialiasing;
+    transition.alpha = 0;
+    add(transition);
+    // transition.play();
+    // transition.pause();
+    // transition.visible = false;
+
+    PlayState.instance.useSingArrays = true;
+
+    if (PlayState.SONG.song.toLowerCase() == "vasectomy")
+        cureStrength *= 1.15;
+
+    if (ClientPrefs.easyMechanics)
+        cureStrength /= 1.75;
+
+    FoundationGameOverSubstate.videoOverride = "vivisection";
+}
+
+function onCreatePost() {
+    oldBfPos = [boyfriend.x, boyfriend.y];
+
+    if (ClientPrefs.lowQuality)
+        dad.load("049-2");
+
+    bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight);
+    oppShadow.setPosition(game.dad.x+175, game.dad.y+game.dad.frameHeight-175);
+    sammyShadow.setPosition(sammy.x+400, sammy.y+sammy.frameHeight-150);
+
+    game.boyfriend.color = mainBGColor;
+    game.gf.color = mainBGColor;
+}
+
+function onPause() {
+    FoundationPauseMenuSubstate.renderOverride = "vivisection";
+}
+
+function doStartCountdown() {
+    if ((PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == "vasectomy") && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if ((PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == "vasectomy") && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+        game.camGame.visible = false;
+
+        add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "vivisection" + Std.string(FlxG.random.int(1, 2));
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+    return Function_Continue;
+}
+
+
+function onSectionHit() {
+    var bfTurn = PlayState.SONG.notes[curSection].mustHitSection;
+    if (bfTurn != lastTurn && canFuckingMove) {
+        if (bfTurn == true)
+            screenEye.animation.play("bf");
+        else
+            screenEye.animation.play("049-2");
+    }
+
+    lastTurn = PlayState.SONG.notes[curSection].mustHitSection;
+}
+
+function onBeatHit() {
+    if (fetch)
+        dad.playAnim("fetch", true);
+
+    if (curBeat % 2 == 0) {
+        if (sammy.animation.curAnim != null) if (!StringTools.startsWith(sammy.animation.curAnim.name, 'sing')) sammy.playAnim("idle" + sammy.idleSuffix);
+        if (sammyDark.animation.curAnim != null) if (!StringTools.startsWith(sammyDark.animation.curAnim.name, 'sing')) sammyDark.playAnim("idle");
+    }
+
+    if (curBeat % 2== 0) {    
+        creature.animation.play("idle");
+        desk.animation.play("idle");
+    }
+
+    if (curBeat % 4 == 0 && alarm) {
+        camOther.flash(0x33FF0000, 1);
+    }
+}
+
+function onCountdownTick(swagCounter) {
+    if (swagCounter % 2 == 0) {
+        sammy.playAnim("idle", true);
+        desk.animation.play("idle");
+    }
+}
+
+function onUpdate(elapsed:Float) {
+    if (!doCure) return;
+    
+    for (stack in 0...cureStacks.length) {
+        cureStacks[stack] -= elapsed;
+        if (cureStacks[stack] <= 0) {
+            cureStacks[stack] = null;
+            needStackUpdate = true;
+            continue;
+        }
+
+        game.health -= cureStrength * elapsed;
+    }
+
+    if (needStackUpdate) {
+        cureStacks = cureStacks.filter((s) -> s != null);
+        needStackUpdate = false;
+
+        if (cureStacks.length <= 0)
+            game.hud.style = "Orange";
+    }
+}
+
+function onEvent(eventName, value1, value2){
+    switch(eventName){
+        case "Song Events": //im just gonna put everything in 1 event cuz im lazy lol!!!!!
+            switch(value1){
+                case "eyeAppear":
+                    PlayState.instance.isCameraOnForcedPos = true;
+                    PlayState.instance.camFollow.x = 500;
+                    PlayState.instance.camFollow.y = 300;
+
+                    game.defaultCamZoom = 0.4;
+
+                    FlxTween.tween(screenNoise, {"alpha": 0}, 0.15);
+
+                    if (ClientPrefs.lowQuality) return;
+                    screenEye.visible = true;
+                    screenEye.animation.play("appear", true);
+                    screenEye.animation.finishCallback = (anim) -> {
+                        screenEye.animation.play("049-1", true);
+                        screenEye.y += 50;
+                        canFuckingMove = true;
+                        screenEye.animation.finishCallback = null;
+                    };
+                    screenEye.alpha = 1;
+                    // FlxTween.tween(screenEye, {"alpha": 1}, 0.25);
+                case "eyeDisappear":
+                    PlayState.instance.isCameraOnForcedPos = false;
+                    game.defaultCamZoom = 0.5;
+
+                    if (ClientPrefs.lowQuality) {
+                        FlxTween.tween(screenNoise, {"alpha": 1}, 0.75);
+                        return;
+                    }
+
+                    canFuckingMove = false;
+                    screenEye.animation.play("disappear", true);
+                    screenEye.animation.finishCallback = (anim) -> {
+                        screenEye.animation.finishCallback = null;
+                        FlxTween.tween(screenNoise, {"alpha": 1}, 0.75);
+                    };
+                case "fetch":
+                    fetch = true;
+                case "stay":
+                    fetch = false;
+                    dad.playAnim("stay", true);
+                    dad.specialAnim = true;
+                case "startTransitionFade":
+                    blackoutGame.visible = true;
+                    blackoutGame.alpha = 0;
+                    FlxTween.tween(blackoutGame, {"alpha": 1}, 0.25);
+                case "startTransition":
+                    FlxTween.tween(transition, {"alpha": 1}, 1);
+                    transition.play();
+                case "aura": // i really fucking wish there was a better way to do 
+                             // this but this fella is not fucking cooperating with me
+                             // no matter what i fucking try -xeight
+                    
+                    if (ClientPrefs.lowQuality) return;
+                    dad.visible = false;
+                    trans049.visible = true;
+
+                    dad.load("049-2");
+                    dad.playAnim("idle", true);
+
+                    trans049.playAnim("shank", true);
+                    trans049.specialAnim = true;
+                    trans049.animation.finishCallback = (anim) -> {
+                        new FlxTimer().start(0.15, (t) -> {
+                            trans049.visible = false;
+                            dad.visible = true;
+                            trans049.animation.finishCallback = null;
+                        });
+                    }
+                case "dark":
+                    FoundationGameOverSubstate.videoOverride = "vivisection-sammy";
+
+                    PlayState.instance.snapCamFollowToPos(sammyDark.getMidpoint().x-350, sammyDark.getMidpoint().y-350);
+
+                    blackoutGame.visible = false;
+                    blackout.visible = true;
+                    blackout.alpha = 0.75;
+
+                    boyfriend.x = 325;
+                    boyfriend.y = 350;
+                    camHUD.flash(FlxColor.BLACK, 4);
+
+                    sammy.visible = false;
+                    dad.visible = false;
+                    boyfriend.visible = false;
+                    gf.visible = false;
+                    sammyDark.visible = true;
+
+                    screenNoise.visible = false;
+                    bg.visible = false;
+                    screenBack.visible = false;
+                    light.visible = false;
+                    desk.visible = false;
+
+                    oppShadow.visible = false;
+				    bfShadow.visible = false;
+				    gfShadow.visible = false;
+                    sammyShadow.visible = false;
+
+                    blackoutBG1.visible = true;
+
+                    foreground.add(dark);
+                case "screenflash":
+                    sammyDark.playAnim("crash", true);
+                    sammyDark.specialAnim = true;
+                    FlxTween.tween(screenflash, {"alpha": 1}, 0.5);
+                    FlxTween.tween(whiteout, {"alpha": 1}, 1);
+                case "lightsOut":
+                    if (value2 == "in") {
+                        blackout.alpha = 1;
+                    }
+                    else if (value2 == "out") {
+                        mainBGColor = 0xFFFFFFFF;
+                        whiteout.visible = false;
+                        screenflash.visible = false;
+
+                        screenNoise.x -= 300;
+                        screenNoise.scale.set(7, 7);
+                        screenNoise.updateHitbox();
+
+                        screenNoise.visible = true;
+                        sammyDark.load("zammyProper");
+                        sammyDark.playAnim("idle", true);
+                        blackout.visible = false;
+                        blackoutBG1.visible = false;
+                        blackoutBG2.visible = true;
+                        camOther.flash(FlxColor.WHITE, 1);
+                    }
+                    else if (value2 == "outRed") {
+                        sammyDark.color = 0xFFFF7F81;
+                        screenNoise.color = FlxColor.RED;
+                        alarm = true;
+
+                        if (!ClientPrefs.lowQuality)
+                            creature.visible = true;
+                        blackoutBG2.visible = false;
+                        blackoutBG3.visible = true;
+                        camOther.flash(FlxColor.RED, 1);
+                    }
+                case "crashout":
+                    FlxTween.tween(otherwhiteout, {"alpha": 1}, 0.5);
+                    FlxTween.color(sammyDark, 0.5, 0xFFFF7F81, FlxColor.BLACK);
+                    if (!ClientPrefs.lowQuality)
+                        FlxTween.color(creature, 0.5, 0xFFFF7F81, FlxColor.BLACK);
+
+                    sammyDark.x -= 200; // im fucking done dude
+                    sammyDark.load("zammyOut");
+                    sammyDark.playAnim("out");
+
+                    if (!ClientPrefs.lowQuality) {
+                        creature.x += 50;
+                        creature.animation.play("perish", true);
+                    }
+
+                    alarm = false;
+                case "light":
+                    FoundationGameOverSubstate.videoOverride = "vivisection";
+
+                    otherwhiteout.visible = false;
+                    whiteout.visible = false;
+                    screenflash.visible = false;
+                    
+                    sammy.playAnim("idle-alt");
+                    sammy.idleSuffix = "-alt";
+                    sammy.recalculateDanceIdle();
+
+                    if (!ClientPrefs.lowQuality)
+                        creature.visible = false;
+                    
+                    // screenNoise.color = FlxColor.WHITE;
+                    // screenNoise.x += 300;
+                    // screenNoise.scale.set(5, 5);
+                    // screenNoise.updateHitbox();
+                    screenNoise.visible = false;
+
+                    camGame.zoom = 0.5;
+                    game.defaultCamZoom = 0.5;
+                    blackoutBG3.visible = false;
+
+                    if (!ClientPrefs.lowQuality) {
+                        dad.load("049-1");
+                        dad.playAnim("idle", true);
+                    }
+                    boyfriend.x = oldBfPos[0];
+                    boyfriend.y = oldBfPos[1];
+
+                    sammy.visible = true;
+                    dad.visible = true;
+                    boyfriend.visible = true;
+                    gf.visible = true;
+                    sammyDark.visible = false;
+
+                    camHUD.flash(FlxColor.WHITE, 2);
+                    bg.visible = true;
+                    screenBack.visible = true;
+                    desk.visible = true;
+                    light.visible = true;
+                    dark.visible = false;
+
+                    desk.color = FlxColor.WHITE;
+                    bg.color = FlxColor.WHITE;
+                    game.gf.color = FlxColor.WHITE;
+                    game.boyfriend.color = FlxColor.WHITE;
+
+                    oppShadow.visible = true;
+				    bfShadow.visible = true;
+				    gfShadow.visible = true;
+                    sammyShadow.visible = true;
+                case "black":
+                    doCure = false;
+                    blackout.alpha = 1;
+                    blackout.visible = true;
+            }
+        case "Change Singers":
+            var rawSingers = value2.split(",");
+            var singers = [];
+            for (sing in rawSingers) {
+                switch (sing) {
+                    case "049":
+                        fetch = false;
+                        singers.push(dad);
+                    case "sammy":
+                        fetch = true;
+                        singers.push(sammy);
+                    case "sammyDark":
+                        singers.push(sammyDark);
+                }
+            }
+        
+            if (value1 == "0") 
+                PlayState.instance.opponentSingArray = singers;
+            else if (value1 == "1")
+                PlayState.instance.playerSingArray = singers;
+    }
+}
+
+function goodNoteHit(note:Note) {
+    if (note.noteType == "Cure Note") {
+        game.hud.style = "Parasite";
+        cureStacks.push(FlxG.random.int(15, 30));
+        FlxG.sound.play(Paths.sound('notes/noteCure'));
+    }
+}

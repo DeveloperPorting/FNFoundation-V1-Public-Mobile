@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "sidle"
+		},
+		{
+			"offsets": [
+				-24,
+				23
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "sright"
+		},
+		{
+			"offsets": [
+				54,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "sleft"
+		},
+		{
+			"offsets": [
+				-26,
+				328
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "sup"
+		},
+		{
+			"offsets": [
+				21,
+				-142
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "sdown"
+		},
+		{
+			"offsets": [
+				105,
+				73
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "shooting",
+			"indices": [],
+			"name": "sshoot"
+		},
+		{
+			"offsets": [
+				-9,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "reload",
+			"indices": [],
+			"name": "saim"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				52,
+				15
+			],
+			"anim": "what",
+			"fps": 24,
+			"name": "swhat",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sammy",
+	"position": [
+		-80,
+		-100
+	],
+	"healthicon": "sammy",
+	"flip_x": false,
+	"healthbar_colors": [
+		93,
+		90,
+		192
+	],
+	"camera_position": [
+		30,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

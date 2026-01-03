@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Blinknotes.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue0000" x="5" y="5" width="177" height="177"/>
+	<SubTexture name="purple0000" x="187" y="5" width="177" height="185"/>
+	<SubTexture name="red0000" x="5" y="195" width="177" height="186"/>
+	<SubTexture name="green0000" x="187" y="195" width="185" height="178"/>
+</TextureAtlas>

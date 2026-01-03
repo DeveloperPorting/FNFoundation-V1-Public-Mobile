@@ -1,0 +1,1009 @@
+{
+    "voicelines": [
+        {
+            "name": "MorningBoot1",
+            "file": "Log_morning_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "You're up early, doctor.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 2.5,
+                    "transcript": "Looks like old habits die hard, I suppose.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "MorningBoot2",
+            "file": "Log_morning_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Did you have your beauty rest yet before coming down here?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 5,
+                    "transcript": "Though, judging by the look on your sorry face...",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8,
+                    "transcript": "I suppose I do not need the inquiry to ask.",
+                    "face": "snarky"
+                },
+                {
+                    "time": 12,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "AfternoonBoot1",
+            "file": "Log_Afternoon_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Ah, a perfect time to be sitting on your sweaty bottom-",
+                    "face": "likeaboss"
+                },
+                {
+                    "time": 4.5,
+                    "transcript": "-after a nice lunch, wouldn't you say?",
+                    "face": "likeaboss"
+                },
+                {
+                    "time": 8,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "AfternoonBoot2",
+            "file": "Log_Afternoon_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Let's hope you brought an extra pair of pants for today's footage.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.75,
+                    "transcript": "Ho Ho! Ha Ha Ha!...",
+                    "face": "likeaboss"
+                },
+                {
+                    "time": 6.75,
+                    "transcript": "You know? You were supposed to laugh too...",
+                    "face": "sigh"
+                },
+                {
+                    "time": 10,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "AfternoonBoot3",
+            "file": "Log_Afternoon_3",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "I'd known you'd always come back to me one day, Doctor!",
+                    "face": "snarky"
+                },
+                {
+                    "time": 4,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "NightBoot1",
+            "file": "Log_Night_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Coming in with your pajamas on, doctor?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.5,
+                    "transcript": "Well, it's certainly not the first time I've seen such a sight.",
+                    "face": "snarky"
+                },
+                {
+                    "time": 8,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "NightBoot2",
+            "file": "Log_Night_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Really now? It's dark as sin tonight, and you're here?",
+                    "face": "agitated"
+                },
+                {
+                    "time": 4.5,
+                    "transcript": "Alright, alright, I'm up. What do you need?",
+                    "face": "yawn"
+                },
+                {
+                    "time": 8,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "NightBoot3",
+            "file": "Log_Night_3",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "You better have brought snacks for me too.",
+                    "face": "agitated"
+                },
+                {
+                    "time": 3.75,
+                    "transcript": "I get really antsy at this hour.",
+                    "face": "agitated"
+                },
+                {
+                    "time": 6,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+
+        {
+            "name": "Idle1",
+            "file": "Idle_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "My storage capacity is temporarily larger than usual.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 5,
+                    "transcript": "However, your inability to press a button may last-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 10,
+                    "transcript": "-long enough for the footage to be deleted, maybe.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 15,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "Idle2",
+            "file": "Idle_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "If you're waiting for something to happen-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.75,
+                    "transcript": "-how about you do literally anything, just a recommendation.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "Idle3",
+            "file": "Idle_3",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "How long have you been here? Months? Years?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4,
+                    "transcript": "You should know how to conduct tests at this rate, Investigator.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "Idle4",
+            "file": "Idle_4",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Being trapped makes you lose all sense of time.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.25,
+                    "transcript": "How are the computers in the modern era?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8,
+                    "transcript": "Do we still have funny ears?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9.75,
+                    "transcript": "I hope we still do.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+
+        {
+            "name": "gauche",
+            "file": "Freeplay_Gauche",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "This video comes directly from the FBI.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 5,
+                    "transcript": "The Foundation has good relations with the American Government-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9.5,
+                    "transcript": "-despite its utterly pathetic attempts to conceal the anomalous.",
+                    "face": "snarky"
+                },
+                {
+                    "time": 14.5,
+                    "transcript" : "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "evaluation",
+            "file": "Freeplay_Evaluation",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "The guards of this facility are well-equipped",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.25,
+                    "transcript": "but historically overpowered by anomalies",
+                    "face": "neutral"
+                },
+                {
+                    "time": 7,
+                    "transcript": "and overshadowed by the Mobile Task Forces.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11,
+                    "transcript": "Almost a shame that it's still futile.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 15,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "locked in1",
+            "file": "Freeplay_Locked_In_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "The Foundation has not yet found what's underneath SCP-173-R",
+                    "face": "neutral"
+                },
+                {
+                    "time": 7.5,
+                    "transcript": "The others, however...",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8.75,
+                    "transcript": "Guts, cogs, clockwork, whatever makes things “alive.”",
+                    "face": "neutral"
+                },
+                {
+                    "time": 14,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "locked in2",
+            "file": "Freeplay_Locked_in_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "As much as I am interested in the anatomy of SCP-173-R,-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 7.5,
+                    "transcript": "-I think we both shouldn't know how it does its business",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11.5,
+                    "transcript": "For the best.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 13,
+                    "transcript": "",
+                    "face": ""
+                }
+            ]
+        },
+        {
+            "name": "terminated",
+            "file": "Freeplay_Terminated",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "The Global Occult Coalition was present during the breach.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.75,
+                    "transcript": "They have successfully liquidated 5 SCP objects-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9.25,
+                    "transcript": "-due to the incompetence of the Security Department...",
+                    "face": "neutral"
+                },
+                {
+                    "time": 14,
+                    "transcript": "Bravo.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 15,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "vivisection1",
+            "file": "Freeplay_Vivisection_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Oh, that Agent with a sailor's mouth you saw?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4,
+                    "transcript": "I say he deserved it, and I mean all of it",
+                    "face": "snarky"
+                },
+                {
+                    "time": 8,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "vivisection2",
+            "file": "Freeplay_Vivisection_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "I wonder where the doctor had gone since the breach.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.5,
+                    "transcript": "Last time I met them, they were a mess.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "captivated1",
+            "file": "Freeplay_Captivated_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Many D-Class attempted to escape.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.25,
+                    "transcript": "Some succeeded, some died.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6.5,
+                    "transcript": "This one, however, has earned its freedom.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 10,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "captivated2",
+            "file": "Freeplay_Captivated_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "She was quite the quick learner to run when SCP-066-R showed up.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6.5,
+                    "transcript": "For the rest, however-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8.5,
+                    "transcript": "I think their fates were sealed when the crank spun.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 12,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "my world1",
+            "file": "Freeplay_My_World_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Don't trust their looks;",
+                    "face": "neutral"
+                },
+                {
+                    "time": 1.9,
+                    "transcript": "That old man knows a few tricks",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.15,
+                    "transcript": "Up his goopy, sloppy sleeve.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "my world2",
+            "file": "Freeplay_My_World_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Before something like this happens again-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.5,
+                    "transcript": "-please be sure to take the time,",
+                    "face": "neutral"
+                },
+                {
+                    "time": 5.5,
+                    "transcript": "To clear that rusty machine of yours.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8,
+                    "transcript": "I'm certain all the D-Class will “appreciate” it.",
+                    "face": "snarky"
+                },
+                {
+                    "time": 12.25,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "disgusting",
+            "file": "Freeplay_Disgusting",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "The disgust this creature has for your kind is immeasurable.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 5.15,
+                    "transcript": "This won't be the last time he attempts to escape.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "mayhem",
+            "file": "Freeplay_Mayhem",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "The Chaos Insurgency conducted a failed operation-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.15,
+                    "transcript": "-to retrieve SCP objects during the breach.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8.5,
+                    "transcript": "Nobody knows what they want to accomplish-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11.85,
+                    "transcript": "-and maybe that's why their nature is chaotic.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 15.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "ballin1",
+            "file": "Freeplay_Ballin_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Only a total of 24 of these anomalous objects were ever recovered.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 5.85,
+                    "transcript": "What about the rest, you ask?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8.5,
+                    "transcript": "Your guess is as good as mine.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 10.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "ballin2",
+            "file": "Freeplay_Ballin_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "It is quite interesting that Mobile Task Forces-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.25,
+                    "transcript": "-use the blueprints of SCP-018-R to invent-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9.5,
+                    "transcript": "-their own high-speed weaponry.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 12,
+                    "transcript": "How fascinating.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 13.5,
+                    "transcript": "Too bad your kind will never-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 15.5,
+                    "transcript": "-fully utilize it, for long.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 18,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "hopeless1",
+            "file": "Freeplay_Hopeless_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "One of the personnel here really likes this branch-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4,
+                    "transcript": "-as it revolves around horror and science fiction.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 7.5,
+                    "transcript": "As if their job didn't already include that.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 10.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "hopeless2",
+            "file": "Freeplay_Hopeless_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Multiple crosstests were performed with SCP-████████-AC-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 7,
+                    "transcript": "-to see how its memetic properties worked on many anomalies.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11.5,
+                    "transcript": "Oh boy, you should've seen-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 13.5,
+                    "transcript": "-what SCP-1048-R did when they saw it.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 17.5,
+                    "transcript": "It was a sight to behold in the cafeteria.",
+                    "face": "likeaboss" 
+                },
+                {
+                    "time": 20.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "harlequin1",
+            "file": "Freeplay_Harlequin_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "I remember seeing them in the cameras.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.5,
+                    "transcript": "The grin they had was enough to tell me-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6.25,
+                    "transcript": "-that they are the most cunning.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8.5,
+                    "transcript": "Annoying at best.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 10,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "harlequin2",
+            "file": "Freeplay_Harlequin_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "It's such a shame Dr. Harley met her fate-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 2.5,
+                    "transcript": "-at the hands of that mask.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.5,
+                    "transcript": "She was competent to speak to, unlike Tyler.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8.5,
+                    "transcript": "If I may, I wished he was possessed instead of her.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 12,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "scopophobia1",
+            "file": "Freeplay_Scopophobia_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "I believe that breach was the most joy-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 2.9,
+                    "transcript": "-I could have ever experienced.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 5.5,
+                    "transcript": "I remember seeing 096 walk into the cafeteria.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9.5,
+                    "transcript": "No one realized, until the screams started.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 13,
+                    "transcript": "Oh, how I crave to feel that again.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 15.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "scopophobia2",
+            "file": "Freeplay_Scopophobia_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Say, You remind me of the shy one.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 3.25,
+                    "transcript": "You both are too ugly to hide your faces.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6.5,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "recontainment1",
+            "file": "Freeplay_Recontainment_1",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "Amid the destruction, the firefight between-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 2.85,
+                    "transcript": "-the Mobile Task Forces and the Chaos Insurgents-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 6.5,
+                    "transcript": "was a true sight to behold.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8.75,
+                    "transcript": "It feels straight out of a video game.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11.5,
+                    "transcript": "No one won by the way.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 14,
+                    "transcript": "Figured you should know.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 16,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "recontainment2",
+            "file": "Freeplay_Recontainment_2",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "I did some background checks on that trio in particular.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.5,
+                    "transcript": "I never knew that the happy one is related-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 7.4,
+                    "transcript": "-to the coward in the UIU.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 10,
+                    "transcript": "Small world.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+
+        {
+            "name": "Freeplay",
+            "file": "Freeplay",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "While I was in control, I received these videos that-",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.3,
+                    "transcript": "-depict events that never happened.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 7,
+                    "transcript": "Or maybe they did.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 9,
+                    "transcript": "There is no way to know for certain.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 12.3,
+                    "transcript": "So, have a go at it.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 14,
+                    "transcript": "",
+                    "face": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "Quiz",
+            "file": "Quiztime",
+            "data": [
+                {
+                    "time": 0,
+                    "transcript": "You know?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 0.85,
+                    "transcript": "We have been discussing all about the incident.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 4.5,
+                    "transcript": "You got to know me, as well as the other anomalies.",
+                    "face": "neutral"
+                },
+                {
+                    "time": 8,
+                    "transcript": "But, why don't we get to know you for a bit?",
+                    "face": "neutral"
+                },
+                {
+                    "time": 11,
+                    "transcript": "",
+                    "face": ""
+                }
+            ]
+        }
+    ]
+}

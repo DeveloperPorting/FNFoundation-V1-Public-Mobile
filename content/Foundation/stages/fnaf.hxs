@@ -1,0 +1,205 @@
+var introCutscene:PsychVideoSprite;
+var transition:PsychVideoSprite;
+
+var impactFrame:FlxSprite;
+
+var blackoutGame:FlxSprite;
+var blackout:FlxSprite;
+
+var preloadies = [
+    "sammyanims"
+];
+
+function onLoad() {
+    if (ClientPrefs.lowQuality) preloadies = [];
+    // just in case
+    for (pre in preloadies) {
+        Character.preload(pre);
+        var preloads = PlayState.instance.returnCharacterPreload(pre);
+        for (load in preloads) {
+            Paths.image(load.path);
+        }
+    }
+
+	//haha mtf like male to female
+	//var bg:FlxSprite = new FlxSprite(-750, -650).loadGraphic(Paths.image("stages/mtf/gateB"));
+	//bg.scale.set(0.7,0.7);
+	////bg.updateHitbox();
+	//add(bg);
+
+	var bg:FlxSprite = new FlxSprite(-1300, -650).loadGraphic(Paths.image("stages/sammyroom/terminated"));
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+	bg.scale.set(1,1);
+	bg.updateHitbox();
+	//bg.screenCenter(Y);
+	add(bg);
+
+	desk = new FlxSprite(50,250);
+    desk.antialiasing = ClientPrefs.globalAntialiasing;
+    desk.frames = Paths.getSparrowAtlas("stages/sammyroom/desk");
+    desk.animation.addByPrefix("idle", 'desk', 24, false);
+    desk.animation.play("idle");
+    desk.scale.set(1,1);
+    desk.alpha = 1;
+    add(desk);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(oppShadow);
+
+	var light:FlxSprite = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/sammyroom/terminatedlight"));
+    light.antialiasing = ClientPrefs.globalAntialiasing;
+	light.scale.set(1,1);
+	light.alpha = 0.7;
+	light.updateHitbox();
+	//light.screenCenter(Y);
+	foreground.add(light);
+
+    impactFrame = new FlxSprite(-1300, -650).loadGraphic(Paths.image('stages/sammyroom/impact'));
+    impactFrame.antialiasing = ClientPrefs.globalAntialiasing;
+    impactFrame.visible = false;
+    foreground.add(impactFrame);
+
+    blackoutGame = new FlxSprite(-2000, -2000).makeGraphic(1, 1, FlxColor.BLACK);
+    blackoutGame.setGraphicSize(10000, 10000);
+    blackoutGame.visible = false;
+    foreground.add(blackoutGame);
+
+	introCutscene = new PsychVideoSprite();
+    introCutscene.canSkip = true;
+    introCutscene.scale.set(0.7, 0.675);
+    introCutscene.addCallback('onFormat',()->{
+        introCutscene.cameras = [game.camOther];
+        introCutscene.updateHitbox();
+        introCutscene.screenCenter();
+    });
+    introCutscene.addCallback('onEnd',()->{
+        game.camHUD.visible = true;
+        game.camGame.visible = true;
+        game.startCountdown();
+		introCutscene.kill();
+    });
+    introCutscene.load(Paths.video('cutscenes/TerminatedIntro'));
+    introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+
+    transition = new PsychVideoSprite();
+	transition.scale.set(0.7, 0.675);
+    transition.addCallback('onFormat',()->{
+        transition.cameras = [game.camHUD];
+        transition.updateHitbox();
+        transition.screenCenter();
+    });
+    transition.addCallback('onEnd',()->{
+		transition.kill();
+        blackoutGame.visible = false;
+    });
+    transition.load(Paths.video('transitions/TerminatedTransition'), [PsychVideoSprite.muted]);
+    transition.antialiasing = ClientPrefs.globalAntialiasing;
+    add(transition);
+    // transition.play();
+    // transition.pause();
+    // transition.visible = false;
+
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+	blackout.visible = false;
+    blackout.cameras = [game.camOther];
+    add(blackout);
+}
+
+function onCreatePost() {
+    bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight);
+    oppShadow.setPosition(game.dad.x, game.dad.y+game.dad.frameHeight-150);
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+        game.camGame.visible = false;
+
+        add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "terminated";
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+    return Function_Continue;
+}
+
+function onBeatHit(){
+    if (curBeat % 2== 0) {    
+        desk.animation.play("idle");
+    }
+}
+
+
+function onCountdownTick(swagCounter) {
+    if (swagCounter % 2 == 0) {
+        desk.animation.play("idle");
+    }
+}
+
+function opponentNoteHit(note:Note) {
+    if (note.noteType == "Bullet Note") {
+        game.isCameraOnForcedPos = true;
+        game.camGame.shake(0.05, 1/20);
+        game.camHUD.visible = false;
+        if (ClientPrefs.easyMechanics)
+            game.health -= 1.15 * Math.pow((game.health / 3), 1.1);
+        else
+            game.health -= 1.25 * Math.pow((game.health / 2), 1.1);
+        impactFrame.visible = true;
+        new FlxTimer().start(1/10, (t) ->  {
+            game.isCameraOnForcedPos = false;
+            game.camHUD.visible = true;
+            impactFrame.visible = false;
+            game.boyfriend.specialAnim = true;
+            game.boyfriend.playAnim("hurt", true);
+        });
+    }
+}
+
+function onEvent(n, v1, v2) {
+    if (n == "Song Events") {
+        switch (v1) {
+            case "startTransitionFade":
+                blackoutGame.visible = true;
+                blackoutGame.alpha = 0;
+                FlxTween.tween(blackoutGame, {"alpha": 1}, 0.25);
+            case "startTransition":
+                FlxTween.tween(transition, {"alpha": 1}, 1);
+                transition.visible = true;
+                transition.play();
+            case "hate":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("sammyanims");
+                dad.playAnim("hate", true);
+                dad.specialAnim = true;
+            case "nvm":
+                if (ClientPrefs.lowQuality) return;
+
+                trace('yo');
+                dad.load("sammy");
+                dad.playAnim("idle");
+            case "black":
+                blackout.visible = true;
+        }
+    }
+}

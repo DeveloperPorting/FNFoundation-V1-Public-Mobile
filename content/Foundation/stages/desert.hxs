@@ -1,0 +1,249 @@
+addHaxeLibrary('FoundationMainMenuState', 'meta.states');
+addHaxeLibrary('FoundationOfficeState', 'meta.states');
+
+var eva:FlxSprite;
+var nova:FlxSprite;
+var byan:FlxSprite;
+var oscar:FlxSprite;
+var glizzly:FlxSprite;
+
+var fire:FlxSprite;
+
+var introCutscene:PsychVideoSprite;
+var introTransition:PsychVideoSprite;
+var endCutscene:PsychVideoSprite;
+
+var blackout:FlxSprite;
+
+function onLoad() {
+    var bg:FlxSprite = new FlxSprite(-1500, -1200).loadGraphic(Paths.image("stages/desert/sky"));
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+    bg.scale.set(1,1);
+    bg.updateHitbox();
+    bg.scrollFactor.set(0.7,0.7);
+    add(bg);
+
+    var backersand:FlxSprite = new FlxSprite(-1500, -1000).loadGraphic(Paths.image("stages/desert/backersand"));
+    backersand.antialiasing = ClientPrefs.globalAntialiasing;
+    backersand.scale.set(0.9,0.9);
+    backersand.updateHitbox();
+    backersand.scrollFactor.set(0.8,0.8);
+    add(backersand);
+
+    var sand:FlxSprite = new FlxSprite(-1500, -1000).loadGraphic(Paths.image("stages/desert/sand"));
+    sand.antialiasing = ClientPrefs.globalAntialiasing;
+    sand.scale.set(0.9,0.9);
+    sand.updateHitbox();
+    sand.scrollFactor.set(0.9,0.9);
+    add(sand);
+
+    var crash:FlxSprite = new FlxSprite(-1500, -1000).loadGraphic(Paths.image("stages/desert/crash"));
+    crash.antialiasing = ClientPrefs.globalAntialiasing;
+    crash.scale.set(0.9,0.9);
+    crash.updateHitbox();
+    add(crash);
+
+    if (!ClientPrefs.lowQuality) {
+      fire = new FlxSprite(1500, -400);
+      fire.antialiasing = ClientPrefs.globalAntialiasing;
+      fire.frames = Paths.getSparrowAtlas('stages/desert/planefireooo');
+      fire.animation.addByPrefix("idle", "fire", 24);
+      fire.animation.play("idle");
+      add(fire);
+
+      eva = new FlxSprite(-400, 100);
+      eva.antialiasing = ClientPrefs.globalAntialiasing;
+      eva.frames = Paths.getSparrowAtlas('stages/desert/Eva');
+      eva.animation.addByPrefix('eva', 'eva', 24, false);
+      add(eva);
+
+      nova = new FlxSprite(2000, 400);
+      nova.antialiasing = ClientPrefs.globalAntialiasing;
+      nova.frames = Paths.getSparrowAtlas('stages/desert/Nova');
+      nova.animation.addByPrefix('nova', 'nova', 24, false);
+      add(nova);
+
+      byan = new FlxSprite(1700, 550);
+      byan.antialiasing = ClientPrefs.globalAntialiasing;
+      byan.frames = Paths.getSparrowAtlas('stages/desert/Byan');
+      byan.animation.addByPrefix('byan', 'byan', 24, false);
+      add(byan);
+
+      oscar = new FlxSprite(-1000, 400);
+      oscar.antialiasing = ClientPrefs.globalAntialiasing;
+      oscar.frames = Paths.getSparrowAtlas('stages/desert/oscar');
+      oscar.animation.addByPrefix('oscar', 'oscar', 24, false);
+      add(oscar);
+
+      glizzly = new FlxSprite(1400, 450);
+      glizzly.antialiasing = ClientPrefs.globalAntialiasing;
+      glizzly.scale.set(1, 1);
+      glizzly.frames = Paths.getSparrowAtlas('stages/desert/glizzly');
+      glizzly.animation.addByPrefix('glizzly', 'glizzly', 24, false);
+      add(glizzly);
+    }
+
+    var cacti:FlxSprite = new FlxSprite(-1500, -1000).loadGraphic(Paths.image("stages/desert/cacti"));
+    cacti.antialiasing = ClientPrefs.globalAntialiasing;
+    cacti.scale.set(0.9,0.9);
+    cacti.updateHitbox();
+    cacti.scrollFactor.set(0.9,0.9);
+    foreground.add(cacti);
+
+    var gradient:FlxSprite = new FlxSprite(-1500, -1000).loadGraphic(Paths.image("stages/desert/gradient"));
+    gradient.antialiasing = ClientPrefs.globalAntialiasing;
+    gradient.scale.set(0.9,0.9);
+    gradient.updateHitbox();
+    foreground.add(gradient);
+
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    add(blackout);
+
+    if (ClientPrefs.cutscenes) {
+      introCutscene = new PsychVideoSprite();
+      introCutscene.canSkip = true;
+      introCutscene.scale.set(0.7, 0.675);
+      introCutscene.addCallback('onFormat',()->{
+          introCutscene.cameras = [game.camOther];
+          introCutscene.updateHitbox();
+          introCutscene.screenCenter();
+      });
+      introCutscene.addCallback('onEnd',()->{
+          game.camHUD.visible = true;
+          game.startCountdown();
+          introCutscene.kill();
+      });
+      introCutscene.load(Paths.video('cutscenes/GaucheIntro'));
+      introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    }
+
+    introTransition = new PsychVideoSprite();
+    introTransition.canSkip = false;
+    introTransition.scale.set(0.7, 0.675);
+    introTransition.addCallback('onFormat',()->{
+      introTransition.cameras = [game.camOther];
+      introTransition.updateHitbox();
+      introTransition.screenCenter();
+    });
+    introTransition.addCallback('onEnd',()->{
+        game.camHUD.visible = true;
+        game.camGame.visible = true;
+        introTransition.kill();
+        blackout.visible = false;
+        camOther.flash(FlxColor.BLACK, 1);
+    });
+    introTransition.load(Paths.video('transitions/GaucheTransition'));
+    introTransition.antialiasing = ClientPrefs.globalAntialiasing;
+    add(introTransition);
+    // introTransition.play();
+    // introTransition.pause();
+    // introTransition.visible = false;
+
+    if (ClientPrefs.cutscenes) {
+      endCutscene = new PsychVideoSprite();
+      endCutscene.canSkip = true;
+      endCutscene.scale.set(0.7, 0.675);
+      endCutscene.addCallback('onFormat',()->{
+        endCutscene.cameras = [game.camOther];
+        endCutscene.updateHitbox();
+        endCutscene.screenCenter();
+      });
+      endCutscene.addCallback('onEnd',()->{
+          endCutscene.kill();
+          blackout.visible = true;
+          FlxG.save.data.foundation.finishedGauche = true;
+          if (PlayState.introSequence) 
+            FlxG.switchState(new FoundationMainMenuState());
+          else {
+            FlxG.switchState(new FoundationOfficeState());
+            FlxG.sound.playMusic(Paths.music("079"));
+          }
+
+          PlayState.introSequence = false;
+      });
+      endCutscene.load(Paths.video('cutscenes/GaucheOutro'));
+      endCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+      // add(endCutscene);
+    }
+}
+
+function doStartCountdown() {
+  if (!PlayState.seenCutscene && ClientPrefs.cutscenes)
+    return Function_Stop;
+}
+
+function presongCutscene() {
+  if (!PlayState.seenCutscene && ClientPrefs.cutscenes) {
+    game.camHUD.visible = false;
+    game.camGame.visible = false;
+
+    add(introCutscene);
+    game.inCutscene = true;    
+    introCutscene.play();
+  }
+}
+
+function onCreatePost() {
+  game.hud.style = "Blue";
+
+  bfShadow = new FlxSprite(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-150).loadGraphic(Paths.image("BFShadow"));
+  add(bfShadow);
+
+  oppShadow = new FlxSprite(game.dad.x, game.dad.y+game.dad.frameHeight-150).loadGraphic(Paths.image("OppShadow"));
+  add(oppShadow);
+}
+
+function onBeatHit() {
+  if (curBeat % 2 == 0) {
+    animateSillies();
+  }
+}
+
+function onCountdownTick(swagCounter) {
+  if (swagCounter % 2 == 0) {
+    animateSillies();
+  }
+}
+
+function onSongStart() {
+  game.camOther.flash(FlxColor.BLACK, 1);
+  introTransition.visible = true;
+  introTransition.play();
+}
+
+function onEndSong() {
+  if (ClientPrefs.cutscenes) {
+    add(endCutscene);
+    endCutscene.play();
+  }
+  else {
+    FlxG.save.data.foundation.finishedGauche = true;
+    if (PlayState.introSequence) 
+      FlxG.switchState(new FoundationMainMenuState());
+      else {
+        FlxG.switchState(new FoundationOfficeState());
+        FlxG.sound.playMusic(Paths.music("079"));
+      }
+  }
+  if (!PlayState.isStoryMode && !PlayState.introSequence) {
+    ComputerVoicelines.neededFreeplay = "gauche";
+    ComputerVoicelines.flags.push("freeplay_voiceline");
+  }
+  return Function_Stop;
+}
+
+function animateSillies() {
+  if (ClientPrefs.lowQuality) return;
+
+  eva.animation.play('eva', true);
+  nova.animation.play('nova', true);
+  byan.animation.play('byan', true);
+  oscar.animation.play('oscar', true);
+  glizzly.animation.play('glizzly', true);
+}
+
+function onEvent(n, v1, v2) {
+	if (n == "Song Events" && v1 == "black")
+		blackout.visible = true;
+}

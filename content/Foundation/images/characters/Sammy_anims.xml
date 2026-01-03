@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Sammy_anims.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ifhy0000" x="2" y="2" width="587" height="789" frameX="-85" frameY="-28" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0001" x="2" y="2" width="587" height="789" frameX="-85" frameY="-28" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0002" x="591" y="2" width="569" height="787" frameX="-100" frameY="-30" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0003" x="591" y="2" width="569" height="787" frameX="-100" frameY="-30" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0004" x="1162" y="2" width="619" height="783" frameX="-32" frameY="-34" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0005" x="1162" y="2" width="619" height="783" frameX="-32" frameY="-34" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0006" x="1783" y="2" width="727" height="791" frameX="-1" frameY="-9" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0007" x="1783" y="2" width="727" height="791" frameX="-1" frameY="-9" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0008" x="2512" y="2" width="703" height="786" frameX="-6" frameY="-14" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0009" x="2512" y="2" width="703" height="786" frameX="-6" frameY="-14" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0010" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0011" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0012" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0013" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0014" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0015" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0016" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0017" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0018" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0019" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0020" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0021" x="3217" y="2" width="703" height="784" frameX="-6" frameY="-16" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0022" x="3922" y="2" width="709" height="789" frameX="0" frameY="-11" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0023" x="4633" y="2" width="643" height="783" frameX="-19" frameY="-17" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0024" x="4633" y="2" width="643" height="783" frameX="-19" frameY="-17" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0025" x="5278" y="2" width="594" height="789" frameX="-41" frameY="-11" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0026" x="5278" y="2" width="594" height="789" frameX="-41" frameY="-11" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0027" x="5874" y="2" width="644" height="808" frameX="-140" frameY="-9" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0028" x="5874" y="2" width="644" height="808" frameX="-140" frameY="-9" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0029" x="6520" y="2" width="634" height="811" frameX="-139" frameY="-6" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0030" x="6520" y="2" width="634" height="811" frameX="-139" frameY="-6" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0031" x="7156" y="2" width="633" height="814" frameX="-139" frameY="-3" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0032" x="7156" y="2" width="633" height="814" frameX="-139" frameY="-3" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0033" x="7156" y="2" width="633" height="814" frameX="-139" frameY="-3" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0034" x="7156" y="2" width="633" height="814" frameX="-139" frameY="-3" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0035" x="7156" y="2" width="633" height="814" frameX="-139" frameY="-3" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0036" x="7156" y="2" width="633" height="814" frameX="-139" frameY="-3" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0037" x="2" y="818" width="642" height="817" frameX="-131" frameY="0" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0038" x="2" y="818" width="642" height="817" frameX="-131" frameY="0" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0039" x="646" y="818" width="661" height="803" frameX="-137" frameY="-14" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0040" x="646" y="818" width="661" height="803" frameX="-137" frameY="-14" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0041" x="1309" y="818" width="657" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0042" x="1309" y="818" width="657" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0043" x="1968" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0044" x="1968" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0045" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0046" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0047" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0048" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0049" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0050" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0051" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0052" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0053" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0054" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0055" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0056" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0057" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0058" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0059" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0060" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="ifhy0061" x="2626" y="818" width="656" height="805" frameX="-138" frameY="-12" frameWidth="798" frameHeight="817"/>
+	<SubTexture name="suck my dick0000" x="3284" y="818" width="587" height="789" frameX="-78" frameY="-17" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0001" x="3284" y="818" width="587" height="789" frameX="-78" frameY="-17" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0002" x="3873" y="818" width="552" height="786" frameX="-91" frameY="-20" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0003" x="4427" y="818" width="552" height="786" frameX="-91" frameY="-20" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0004" x="4981" y="818" width="703" height="778" frameX="0" frameY="-28" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0005" x="4981" y="818" width="703" height="778" frameX="0" frameY="-28" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0006" x="5686" y="818" width="679" height="780" frameX="-11" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0007" x="5686" y="818" width="679" height="780" frameX="-11" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0008" x="6367" y="818" width="678" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0009" x="6367" y="818" width="678" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0010" x="7047" y="818" width="682" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0011" x="7047" y="818" width="682" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0012" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0013" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0014" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0015" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0016" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0017" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0018" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0019" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0020" x="2" y="1637" width="683" height="780" frameX="-15" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0021" x="687" y="1637" width="689" height="782" frameX="-13" frameY="-24" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0022" x="1378" y="1637" width="689" height="782" frameX="-13" frameY="-24" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0023" x="2069" y="1637" width="658" height="777" frameX="-37" frameY="-29" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0024" x="2729" y="1637" width="658" height="777" frameX="-37" frameY="-29" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0025" x="3389" y="1637" width="655" height="779" frameX="-36" frameY="-27" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0026" x="3389" y="1637" width="655" height="779" frameX="-36" frameY="-27" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0027" x="4046" y="1637" width="659" height="781" frameX="-35" frameY="-25" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0028" x="4707" y="1637" width="659" height="781" frameX="-35" frameY="-25" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0029" x="5368" y="1637" width="565" height="780" frameX="-131" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0030" x="5368" y="1637" width="565" height="780" frameX="-131" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0031" x="5935" y="1637" width="565" height="780" frameX="-131" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0032" x="5935" y="1637" width="565" height="780" frameX="-131" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0033" x="6502" y="1637" width="582" height="780" frameX="-114" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0034" x="6502" y="1637" width="582" height="780" frameX="-114" frameY="-26" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0035" x="7086" y="1637" width="642" height="764" frameX="-41" frameY="-42" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0036" x="7086" y="1637" width="642" height="764" frameX="-41" frameY="-42" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0037" x="2" y="2421" width="670" height="764" frameX="-10" frameY="-42" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0038" x="2" y="2421" width="670" height="764" frameX="-10" frameY="-42" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0039" x="674" y="2421" width="550" height="764" frameX="-131" frameY="-42" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0040" x="1226" y="2421" width="793" height="803" frameX="-131" frameY="-3" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0041" x="2021" y="2421" width="793" height="803" frameX="-131" frameY="-3" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0042" x="2816" y="2421" width="792" height="805" frameX="-131" frameY="-1" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0043" x="3610" y="2421" width="750" height="805" frameX="-131" frameY="-1" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0044" x="4362" y="2421" width="757" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0045" x="5121" y="2421" width="757" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0046" x="5880" y="2421" width="757" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0047" x="6639" y="2421" width="757" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0048" x="7398" y="2421" width="757" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0049" x="2" y="3229" width="824" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0050" x="828" y="3229" width="991" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0051" x="1821" y="3229" width="899" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0052" x="1821" y="3229" width="899" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0053" x="2722" y="3229" width="887" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0054" x="3611" y="3229" width="868" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0055" x="4481" y="3229" width="891" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0056" x="5374" y="3229" width="871" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0057" x="5374" y="3229" width="871" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0058" x="6247" y="3229" width="878" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="suck my dick0059" x="7127" y="3229" width="907" height="806" frameX="-131" frameY="0" frameWidth="1122" frameHeight="806"/>
+	<SubTexture name="swhat0000" x="2" y="4037" width="784" height="812" frameX="0" frameY="0" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0001" x="2" y="4037" width="784" height="812" frameX="0" frameY="0" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0002" x="788" y="4037" width="784" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0003" x="788" y="4037" width="784" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0004" x="1574" y="4037" width="774" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0005" x="1574" y="4037" width="774" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0006" x="1574" y="4037" width="774" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0007" x="1574" y="4037" width="774" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0008" x="1574" y="4037" width="774" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+	<SubTexture name="swhat0009" x="1574" y="4037" width="774" height="801" frameX="-13" frameY="-11" frameWidth="797" frameHeight="812"/>
+</TextureAtlas>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Oscar.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="oscar0000" x="2" y="2" width="1106" height="1246" frameX="-1" frameY="-22" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0001" x="2" y="2" width="1106" height="1246" frameX="-1" frameY="-22" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0002" x="1110" y="2" width="1122" height="1267" frameX="0" frameY="-2" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0003" x="1110" y="2" width="1122" height="1267" frameX="0" frameY="-2" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0004" x="2234" y="2" width="1106" height="1268" frameX="-1" frameY="0" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0005" x="2234" y="2" width="1106" height="1268" frameX="-1" frameY="0" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0006" x="2" y="1272" width="1098" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0007" x="2" y="1272" width="1098" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0008" x="1102" y="1272" width="1092" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0009" x="1102" y="1272" width="1092" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0010" x="1102" y="1272" width="1092" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0011" x="1102" y="1272" width="1092" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0012" x="1102" y="1272" width="1092" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+	<SubTexture name="oscar0013" x="1102" y="1272" width="1092" height="1267" frameX="-1" frameY="-1" frameWidth="1122" frameHeight="1269"/>
+</TextureAtlas>

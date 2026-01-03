@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="106PBJ.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bananloop0000" x="2" y="2" width="1043" height="1411" frameX="-82" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0001" x="1047" y="2" width="1123" height="1439" frameX="-2" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0002" x="2172" y="2" width="1133" height="1439" frameX="0" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0003" x="2172" y="2" width="1133" height="1439" frameX="0" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0004" x="3307" y="2" width="1127" height="1439" frameX="-6" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0005" x="3307" y="2" width="1127" height="1439" frameX="-6" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0006" x="4436" y="2" width="1110" height="1439" frameX="-23" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0007" x="4436" y="2" width="1110" height="1439" frameX="-23" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0008" x="5548" y="2" width="1022" height="1401" frameX="-51" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0009" x="5548" y="2" width="1022" height="1401" frameX="-51" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0010" x="6572" y="2" width="1034" height="1439" frameX="-39" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0011" x="6572" y="2" width="1034" height="1439" frameX="-39" frameY="-776" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0012" x="2" y="1443" width="2060" height="2767" frameX="-153" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0013" x="2064" y="1443" width="2012" height="2691" frameX="-201" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0014" x="4078" y="1443" width="2018" height="2713" frameX="-201" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0015" x="4078" y="1443" width="2018" height="2713" frameX="-201" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0016" x="2" y="4212" width="2163" height="2793" frameX="-194" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0017" x="2" y="4212" width="2163" height="2793" frameX="-194" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0018" x="2167" y="4212" width="2068" height="2834" frameX="-121" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0019" x="2167" y="4212" width="2068" height="2834" frameX="-121" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0020" x="4237" y="4212" width="1646" height="2802" frameX="-110" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0021" x="4237" y="4212" width="1646" height="2802" frameX="-110" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0022" x="5885" y="4212" width="2076" height="2819" frameX="-119" frameY="0" frameWidth="2357" frameHeight="2834"/>
+	<SubTexture name="bananloop0023" x="5885" y="4212" width="2076" height="2819" frameX="-119" frameY="0" frameWidth="2357" frameHeight="2834"/>
+</TextureAtlas>

@@ -1,0 +1,53 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				60,
+				270
+			],
+			"cameraOffset": [
+				30,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "rook",
+			"indices": [],
+			"name": "rook"
+		},
+		{
+			"offsets": [
+				230,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				30,
+				0
+			],
+			"anim": "noTime",
+			"loop": false,
+			"name": "donthavetime"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/recontainment/recont-ryan-rooklines",
+	"position": [
+		-280,
+		-350
+	],
+	"healthicon": "ryan",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		153,
+		51
+	],
+	"camera_position": [
+		50,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DJoe.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DJoe0000" x="2" y="2" width="653" height="851" frameX="-5" frameY="-14" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0001" x="2" y="2" width="653" height="851" frameX="-5" frameY="-14" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0002" x="657" y="2" width="655" height="859" frameX="0" frameY="-6" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0003" x="657" y="2" width="655" height="859" frameX="0" frameY="-6" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0004" x="1314" y="2" width="645" height="865" frameX="-9" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0005" x="1314" y="2" width="645" height="865" frameX="-9" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0006" x="2" y="869" width="638" height="865" frameX="-16" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0007" x="2" y="869" width="638" height="865" frameX="-16" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0008" x="642" y="869" width="636" height="865" frameX="-18" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0009" x="642" y="869" width="636" height="865" frameX="-18" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0010" x="642" y="869" width="636" height="865" frameX="-18" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0011" x="642" y="869" width="636" height="865" frameX="-18" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0012" x="642" y="869" width="636" height="865" frameX="-18" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0013" x="642" y="869" width="636" height="865" frameX="-18" frameY="0" frameWidth="658" frameHeight="865"/>
+	<SubTexture name="DJoe0014" x="2" y="2" width="653" height="851" frameX="-5" frameY="-14" frameWidth="658" frameHeight="865"/>
+</TextureAtlas>

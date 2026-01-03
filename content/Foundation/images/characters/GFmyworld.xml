@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFmyworld.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gfcrouchcombobreak0000" x="2" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0001" x="2" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0002" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0003" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0004" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0005" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0006" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0007" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0008" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchcombobreak0009" x="441" y="2" width="437" height="637"/>
+	<SubTexture name="gfcrouchdance0000" x="880" y="2" width="437" height="644" frameX="0" frameY="0" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0001" x="880" y="2" width="437" height="644" frameX="0" frameY="0" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0002" x="1319" y="2" width="426" height="637" frameX="-7" frameY="-7" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0003" x="1319" y="2" width="426" height="637" frameX="-7" frameY="-7" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0004" x="1747" y="2" width="436" height="643" frameX="-6" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0005" x="2185" y="2" width="436" height="643" frameX="-6" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0006" x="2623" y="2" width="434" height="643" frameX="-7" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0007" x="3059" y="2" width="434" height="643" frameX="-7" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0008" x="3495" y="2" width="430" height="643" frameX="-8" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0009" x="3927" y="2" width="430" height="643" frameX="-8" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0010" x="4359" y="2" width="427" height="643" frameX="-8" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0011" x="4359" y="2" width="427" height="643" frameX="-8" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0012" x="4359" y="2" width="427" height="643" frameX="-8" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfcrouchdance0013" x="4359" y="2" width="427" height="643" frameX="-8" frameY="-1" frameWidth="442" frameHeight="644"/>
+	<SubTexture name="gfteleport0000" x="4788" y="2" width="117" height="110" frameX="-370" frameY="-566" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0001" x="4788" y="2" width="117" height="110" frameX="-370" frameY="-566" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0002" x="4907" y="2" width="313" height="295" frameX="-272" frameY="-439" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0003" x="5222" y="2" width="313" height="295" frameX="-272" frameY="-439" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0004" x="5537" y="2" width="373" height="352" frameX="-243" frameY="-399" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0005" x="5912" y="2" width="367" height="386" frameX="-243" frameY="-355" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0006" x="6281" y="2" width="501" height="473" frameX="-182" frameY="-317" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0007" x="6281" y="2" width="501" height="473" frameX="-182" frameY="-317" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0008" x="6784" y="2" width="695" height="657" frameX="-87" frameY="-189" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0009" x="7481" y="2" width="684" height="720" frameX="-86" frameY="-107" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0010" x="2" y="724" width="732" height="769" frameX="-62" frameY="-70" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0011" x="736" y="724" width="732" height="769" frameX="-62" frameY="-70" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0012" x="1470" y="724" width="739" height="803" frameX="-49" frameY="-27" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0013" x="1470" y="724" width="739" height="803" frameX="-49" frameY="-27" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0014" x="2211" y="724" width="760" height="826" frameX="-38" frameY="-9" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0015" x="2973" y="724" width="762" height="719" frameX="-54" frameY="-145" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0016" x="3737" y="724" width="762" height="719" frameX="-54" frameY="-145" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0017" x="4501" y="724" width="762" height="719" frameX="-54" frameY="-145" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0018" x="5265" y="724" width="750" height="788" frameX="-53" frameY="-56" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0019" x="6017" y="724" width="830" height="867" frameX="-15" frameY="-18" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0020" x="6849" y="724" width="865" height="788" frameX="0" frameY="-56" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0021" x="2" y="1593" width="760" height="835" frameX="-38" frameY="0" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0022" x="2" y="1593" width="760" height="835" frameX="-38" frameY="0" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0023" x="764" y="1593" width="760" height="826" frameX="-38" frameY="-9" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0024" x="1526" y="1593" width="762" height="844" frameX="-54" frameY="-20" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0025" x="2290" y="1593" width="762" height="834" frameX="-54" frameY="-30" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0026" x="3054" y="1593" width="762" height="834" frameX="-54" frameY="-30" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0027" x="3818" y="1593" width="750" height="812" frameX="-53" frameY="-32" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0028" x="3818" y="1593" width="750" height="812" frameX="-53" frameY="-32" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0029" x="4570" y="1593" width="750" height="810" frameX="-53" frameY="-34" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0030" x="5322" y="1593" width="760" height="826" frameX="-38" frameY="-9" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0031" x="6084" y="1593" width="760" height="826" frameX="-38" frameY="-9" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0032" x="6846" y="1593" width="760" height="826" frameX="-38" frameY="-9" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0033" x="2" y="2439" width="762" height="830" frameX="-54" frameY="-34" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0034" x="766" y="2439" width="762" height="830" frameX="-54" frameY="-34" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0035" x="1530" y="2439" width="432" height="637" frameX="-196" frameY="-34" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0036" x="1964" y="2439" width="432" height="637" frameX="-196" frameY="-34" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0037" x="1964" y="2439" width="432" height="637" frameX="-196" frameY="-34" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0038" x="2398" y="2439" width="432" height="637" frameX="-196" frameY="-34" frameWidth="865" frameHeight="885"/>
+	<SubTexture name="gfteleport0039" x="2398" y="2439" width="432" height="637" frameX="-196" frameY="-34" frameWidth="865" frameHeight="885"/>
+</TextureAtlas>

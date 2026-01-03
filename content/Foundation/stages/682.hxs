@@ -1,0 +1,165 @@
+addHaxeLibrary('FoundationOfficeState', 'meta.states');
+addHaxeLibrary('CutsceneState', 'meta.states');
+addHaxeLibrary('KUTValueHandler', 'meta.states');
+var bg:FlxSprite;
+var light:FlxSprite;
+
+var tesla:FlxSprite;
+
+var introCutscene:PsychVideoSprite;
+var blackout:FlxSprite;
+
+var acid:Float = 0;
+var acidAdd:Float = ClientPrefs.easyMechanics ?  0.01 : 0.025;
+var doAcid:Bool = true;
+
+function onLoad() {
+    bg = new FlxSprite(-2000, -800).loadGraphic(Paths.image('stages/682/DisgustingAUGH'));
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+    add(bg);
+    
+    light = new FlxSprite(-2000, -800).loadGraphic(Paths.image('stages/682/DisgustingOvulation'));
+    light.antialiasing = ClientPrefs.globalAntialiasing;
+    foreground.add(light);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("stages/682/682"));
+    add(oppShadow);
+
+
+    tesla = new FlxSprite(-300, -1000);
+    tesla.antialiasing = ClientPrefs.globalAntialiasing;
+    tesla.frames = Paths.getSparrowAtlas('stages/682/goodtesla');
+    tesla.animation.addByPrefix("idle", "goodtesla", 24, false);
+    tesla.visible = false;
+    add(tesla);
+
+    tesla.animation.finishCallback = (anim) -> {
+        tesla.visible = false;
+    };
+
+    // Preload note sound
+    Paths.sound('notes/noteAcid');
+
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    blackout.visible = false;
+    add(blackout);
+
+    introCutscene = new PsychVideoSprite();
+    introCutscene.canSkip = true;
+    introCutscene.scale.set(0.7, 0.675);
+    introCutscene.addCallback('onFormat',()->{
+        introCutscene.cameras = [game.camOther];
+        introCutscene.updateHitbox();
+        introCutscene.screenCenter();
+    });
+    introCutscene.addCallback('onEnd',()->{
+        game.camHUD.visible = true;
+        game.camGame.visible = true;
+        game.startCountdown();
+		introCutscene.kill();
+    });
+    introCutscene.load(Paths.video('cutscenes/DisgustingIntro'));
+    introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+
+    endCutscene = new PsychVideoSprite();
+    endCutscene.canSkip = true;
+    endCutscene.scale.set(0.7, 0.675);
+    endCutscene.addCallback('onFormat',()->{
+      endCutscene.cameras = [game.camOther];
+      endCutscene.updateHitbox();
+      endCutscene.screenCenter();
+    });
+    endCutscene.addCallback('onEnd',()->{
+        // FlxG.sound.playMusic(Paths.music(KUTValueHandler.getMenuMusic()), 1, true);
+        if (PlayState.isStoryMode)
+            FlxG.switchState(new CutsceneState("credits"));
+
+        endCutscene.kill();
+    });
+    endCutscene.load(Paths.video('cutscenes/BadEnding'));
+    endCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+
+    game.defaultCamZoom = 0.45;
+}
+
+function onCreatePost(){
+	bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-100);
+    oppShadow.setPosition(game.dad.x-200, game.dad.y+game.dad.frameHeight+1000);
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene) {
+        game.camHUD.visible = false;
+        game.camGame.visible = false;
+
+        add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onEndSong() {
+    if (PlayState.isStoryMode) {
+      add(endCutscene);
+      endCutscene.play();
+      return Function_Stop;
+    }
+    else {
+        ComputerVoicelines.neededFreeplay = "disgusting";
+        ComputerVoicelines.flags.push("freeplay_voiceline");
+    }
+
+    return Function_Continue;
+  }
+
+function onBeatHit() {
+    if (curBeat % 16==0) {
+        tesla.visible = true;
+        tesla.animation.play("idle", true);
+    }
+}
+
+function goodNoteHit(note) {
+	if (note.noteType == "Acid Note") {
+        acid += acidAdd;
+        FlxG.sound.play(Paths.sound('notes/noteAcid'));
+
+        game.hud.style = "Acid";
+    }
+}
+
+function onSectionHit() {
+    if (PlayState.SONG.notes[curSection].mustHitSection) 
+        game.defaultCamZoom = 0.55;
+    else
+        game.defaultCamZoom = 0.45;
+}
+
+function onUpdate(delta:Float) {
+    if (doAcid)
+        game.health -= acid * delta;
+}
+
+function onEvent(n, v1, v2) {
+    if (n == "Song Events") {
+        if (v1 == "black") {
+            doAcid = false;
+            blackout.visible = true;
+            blackout.alpha = 0;
+            FlxTween.tween(blackout, {"alpha": 1}, 2.5);
+        }
+    }
+}

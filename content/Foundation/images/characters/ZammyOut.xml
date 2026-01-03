@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sammydies.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sammydieslol0000" x="2" y="2" width="832" height="694" frameX="-166" frameY="-57" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0001" x="836" y="2" width="895" height="686" frameX="-128" frameY="-64" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0002" x="1733" y="2" width="822" height="768" frameX="-185" frameY="-2" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0003" x="2" y="2" width="832" height="694" frameX="-166" frameY="-57" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0004" x="836" y="2" width="895" height="686" frameX="-128" frameY="-64" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0005" x="1733" y="2" width="822" height="768" frameX="-185" frameY="-2" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0006" x="2" y="2" width="832" height="694" frameX="-166" frameY="-57" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0007" x="836" y="2" width="895" height="686" frameX="-128" frameY="-64" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0008" x="1733" y="2" width="822" height="768" frameX="-185" frameY="-2" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0009" x="2" y="2" width="832" height="694" frameX="-166" frameY="-57" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0010" x="836" y="2" width="895" height="686" frameX="-128" frameY="-64" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0011" x="2557" y="2" width="858" height="775" frameX="-169" frameY="0" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0012" x="2" y="779" width="902" height="701" frameX="-133" frameY="-55" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0013" x="906" y="779" width="1091" height="693" frameX="-32" frameY="-62" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0014" x="1999" y="779" width="1082" height="775" frameX="-57" frameY="0" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0015" x="2" y="1556" width="1092" height="701" frameX="-38" frameY="-55" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0016" x="1096" y="1556" width="1155" height="693" frameX="0" frameY="-62" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0017" x="1999" y="779" width="1082" height="775" frameX="-57" frameY="0" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0018" x="2" y="1556" width="1092" height="701" frameX="-38" frameY="-55" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0019" x="1096" y="1556" width="1155" height="693" frameX="0" frameY="-62" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0020" x="1999" y="779" width="1082" height="775" frameX="-57" frameY="0" frameWidth="1155" frameHeight="775"/>
+	<SubTexture name="sammydieslol0021" x="2" y="1556" width="1092" height="701" frameX="-38" frameY="-55" frameWidth="1155" frameHeight="775"/>
+</TextureAtlas>

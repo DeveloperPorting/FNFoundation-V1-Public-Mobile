@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFscop.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gfpeekcombobreak0000" x="2" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0001" x="2" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0002" x="539" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0003" x="539" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0004" x="1076" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0005" x="1076" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0006" x="1613" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0007" x="1613" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0008" x="1613" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekcombobreak0009" x="1613" y="2" width="535" height="757"/>
+	<SubTexture name="gfpeekdance0000" x="2150" y="2" width="539" height="758" frameX="0" frameY="0" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0001" x="2150" y="2" width="539" height="758" frameX="0" frameY="0" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0002" x="2691" y="2" width="535" height="751" frameX="0" frameY="-7" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0003" x="2691" y="2" width="535" height="751" frameX="0" frameY="-7" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0004" x="3228" y="2" width="543" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0005" x="3228" y="2" width="543" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0006" x="2" y="762" width="543" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0007" x="2" y="762" width="543" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0008" x="547" y="762" width="539" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0009" x="547" y="762" width="539" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0010" x="1088" y="762" width="537" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0011" x="1088" y="762" width="537" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0012" x="1627" y="762" width="535" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+	<SubTexture name="gfpeekdance0013" x="1627" y="762" width="535" height="757" frameX="0" frameY="-1" frameWidth="543" frameHeight="758"/>
+</TextureAtlas>

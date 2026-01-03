@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Foundationsplash.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DOWNsplash0000" x="2" y="2" width="179" height="173" frameX="-17" frameY="-37" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0001" x="183" y="2" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0002" x="183" y="2" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0003" x="408" y="2" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0004" x="408" y="2" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0005" x="638" y="2" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0006" x="638" y="2" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0007" x="871" y="2" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0008" x="871" y="2" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0009" x="1098" y="2" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0010" x="1098" y="2" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0011" x="1098" y="2" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0012" x="1098" y="2" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="DOWNsplash0013" x="1098" y="2" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0000" x="1100" y="2" width="179" height="173" frameX="-17" frameY="-37" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0001" x="1281" y="2" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0002" x="1281" y="2" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0003" x="1506" y="2" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0004" x="1506" y="2" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0005" x="1736" y="2" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0006" x="1736" y="2" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0007" x="2" y="243" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0008" x="2" y="243" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0009" x="229" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0010" x="229" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0011" x="229" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0012" x="229" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="LEFTsplash0013" x="229" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0000" x="231" y="243" width="179" height="173" frameX="-17" frameY="-37" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0001" x="412" y="243" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0002" x="412" y="243" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0003" x="637" y="243" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0004" x="637" y="243" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0005" x="638" y="2" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0006" x="638" y="2" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0007" x="871" y="2" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0008" x="871" y="2" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0009" x="867" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0010" x="867" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0011" x="867" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0012" x="867" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="RIGHTsplash0013" x="867" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0000" x="869" y="243" width="179" height="173" frameX="-17" frameY="-37" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0001" x="1050" y="243" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0002" x="1050" y="243" width="223" height="223" frameX="-3" frameY="-8" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0003" x="1275" y="243" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0004" x="1275" y="243" width="228" height="229" frameX="-1" frameY="-3" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0005" x="1505" y="243" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0006" x="1505" y="243" width="231" height="239" frameX="-3" frameY="0" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0007" x="1738" y="243" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0008" x="1738" y="243" width="225" height="233" frameX="0" frameY="-1" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0009" x="1965" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0010" x="1965" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0011" x="1965" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0012" x="1965" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+	<SubTexture name="UPsplash0013" x="1965" y="243" width="0" height="0" frameX="-104" frameY="-121" frameWidth="234" frameHeight="239"/>
+</TextureAtlas>

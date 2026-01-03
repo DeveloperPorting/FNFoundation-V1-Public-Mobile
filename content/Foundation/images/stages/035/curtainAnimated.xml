@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="curtain.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Curtain_enter0000" x="2" y="2" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0001" x="1927" y="2" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0002" x="1927" y="2" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0003" x="3852" y="2" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0004" x="3852" y="2" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0005" x="5777" y="2" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0006" x="5777" y="2" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0007" x="2" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0008" x="2" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0009" x="1927" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0010" x="1927" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0011" x="3852" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0012" x="3852" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0013" x="5777" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0014" x="5777" y="1088" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0015" x="2" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0016" x="2" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0017" x="1927" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_enter0018" x="1927" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0000" x="1927" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0001" x="3852" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0002" x="3852" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0003" x="5777" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0004" x="5777" y="2174" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0005" x="2" y="3260" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0006" x="2" y="3260" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0007" x="1927" y="3260" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0008" x="1927" y="3260" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0009" x="3852" y="3260" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0010" x="3852" y="3260" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0011" x="5777" y="3260" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0012" x="2" y="4346" width="1923" height="1084"/>
+	<SubTexture name="Curtain_exit0013" x="1927" y="4346" width="1923" height="1084"/>
+</TextureAtlas>

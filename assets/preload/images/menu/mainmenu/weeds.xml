@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="weeds.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="weeds0000" x="5" y="5" width="3042" height="350" frameX="-1" frameY="-2" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0001" x="5" y="5" width="3042" height="350" frameX="-1" frameY="-2" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0002" x="5" y="361" width="3045" height="353" frameX="-1" frameY="-2" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0003" x="5" y="361" width="3045" height="353" frameX="-1" frameY="-2" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0004" x="5" y="720" width="3023" height="347" frameX="-1" frameY="-6" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0005" x="5" y="720" width="3023" height="347" frameX="-1" frameY="-6" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0006" x="5" y="1073" width="3010" height="332" frameX="-2" frameY="-8" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0007" x="5" y="1073" width="3010" height="332" frameX="-2" frameY="-8" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0008" x="5" y="1411" width="3003" height="320" frameX="-4" frameY="-6" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0009" x="5" y="1411" width="3003" height="320" frameX="-4" frameY="-6" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0010" x="5" y="1737" width="3004" height="327" frameX="0" frameY="0" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0011" x="5" y="1737" width="3004" height="327" frameX="0" frameY="0" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0012" x="5" y="2070" width="3000" height="317" frameX="-4" frameY="-9" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0013" x="5" y="2070" width="3000" height="317" frameX="-4" frameY="-9" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0014" x="5" y="2393" width="3012" height="330" frameX="-3" frameY="-7" frameWidth="3046" frameHeight="355"/>
+	<SubTexture name="weeds0015" x="5" y="2393" width="3012" height="330" frameX="-3" frameY="-7" frameWidth="3046" frameHeight="355"/>
+</TextureAtlas>

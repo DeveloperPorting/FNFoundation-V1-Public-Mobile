@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				100,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "gfmopdance"
+		},
+		{
+			"offsets": [
+				61,
+				-28
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "sad",
+			"loop": false,
+			"name": "gfmopcombobreak"
+		},
+		{
+			"offsets": [
+				61,
+				-28
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "teleport",
+			"loop": false,
+			"name": "gfmopbreakout"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GFmop",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		195,
+		20,
+		115
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

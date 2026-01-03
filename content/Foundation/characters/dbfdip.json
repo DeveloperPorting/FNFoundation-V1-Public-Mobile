@@ -1,0 +1,48 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				357,
+				427
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "taken",
+			"indices": [
+				1,
+				1
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				357,
+				427
+			],
+			"anim": "taken",
+			"fps": 24,
+			"name": "taken",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BFdiptf",
+	"position": [
+		10,
+		420
+	],
+	"healthicon": "dbf",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		70,
+		0
+	],
+	"camera_position": [
+		-306,
+		-426
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

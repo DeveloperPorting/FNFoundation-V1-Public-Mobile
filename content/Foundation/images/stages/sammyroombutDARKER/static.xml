@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="static.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="vivisectionstatic0000" x="2" y="2" width="3243" height="2102"/>
+	<SubTexture name="vivisectionstatic0001" x="2" y="2" width="3243" height="2102"/>
+	<SubTexture name="vivisectionstatic0002" x="2" y="2" width="3243" height="2102"/>
+	<SubTexture name="vivisectionstatic0003" x="3247" y="2" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0004" x="3247" y="2" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0005" x="3247" y="2" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0006" x="2" y="2106" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0007" x="2" y="2106" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0008" x="2" y="2106" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0009" x="3246" y="2106" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0010" x="3246" y="2106" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0011" x="3246" y="2106" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0012" x="2" y="4210" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0013" x="2" y="4210" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+	<SubTexture name="vivisectionstatic0014" x="2" y="4210" width="3242" height="2102" frameX="0" frameY="0" frameWidth="3243" frameHeight="2102"/>
+</TextureAtlas>

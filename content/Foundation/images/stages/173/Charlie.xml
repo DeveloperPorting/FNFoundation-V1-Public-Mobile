@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Charlie.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="charlie die0000" x="6532" y="620" width="656" height="609" frameX="0" frameY="-611" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0001" x="6532" y="620" width="656" height="609" frameX="0" frameY="-611" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0002" x="7191" y="620" width="656" height="612" frameX="0" frameY="-608" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0003" x="3" y="1241" width="653" height="614" frameX="0" frameY="-606" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0004" x="3" y="1241" width="653" height="614" frameX="0" frameY="-606" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0005" x="659" y="1241" width="634" height="592" frameX="-10" frameY="-628" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0006" x="659" y="1241" width="634" height="592" frameX="-10" frameY="-628" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0007" x="1296" y="1241" width="638" height="593" frameX="-7" frameY="-627" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0008" x="1296" y="1241" width="638" height="593" frameX="-7" frameY="-627" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0009" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0010" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0011" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0012" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0013" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0014" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0015" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0016" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0017" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0018" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0019" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0020" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0021" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0022" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0023" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0024" x="1937" y="1241" width="639" height="595" frameX="-5" frameY="-625" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0025" x="2579" y="1241" width="0" height="0" frameX="-326" frameY="-688" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0026" x="2582" y="1241" width="1140" height="1127" frameX="-149" frameY="0" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0027" x="3725" y="1241" width="1239" height="944" frameX="-211" frameY="-168" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0028" x="4967" y="1241" width="1245" height="974" frameX="-232" frameY="-137" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0029" x="6215" y="1241" width="1339" height="968" frameX="-228" frameY="-137" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0030" x="3" y="2371" width="1668" height="1079" frameX="-229" frameY="-131" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0031" x="1674" y="2371" width="1630" height="1079" frameX="-267" frameY="-131" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0032" x="3307" y="2371" width="1834" height="1138" frameX="-268" frameY="-136" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0033" x="5144" y="2371" width="1834" height="1138" frameX="-268" frameY="-136" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0034" x="3" y="3512" width="1835" height="1115" frameX="-264" frameY="-152" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0035" x="1841" y="3512" width="1847" height="1077" frameX="-252" frameY="-190" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0036" x="3691" y="3512" width="1858" height="1226" frameX="-236" frameY="-244" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0037" x="5552" y="3512" width="1885" height="1138" frameX="-209" frameY="-332" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0038" x="3" y="4741" width="897" height="567" frameX="-1198" frameY="-873" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0039" x="903" y="4741" width="892" height="523" frameX="-1198" frameY="-917" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0040" x="1798" y="4741" width="1081" height="423" frameX="-1009" frameY="-917" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0041" x="2882" y="4741" width="1115" height="551" frameX="-904" frameY="-905" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0042" x="2882" y="4741" width="1115" height="551" frameX="-904" frameY="-905" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0043" x="4000" y="4741" width="1046" height="583" frameX="-964" frameY="-808" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0044" x="4000" y="4741" width="1046" height="583" frameX="-964" frameY="-808" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0045" x="5049" y="4741" width="1028" height="622" frameX="-959" frameY="-768" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0046" x="5049" y="4741" width="1028" height="622" frameX="-959" frameY="-768" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0047" x="6080" y="4741" width="1014" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0048" x="6080" y="4741" width="1014" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0049" x="7097" y="4741" width="1013" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0050" x="7097" y="4741" width="1013" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0051" x="7097" y="4741" width="1013" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0052" x="7097" y="4741" width="1013" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0053" x="7097" y="4741" width="1013" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0054" x="7097" y="4741" width="1013" height="630" frameX="-961" frameY="-758" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0055" x="3" y="5374" width="703" height="494" frameX="-1129" frameY="-1049" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0056" x="709" y="5374" width="756" height="429" frameX="-1115" frameY="-1080" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0057" x="1468" y="5374" width="738" height="428" frameX="-1133" frameY="-1080" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0058" x="2209" y="5374" width="684" height="428" frameX="-1182" frameY="-1080" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0059" x="2896" y="5374" width="636" height="428" frameX="-1240" frameY="-1079" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0060" x="3535" y="5374" width="650" height="428" frameX="-1204" frameY="-1078" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0061" x="4188" y="5374" width="715" height="428" frameX="-1149" frameY="-1077" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0062" x="4906" y="5374" width="757" height="428" frameX="-1111" frameY="-1075" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0063" x="5666" y="5374" width="749" height="428" frameX="-1110" frameY="-1074" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0064" x="6418" y="5374" width="747" height="428" frameX="-1119" frameY="-1073" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0065" x="7168" y="5374" width="740" height="431" frameX="-1126" frameY="-1069" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0066" x="3" y="5871" width="717" height="428" frameX="-1157" frameY="-1071" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0067" x="723" y="5871" width="705" height="428" frameX="-1181" frameY="-1070" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0068" x="1431" y="5871" width="678" height="456" frameX="-1217" frameY="-1042" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0069" x="2112" y="5871" width="608" height="428" frameX="-1263" frameY="-1070" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0070" x="2723" y="5871" width="655" height="429" frameX="-1245" frameY="-1069" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0071" x="3381" y="5871" width="842" height="456" frameX="-1205" frameY="-1042" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0072" x="4226" y="5871" width="675" height="456" frameX="-1183" frameY="-1042" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0073" x="4904" y="5871" width="736" height="453" frameX="-1158" frameY="-1045" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0074" x="5643" y="5871" width="774" height="465" frameX="-1110" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0075" x="6420" y="5871" width="757" height="442" frameX="-1115" frameY="-1056" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0076" x="7180" y="5871" width="727" height="463" frameX="-1133" frameY="-1036" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0077" x="3" y="6339" width="672" height="451" frameX="-1182" frameY="-1048" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0078" x="678" y="6339" width="614" height="461" frameX="-1240" frameY="-1039" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0079" x="1295" y="6339" width="672" height="468" frameX="-1204" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0080" x="1970" y="6339" width="719" height="470" frameX="-1149" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0081" x="2692" y="6339" width="712" height="471" frameX="-1111" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0082" x="3407" y="6339" width="718" height="472" frameX="-1110" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0083" x="4128" y="6339" width="724" height="474" frameX="-1119" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0084" x="4855" y="6339" width="702" height="474" frameX="-1126" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0085" x="5560" y="6339" width="674" height="475" frameX="-1157" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0086" x="6237" y="6339" width="651" height="475" frameX="-1181" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0087" x="6891" y="6339" width="597" height="476" frameX="-1217" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0088" x="7491" y="6339" width="569" height="476" frameX="-1263" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0089" x="3" y="6818" width="592" height="476" frameX="-1245" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0090" x="598" y="6818" width="615" height="476" frameX="-1205" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0091" x="1216" y="6818" width="649" height="476" frameX="-1183" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0092" x="1868" y="6818" width="659" height="476" frameX="-1158" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0093" x="2530" y="6818" width="736" height="476" frameX="-1110" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0094" x="3269" y="6818" width="723" height="476" frameX="-1115" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0095" x="3995" y="6818" width="695" height="475" frameX="-1133" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0096" x="4693" y="6818" width="635" height="475" frameX="-1182" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0097" x="5331" y="6818" width="588" height="474" frameX="-1240" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0098" x="5922" y="6818" width="607" height="473" frameX="-1204" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0099" x="6532" y="6818" width="676" height="472" frameX="-1149" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0100" x="7211" y="6818" width="724" height="470" frameX="-1111" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0101" x="3" y="7297" width="709" height="469" frameX="-1110" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0102" x="715" y="7297" width="701" height="468" frameX="-1119" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0103" x="1419" y="7297" width="670" height="474" frameX="-1126" frameY="-1033" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie die0104" x="2579" y="1241" width="0" height="0" frameX="-326" frameY="-688" frameWidth="2102" frameHeight="1543"/>
+	<SubTexture name="charlie idle 0000" x="3" y="3" width="655" height="609" frameX="0" frameY="-5" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0001" x="3" y="3" width="655" height="609" frameX="0" frameY="-5" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0002" x="661" y="3" width="652" height="597" frameX="-3" frameY="-17" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0003" x="661" y="3" width="652" height="597" frameX="-3" frameY="-17" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0004" x="1316" y="3" width="655" height="598" frameX="0" frameY="-16" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0005" x="1316" y="3" width="655" height="598" frameX="0" frameY="-16" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0006" x="1974" y="3" width="655" height="603" frameX="0" frameY="-11" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0007" x="1974" y="3" width="655" height="603" frameX="0" frameY="-11" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0008" x="2632" y="3" width="655" height="609" frameX="0" frameY="-5" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0009" x="2632" y="3" width="655" height="609" frameX="0" frameY="-5" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0010" x="3290" y="3" width="654" height="614" frameX="-1" frameY="0" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0011" x="3290" y="3" width="654" height="614" frameX="-1" frameY="0" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0012" x="3947" y="3" width="654" height="613" frameX="-1" frameY="-1" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0013" x="3947" y="3" width="654" height="613" frameX="-1" frameY="-1" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie idle 0014" x="4604" y="3" width="654" height="612" frameX="-1" frameY="-2" frameWidth="655" frameHeight="614"/>
+	<SubTexture name="charlie walk0000" x="5261" y="3" width="657" height="603" frameX="-5" frameY="-3" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0001" x="5261" y="3" width="657" height="603" frameX="-5" frameY="-3" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0002" x="5921" y="3" width="659" height="604" frameX="-1" frameY="-2" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0003" x="5921" y="3" width="659" height="604" frameX="-1" frameY="-2" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0004" x="6583" y="3" width="660" height="598" frameX="0" frameY="-4" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0005" x="6583" y="3" width="660" height="598" frameX="0" frameY="-4" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0006" x="7246" y="3" width="656" height="607" frameX="-5" frameY="-6" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0007" x="7246" y="3" width="656" height="607" frameX="-5" frameY="-6" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0008" x="3" y="620" width="651" height="611" frameX="-11" frameY="-2" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0009" x="3" y="620" width="651" height="611" frameX="-11" frameY="-2" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0010" x="657" y="620" width="649" height="618" frameX="-13" frameY="0" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0011" x="657" y="620" width="649" height="618" frameX="-13" frameY="0" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0012" x="1309" y="620" width="649" height="616" frameX="-15" frameY="0" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0013" x="1309" y="620" width="649" height="616" frameX="-15" frameY="0" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0014" x="1961" y="620" width="646" height="614" frameX="-17" frameY="-2" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0015" x="1961" y="620" width="646" height="614" frameX="-17" frameY="-2" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0016" x="2610" y="620" width="644" height="608" frameX="-20" frameY="-7" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0017" x="2610" y="620" width="644" height="608" frameX="-20" frameY="-7" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0018" x="3257" y="620" width="647" height="610" frameX="-20" frameY="-5" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0019" x="3257" y="620" width="647" height="610" frameX="-20" frameY="-5" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0020" x="3907" y="620" width="651" height="610" frameX="-17" frameY="-5" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0021" x="3907" y="620" width="651" height="610" frameX="-17" frameY="-5" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0022" x="4561" y="620" width="653" height="615" frameX="-15" frameY="0" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0023" x="4561" y="620" width="653" height="615" frameX="-15" frameY="0" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0024" x="5217" y="620" width="654" height="612" frameX="-12" frameY="-3" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0025" x="5217" y="620" width="654" height="612" frameX="-12" frameY="-3" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0026" x="5874" y="620" width="655" height="609" frameX="-9" frameY="-6" frameWidth="668" frameHeight="618"/>
+	<SubTexture name="charlie walk0027" x="5874" y="620" width="655" height="609" frameX="-9" frameY="-6" frameWidth="668" frameHeight="618"/>
+</TextureAtlas>

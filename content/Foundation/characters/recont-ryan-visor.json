@@ -1,0 +1,53 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "visorOn",
+			"loop": false,
+			"name": "Visor_equip"
+		},
+		{
+			"offsets": [
+				-20,
+				410
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "visorOff",
+			"loop": false,
+			"name": "Visor_unequip"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/recontainment/recont-ryan-visor",
+	"position": [
+		-280,
+		-350
+	],
+	"healthicon": "ryan",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		153,
+		51
+	],
+	"camera_position": [
+		100,
+		100
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,7 @@
+Color-coded subtitles!
+Available flavors: Ryan, Rookie, Dutch, Sammy, Ulgrin
+
+Just put one of their names before your text and your shits golden!
+
+Value 1: Character name:Text
+Value 2: Time

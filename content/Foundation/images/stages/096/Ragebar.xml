@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Ragebar.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="096-10000" x="2" y="2" width="237" height="218"/>
+	<SubTexture name="096-10001" x="2" y="2" width="237" height="218"/>
+	<SubTexture name="096-10002" x="2" y="2" width="237" height="218"/>
+	<SubTexture name="096-10003" x="2" y="2" width="237" height="218"/>
+	<SubTexture name="096-10004" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10005" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10006" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10007" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10008" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10009" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10010" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10011" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10012" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-10013" x="241" y="2" width="227" height="218" frameX="0" frameY="0" frameWidth="237" frameHeight="218"/>
+	<SubTexture name="096-20000" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20001" x="683" y="2" width="206" height="209" frameX="-4" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20002" x="683" y="2" width="206" height="209" frameX="-4" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20003" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20004" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20005" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20006" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20007" x="891" y="2" width="213" height="207" frameX="0" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20008" x="891" y="2" width="213" height="207" frameX="0" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20009" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20010" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20011" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20012" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-20013" x="470" y="2" width="211" height="209" frameX="-2" frameY="0" frameWidth="213" frameHeight="209"/>
+	<SubTexture name="096-30000" x="1106" y="2" width="238" height="296" frameX="-4" frameY="-2" frameWidth="247" frameHeight="298"/>
+	<SubTexture name="096-30001" x="1346" y="2" width="221" height="280" frameX="-13" frameY="0" frameWidth="247" frameHeight="298"/>
+	<SubTexture name="096-30004" x="1569" y="2" width="245" height="222" frameX="-2" frameY="-6" frameWidth="247" frameHeight="298"/>
+	<SubTexture name="096-30007" x="1816" y="2" width="240" height="251" frameX="0" frameY="-4" frameWidth="247" frameHeight="298"/>
+	<SubTexture name="ragebar0000" x="2058" y="2" width="726" height="411"/>
+	<SubTexture name="ragebarfill0000" x="2786" y="2" width="318" height="66"/>
+</TextureAtlas>

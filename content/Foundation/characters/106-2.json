@@ -1,0 +1,158 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				10,
+				50
+			],
+			"cameraOffset": [
+				250,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle_"
+		},
+		{
+			"offsets": [
+				89,
+				29
+			],
+			"cameraOffset": [
+				250,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left_20"
+		},
+		{
+			"offsets": [
+				18,
+				37
+			],
+			"cameraOffset": [
+				250,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right_20"
+		},
+		{
+			"offsets": [
+				80,
+				-47
+			],
+			"cameraOffset": [
+				250,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "right_2ALT"
+		},
+		{
+			"offsets": [
+				125,
+				12
+			],
+			"cameraOffset": [
+				250,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "left_2ALT"
+		},
+		{
+			"offsets": [
+				-2,
+				149
+			],
+			"cameraOffset": [
+				250,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up_20"
+		},
+		{
+			"offsets": [
+				-3,
+				229
+			],
+			"cameraOffset": [
+				250,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "up_2ALT"
+		},
+		{
+			"offsets": [
+				10,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				250,
+				200
+			],
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "down_2ALT"
+		},
+		{
+			"offsets": [
+				31,
+				-20
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				250,
+				200
+			],
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down_20"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/106/106-2",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

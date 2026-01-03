@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="boilstage.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="boilstage0000" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0001" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0002" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0003" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0004" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0005" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0006" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0007" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0008" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0009" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0010" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0011" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0012" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0013" x="2" y="2" width="5000" height="2368" frameX="0" frameY="-32" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0014" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0015" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0016" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0017" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0018" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0019" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0020" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0021" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0022" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0023" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0024" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0025" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0026" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+	<SubTexture name="boilstage0027" x="2" y="2372" width="5000" height="2398" frameX="0" frameY="0" frameWidth="5000" frameHeight="2400"/>
+</TextureAtlas>

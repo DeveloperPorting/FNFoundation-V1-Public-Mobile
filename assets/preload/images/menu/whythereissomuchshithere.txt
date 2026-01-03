@@ -1,0 +1,4 @@
+for reasons beyond me or rather reasons i dont feel like finding out 
+nightmarevision has an issue with not loading the shared directory until you enter a song 
+which results in the game not being able to find the assets, meaning they have to be
+put in preload. sorry gangalangs

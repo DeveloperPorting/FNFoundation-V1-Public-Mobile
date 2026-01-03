@@ -1,0 +1,192 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				6,
+				57
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				108,
+				169
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				71,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				272,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				43
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				115
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "ALTright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				108,
+				346
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "ALTup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				71,
+				21
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "ALTdown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				175,
+				-31
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "what",
+			"indices": [],
+			"name": "bloodstarvedeast"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				272,
+				140
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "ALTleft",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				130
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22
+			],
+			"fps": 24,
+			"anim": "idle-alt",
+			"loop": false,
+			"name": "ALTidle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Larry",
+	"position": [
+		-120,
+		45
+	],
+	"healthicon": "106",
+	"flip_x": false,
+	"healthbar_colors": [
+		70,
+		70,
+		70
+	],
+	"camera_position": [
+		100,
+		-80
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

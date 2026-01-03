@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ulgrinlines.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="buddy0000" x="3" y="3" width="806" height="811" frameX="-38" frameY="-7" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0001" x="812" y="3" width="812" height="812" frameX="-32" frameY="-6" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0002" x="812" y="3" width="812" height="812" frameX="-32" frameY="-6" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0003" x="1627" y="3" width="806" height="810" frameX="-38" frameY="-8" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0004" x="1627" y="3" width="806" height="810" frameX="-38" frameY="-8" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0005" x="2436" y="3" width="794" height="801" frameX="-47" frameY="-17" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0006" x="2436" y="3" width="794" height="801" frameX="-47" frameY="-17" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0007" x="3233" y="3" width="757" height="818" frameX="-59" frameY="0" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0008" x="3233" y="3" width="757" height="818" frameX="-59" frameY="0" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0009" x="3993" y="3" width="736" height="796" frameX="-64" frameY="-22" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0010" x="3993" y="3" width="736" height="796" frameX="-64" frameY="-22" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0011" x="4732" y="3" width="730" height="797" frameX="-65" frameY="-21" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0012" x="4732" y="3" width="730" height="797" frameX="-65" frameY="-21" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0013" x="5465" y="3" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0014" x="5465" y="3" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0015" x="6195" y="3" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0016" x="6195" y="3" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0017" x="6925" y="3" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0018" x="6925" y="3" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0019" x="3" y="824" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0020" x="3" y="824" width="727" height="798" frameX="-68" frameY="-20" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0021" x="733" y="824" width="720" height="787" frameX="-72" frameY="-31" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0022" x="733" y="824" width="720" height="787" frameX="-72" frameY="-31" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0023" x="1456" y="824" width="763" height="791" frameX="-39" frameY="-27" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0024" x="1456" y="824" width="763" height="791" frameX="-39" frameY="-27" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0025" x="2222" y="824" width="831" height="793" frameX="-12" frameY="-25" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0026" x="2222" y="824" width="831" height="793" frameX="-12" frameY="-25" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0027" x="3056" y="824" width="842" height="795" frameX="-2" frameY="-23" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0028" x="3056" y="824" width="842" height="795" frameX="-2" frameY="-23" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0029" x="3901" y="824" width="844" height="795" frameX="0" frameY="-23" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0030" x="3901" y="824" width="844" height="795" frameX="0" frameY="-23" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0031" x="4748" y="824" width="844" height="795" frameX="0" frameY="-23" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0032" x="4748" y="824" width="844" height="795" frameX="0" frameY="-23" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="buddy0033" x="4748" y="824" width="844" height="795" frameX="0" frameY="-23" frameWidth="844" frameHeight="818"/>
+	<SubTexture name="fine0000" x="5595" y="824" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0001" x="5595" y="824" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0002" x="6458" y="824" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0003" x="6458" y="824" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0004" x="7321" y="824" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0005" x="7321" y="824" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0006" x="3" y="1725" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0007" x="3" y="1725" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0008" x="866" y="1725" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0009" x="866" y="1725" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0010" x="1729" y="1725" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0011" x="1729" y="1725" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0012" x="2592" y="1725" width="879" height="898" frameX="-12" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0013" x="3474" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0014" x="3474" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0015" x="4367" y="1725" width="891" height="898"/>
+	<SubTexture name="fine0016" x="4367" y="1725" width="891" height="898"/>
+	<SubTexture name="fine0017" x="5261" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0018" x="5261" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0019" x="6154" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0020" x="6154" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0021" x="7047" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0022" x="7047" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0023" x="7047" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0024" x="7047" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0025" x="7047" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0026" x="7047" y="1725" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0027" x="3" y="2626" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0028" x="3" y="2626" width="890" height="898" frameX="-1" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0029" x="896" y="2626" width="891" height="898"/>
+	<SubTexture name="fine0030" x="896" y="2626" width="891" height="898"/>
+	<SubTexture name="fine0031" x="1790" y="2626" width="887" height="898" frameX="-4" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0032" x="1790" y="2626" width="887" height="898" frameX="-4" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0033" x="2680" y="2626" width="863" height="898" frameX="-28" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0034" x="2680" y="2626" width="863" height="898" frameX="-28" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0035" x="3546" y="2626" width="862" height="898" frameX="-29" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0036" x="3546" y="2626" width="862" height="898" frameX="-29" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0037" x="4411" y="2626" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0038" x="4411" y="2626" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0039" x="5274" y="2626" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0040" x="5274" y="2626" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0041" x="6137" y="2626" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+	<SubTexture name="fine0042" x="6137" y="2626" width="860" height="898" frameX="-31" frameY="0" frameWidth="891" frameHeight="898"/>
+</TextureAtlas>

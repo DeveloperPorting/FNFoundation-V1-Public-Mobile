@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFgauche.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gfgauchecombobreak0000" x="2" y="2" width="585" height="593" frameX="0" frameY="-1" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0001" x="2" y="2" width="585" height="593" frameX="0" frameY="-1" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0002" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0003" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0004" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0005" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0006" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0007" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0008" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchecombobreak0009" x="589" y="2" width="576" height="594" frameX="-9" frameY="0" frameWidth="585" frameHeight="594"/>
+	<SubTexture name="gfgauchedance0000" x="1167" y="2" width="583" height="590" frameX="0" frameY="-5" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0001" x="1167" y="2" width="583" height="590" frameX="0" frameY="-5" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0002" x="2" y="598" width="581" height="589" frameX="-2" frameY="-6" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0003" x="2" y="598" width="581" height="589" frameX="-2" frameY="-6" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0004" x="585" y="598" width="576" height="592" frameX="-7" frameY="-3" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0005" x="585" y="598" width="576" height="592" frameX="-7" frameY="-3" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0006" x="1163" y="598" width="582" height="594" frameX="-6" frameY="-1" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0007" x="1163" y="598" width="582" height="594" frameX="-6" frameY="-1" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0008" x="2" y="1194" width="582" height="595" frameX="-6" frameY="0" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0009" x="2" y="1194" width="582" height="595" frameX="-6" frameY="0" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0010" x="586" y="1194" width="579" height="595" frameX="-6" frameY="0" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0011" x="586" y="1194" width="579" height="595" frameX="-6" frameY="0" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0012" x="1167" y="1194" width="576" height="595" frameX="-7" frameY="0" frameWidth="588" frameHeight="595"/>
+	<SubTexture name="gfgauchedance0013" x="1167" y="1194" width="576" height="595" frameX="-7" frameY="0" frameWidth="588" frameHeight="595"/>
+</TextureAtlas>

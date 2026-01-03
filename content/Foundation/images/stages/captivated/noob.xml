@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="noob.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="noob0000" x="2" y="2" width="551" height="632" frameX="-1" frameY="-13" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0001" x="2" y="2" width="551" height="632" frameX="-1" frameY="-13" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0002" x="555" y="2" width="552" height="639" frameX="0" frameY="-3" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0003" x="555" y="2" width="552" height="639" frameX="0" frameY="-3" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0004" x="1109" y="2" width="548" height="632" frameX="-3" frameY="-2" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0005" x="1109" y="2" width="548" height="632" frameX="-3" frameY="-2" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0006" x="2" y="643" width="543" height="628" frameX="-7" frameY="-1" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0007" x="2" y="643" width="543" height="628" frameX="-7" frameY="-1" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0008" x="547" y="643" width="542" height="627" frameX="-8" frameY="0" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0009" x="547" y="643" width="542" height="627" frameX="-8" frameY="0" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0010" x="1091" y="643" width="542" height="627" frameX="-8" frameY="0" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0011" x="1091" y="643" width="542" height="627" frameX="-8" frameY="0" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0012" x="1091" y="643" width="542" height="627" frameX="-8" frameY="0" frameWidth="552" frameHeight="645"/>
+	<SubTexture name="noob0013" x="1091" y="643" width="542" height="627" frameX="-8" frameY="0" frameWidth="552" frameHeight="645"/>
+</TextureAtlas>

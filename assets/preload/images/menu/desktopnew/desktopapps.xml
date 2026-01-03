@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="desktopapps.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="del_save0000" x="2" y="2" width="120" height="163"/>
+	<SubTexture name="del_saveclick0000" x="124" y="2" width="119" height="162"/>
+	<SubTexture name="del_saveclick0001" x="124" y="2" width="119" height="162"/>
+	<SubTexture name="del_saveclick0002" x="245" y="2" width="119" height="162"/>
+	<SubTexture name="del_saveclick0003" x="245" y="2" width="119" height="162"/>
+	<SubTexture name="del_saveclick0004" x="245" y="2" width="119" height="162"/>
+	<SubTexture name="del_savehl0000" x="366" y="2" width="130" height="173"/>
+	<SubTexture name="entries0000" x="498" y="2" width="153" height="158"/>
+	<SubTexture name="entriesclick0000" x="653" y="2" width="153" height="158"/>
+	<SubTexture name="entriesclick0001" x="653" y="2" width="153" height="158"/>
+	<SubTexture name="entriesclick0002" x="808" y="2" width="153" height="158"/>
+	<SubTexture name="entriesclick0003" x="808" y="2" width="153" height="158"/>
+	<SubTexture name="entriesclick0004" x="808" y="2" width="153" height="158"/>
+	<SubTexture name="entrieshl0000" x="2" y="177" width="164" height="169"/>
+	<SubTexture name="extras0000" x="168" y="177" width="187" height="144"/>
+	<SubTexture name="extrasclick0000" x="357" y="177" width="187" height="144"/>
+	<SubTexture name="extrasclick0001" x="357" y="177" width="187" height="144"/>
+	<SubTexture name="extrasclick0002" x="546" y="177" width="187" height="144"/>
+	<SubTexture name="extrasclick0003" x="546" y="177" width="187" height="144"/>
+	<SubTexture name="extrasclick0004" x="546" y="177" width="187" height="144"/>
+	<SubTexture name="extrashl0000" x="735" y="177" width="198" height="155"/>
+	<SubTexture name="footage0000" x="2" y="348" width="163" height="148"/>
+	<SubTexture name="clickfootage0000" x="167" y="348" width="163" height="148"/>
+	<SubTexture name="clickfootage0001" x="167" y="348" width="163" height="148"/>
+	<SubTexture name="clickfootage0002" x="332" y="348" width="163" height="148"/>
+	<SubTexture name="clickfootage0003" x="332" y="348" width="163" height="148"/>
+	<SubTexture name="clickfootage0004" x="332" y="348" width="163" height="148"/>
+	<SubTexture name="hoverfootage0000" x="497" y="348" width="174" height="159"/>
+	<SubTexture name="notes0000" x="673" y="348" width="148" height="163"/>
+	<SubTexture name="notesclick0000" x="823" y="348" width="147" height="163"/>
+	<SubTexture name="notesclick0001" x="823" y="348" width="147" height="163"/>
+	<SubTexture name="notesclick0002" x="2" y="513" width="147" height="163"/>
+	<SubTexture name="notesclick0003" x="2" y="513" width="147" height="163"/>
+	<SubTexture name="notesclick0004" x="2" y="513" width="147" height="163"/>
+	<SubTexture name="noteshl0000" x="151" y="513" width="158" height="173"/>
+	<SubTexture name="quit0000" x="311" y="513" width="158" height="163"/>
+	<SubTexture name="clickquit0000" x="471" y="513" width="157" height="162"/>
+	<SubTexture name="clickquit0001" x="471" y="513" width="157" height="162"/>
+	<SubTexture name="clickquit0002" x="630" y="513" width="157" height="162"/>
+	<SubTexture name="clickquit0003" x="630" y="513" width="157" height="162"/>
+	<SubTexture name="clickquit0004" x="630" y="513" width="157" height="162"/>
+	<SubTexture name="hoverquit0000" x="789" y="513" width="168" height="174"/>
+	<SubTexture name="settings0000" x="2" y="689" width="167" height="139"/>
+	<SubTexture name="clicksettings0000" x="171" y="689" width="167" height="138"/>
+	<SubTexture name="clicksettings0001" x="171" y="689" width="167" height="138"/>
+	<SubTexture name="clicksettings0002" x="340" y="689" width="167" height="138"/>
+	<SubTexture name="clicksettings0003" x="340" y="689" width="167" height="138"/>
+	<SubTexture name="clicksettings0004" x="340" y="689" width="167" height="138"/>
+	<SubTexture name="hoversettings0000" x="509" y="689" width="178" height="150"/>
+	<SubTexture name="store0000" x="689" y="689" width="172" height="153"/>
+	<SubTexture name="clickstore0000" x="2" y="844" width="171" height="152"/>
+	<SubTexture name="clickstore0001" x="2" y="844" width="171" height="152"/>
+	<SubTexture name="clickstore0002" x="175" y="844" width="171" height="152"/>
+	<SubTexture name="clickstore0003" x="175" y="844" width="171" height="152"/>
+	<SubTexture name="clickstore0004" x="175" y="844" width="171" height="152"/>
+	<SubTexture name="hoverstore0000" x="348" y="844" width="182" height="164"/>
+</TextureAtlas>

@@ -1,0 +1,110 @@
+{
+	"song": {
+		"events": [
+			[
+				9794.11764705882,
+				[
+					[
+						"Song Events",
+						"curtain",
+						"out"
+					]
+				]
+			],
+			[
+				33882.3529411765,
+				[
+					[
+						"Song Events",
+						"stageChange",
+						"2"
+					]
+				]
+			],
+			[
+				79058.8235294117,
+				[
+					[
+						"Song Events",
+						"stageChange",
+						"3"
+					]
+				]
+			],
+			[
+				100941.176470588,
+				[
+					[
+						"Song Events",
+						"startRain",
+						""
+					]
+				]
+			],
+			[
+				101647.058823529,
+				[
+					[
+						"Song Events",
+						"startTransition",
+						""
+					]
+				]
+			],
+			[
+				158117.647058823,
+				[
+					[
+						"Song Events",
+						"gameCurtain",
+						"in"
+					],
+					[
+						"Song Events",
+						"startSticks",
+						""
+					]
+				],
+				null,
+				""
+			],
+			[
+				176470.588235294,
+				[
+					[
+						"Song Events",
+						"endSticks",
+						""
+					]
+				]
+			],
+			[
+				180705.882352941,
+				[
+					[
+						"Song Events",
+						"gameCurtain",
+						"getOut"
+					],
+					[
+						"Song Events",
+						"stageChange",
+						"1"
+					]
+				],
+				null,
+				""
+			],
+			[
+				203294.117647058,
+				[
+					[
+						"Song Events",
+						"black",
+						""
+					]
+				]
+			]
+		]
+	}
+}

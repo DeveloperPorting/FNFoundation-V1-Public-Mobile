@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="planefireooo.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fire0000" x="2" y="2" width="718" height="903" frameX="-82" frameY="-187" frameWidth="800" frameHeight="1133"/>
+	<SubTexture name="fire0001" x="722" y="2" width="641" height="928" frameX="-99" frameY="-161" frameWidth="800" frameHeight="1133"/>
+	<SubTexture name="fire0002" x="1365" y="2" width="795" height="1059" frameX="0" frameY="-74" frameWidth="800" frameHeight="1133"/>
+	<SubTexture name="fire0003" x="2162" y="2" width="678" height="1054" frameX="-80" frameY="-23" frameWidth="800" frameHeight="1133"/>
+	<SubTexture name="fire0004" x="2842" y="2" width="681" height="1098" frameX="-89" frameY="0" frameWidth="800" frameHeight="1133"/>
+</TextureAtlas>

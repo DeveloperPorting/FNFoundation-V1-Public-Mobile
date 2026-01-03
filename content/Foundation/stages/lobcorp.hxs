@@ -1,0 +1,72 @@
+var pixelShader:FlxRuntimeShader;
+
+var baselinePixelation:Float = 0.01;
+
+function onLoad() {
+	bg = new FlxSprite(-2000, -800).loadGraphic(Paths.image('stages/lobcorp/BG'));
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+    add(bg);
+    
+    overlay = new FlxSprite(-2000, -800).loadGraphic(Paths.image('stages/lobcorp/Overlay'));
+    overlay.antialiasing = ClientPrefs.globalAntialiasing;
+    add(overlay);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("stages/682/682"));
+    oppShadow.scale.set(0.75, 0.75);
+    oppShadow.updateHitbox();
+    add(oppShadow);
+    
+   
+    // SingMachine = new FlxSprite(-1200,-100);
+    // SingMachine.antialiasing = ClientPrefs.globalAntialiasing;
+    // SingMachine.frames = Paths.getSparrowAtlas("stages/lobcorp/abnormalities");
+    // SingMachine.animation.addByPrefix("idle", 'SM', 24, true);
+    // SingMachine.animation.play("idle");
+    // add(SingMachine); 
+
+    if (ClientPrefs.shaders) {
+        pixelShader = newShader("pixel");
+        pixelShader.setFloat('pixelSize', 0.01);
+        ExUtils.addShader(pixelShader, game.camGame);
+        ExUtils.addShader(pixelShader, game.camHUD);
+    }
+}
+
+function onCreatePost(){
+	bfShadow.setPosition(game.boyfriend.x + 200, game.boyfriend.y+game.boyfriend.frameHeight-200);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-100);
+    oppShadow.setPosition(game.dad.x-50, game.dad.y+game.dad.frameHeight-400);
+}
+
+function onEndSong() {
+	ComputerVoicelines.neededFreeplay = "hopeless" + Std.string(FlxG.random.int(1, 2));
+	ComputerVoicelines.flags.push("freeplay_voiceline");
+
+    return Function_Continue;
+}
+
+function onEvent(n, v1, v2) {
+	function updatePixelSize(t) {
+        pixelShader.setFloat("pixelSize", t.value);
+    }
+  if (n == "Change Character") {
+    if (ClientPrefs.shaders) {
+    	if (v2 == "censored") {
+        	FlxTween.num(pixelShader.getFloat("pixelSize"), baselinePixelation, 0.15, {onUpdate: updatePixelSize});
+        }
+    else if (v2 == "censoredFUCKED")
+    	FlxTween.num(pixelShader.getFloat("pixelSize"), Math.min(2, baselinePixelation + 1.5), 0.15, {onUpdate: updatePixelSize});
+    }
+  }
+
+    if (n == "Song Events" && v1 == "changeBaseline") {
+        baselinePixelation = Std.parseFloat(v2);
+        FlxTween.num(pixelShader.getFloat("pixelSize"), baselinePixelation, 0.15, {onUpdate: updatePixelSize});
+    }
+}

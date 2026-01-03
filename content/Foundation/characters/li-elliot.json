@@ -1,0 +1,68 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "elliot idle"
+		},
+		{
+			"offsets": [
+				0,
+				28
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "walk",
+			"indices": [],
+			"name": "elliot walk"
+		},
+		{
+			"offsets": [
+				525,
+				564
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "bitedust",
+			"indices": [],
+			"name": "elliot die"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "stages/173/elliot",
+	"position": [
+		0,
+		150
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.95
+}

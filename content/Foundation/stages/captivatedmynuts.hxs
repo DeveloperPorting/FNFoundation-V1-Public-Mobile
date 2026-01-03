@@ -1,0 +1,390 @@
+var pressedSpace:Bool = true;
+var needToPress:Bool = false;
+var beatsCounted:Int = 0;
+
+var warning:FlxSprite;
+var hitOverlay:FlxSprite;
+var bleedOverlay:FlxSprite;
+
+var bleedTimer:Float = 0;
+var blackStarted:Bool = false;
+
+var bg:FlxSprite;
+var light:FlxSprite;
+var darkBg:FlxSprite;
+var darkLight:FlxSprite;
+
+var introCutscene:PsychVideoSprite;
+var transition:PsychVideoSprite;
+
+var blackout:FlxSprite;
+
+function onLoad() {
+
+    // Preload sounds
+    Paths.sound('captivated/knifeHit1');
+    Paths.sound('captivated/knifeHit2');
+    Paths.sound('captivated/knifeSwing');
+
+	bg = new FlxSprite(-1300, -650).loadGraphic(Paths.image("stages/captivated/theroom"));
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+	bg.scale.set(1,1);
+	bg.updateHitbox();
+	//bg.screenCenter(Y);
+	add(bg);
+
+	var bg2:FlxSprite = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/captivated/wires"));
+    bg2.antialiasing = ClientPrefs.globalAntialiasing;
+	bg2.scale.set(1,1);
+	bg2.updateHitbox();
+	//bg2.screenCenter(Y);
+	bg2.alpha = 0;
+	add(bg2);
+
+    darkBg = new FlxSprite(-1300, -650).loadGraphic(Paths.image("stages/captivated/blackRoom"));
+    darkBg.antialiasing = ClientPrefs.globalAntialiasing;
+	darkBg.scale.set(1,1);
+	darkBg.updateHitbox();
+	//bg.screenCenter(Y);
+    darkBg.alpha = 0;
+	add(darkBg);
+
+    if (!ClientPrefs.lowQuality) {
+        noob = new FlxSprite(-1000,0);
+        noob.antialiasing = ClientPrefs.globalAntialiasing;
+        noob.frames = Paths.getSparrowAtlas("stages/captivated/noob");
+    noob.animation.addByPrefix("idle", 'noob', 24, false);
+        noob.scale.set(1,1);
+        noob.alpha = 1;
+        add(noob);
+
+        fifi = new FlxSprite(-500,-200);
+        fifi.antialiasing = ClientPrefs.globalAntialiasing;
+        fifi.frames = Paths.getSparrowAtlas("stages/captivated/fifi");
+    fifi.animation.addByPrefix("idle", 'fifi', 24, false);
+        fifi.scale.set(1,1);
+        fifi.alpha = 1;
+        add(fifi);
+
+        crap = new FlxSprite(200,-700);
+        crap.antialiasing = ClientPrefs.globalAntialiasing;
+        crap.frames = Paths.getSparrowAtlas("stages/captivated/crap");
+    crap.animation.addByPrefix("idle", 'crap', 24, false);
+        crap.scale.set(1,1);
+        crap.alpha = 1;
+        add(crap);
+
+            speaky = new FlxSprite(1200,-200);
+            speaky.antialiasing = ClientPrefs.globalAntialiasing;
+        speaky.frames = Paths.getSparrowAtlas("stages/captivated/speaky");
+    speaky.animation.addByPrefix("idle", 'speaky', 24, false);
+        speaky.scale.set(1,1);
+        speaky.alpha = 1;
+        add(speaky);
+
+            idiom = new FlxSprite(800,100);
+            idiom.antialiasing = ClientPrefs.globalAntialiasing;
+        idiom.frames = Paths.getSparrowAtlas("stages/captivated/idiom");
+    idiom.animation.addByPrefix("idle", 'idiom', 24, false);
+        idiom.scale.set(1,1);
+        idiom.alpha = 1;
+        add(idiom);
+
+            Bboy = new FlxSprite(1100,200);
+            Bboy.antialiasing = ClientPrefs.globalAntialiasing;
+        Bboy.frames = Paths.getSparrowAtlas("stages/captivated/Bboy");
+    Bboy.animation.addByPrefix("idle", 'b boy', 24, false);
+        Bboy.scale.set(1,1);
+        Bboy.alpha = 1;
+        add(Bboy);
+
+            DJoe = new FlxSprite(1600,-50);
+            DJoe.antialiasing = ClientPrefs.globalAntialiasing;
+        DJoe.frames = Paths.getSparrowAtlas("stages/captivated/DJoe");
+    DJoe.animation.addByPrefix("idle", 'DJoe', 24, false);
+        DJoe.scale.set(1,1);
+        DJoe.alpha = 1;
+        add(DJoe);
+    }
+
+    light = new FlxSprite(-1300, -650).loadGraphic(Paths.image("stages/captivated/gradientlight"));
+    light.antialiasing = ClientPrefs.globalAntialiasing;
+    foreground.add(light);
+
+    darkLight = new FlxSprite(-1300, -650).loadGraphic(Paths.image("stages/captivated/darkLight"));
+    darkLight.antialiasing = ClientPrefs.globalAntialiasing;
+    foreground.add(darkLight);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(oppShadow);
+
+    warning = new FlxSprite(0, 0);
+    warning.antialiasing = ClientPrefs.globalAntialiasing;
+    warning.cameras = [game.camHUD];
+    warning.frames = Paths.getSparrowAtlas("stages/captivated/Spacebar");
+    warning.animation.addByPrefix("idle", "spacebar", 24, false);
+    warning.animation.play("idle", true);
+    warning.scale.set(0.5, 0.5);
+    warning.updateHitbox();
+    warning.screenCenter(FlxAxes.XY);
+    warning.visible = false;
+    add(warning);
+
+    hitOverlay = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/captivated/hitOverlay"));
+    hitOverlay.antialiasing = ClientPrefs.globalAntialiasing;
+    hitOverlay.cameras = [game.camHUD];
+    hitOverlay.updateHitbox();
+    hitOverlay.screenCenter(FlxAxes.XY);
+    hitOverlay.visible = false;
+    add(hitOverlay);
+
+    bleedOverlay = new FlxSprite(0, 0).loadGraphic(Paths.image("stages/captivated/bleedOverlay"));
+    bleedOverlay.antialiasing = ClientPrefs.globalAntialiasing;
+    bleedOverlay.cameras = [game.camHUD];
+    bleedOverlay.updateHitbox();
+    bleedOverlay.screenCenter(FlxAxes.XY);
+    bleedOverlay.alpha = 0;
+    add(bleedOverlay);
+
+    if (ClientPrefs.cutscenes) {
+        introCutscene = new PsychVideoSprite();
+        introCutscene.canSkip = true;
+        introCutscene.scale.set(0.7, 0.675);
+        introCutscene.addCallback('onFormat',()->{
+            introCutscene.cameras = [game.camOther];
+            introCutscene.updateHitbox();
+            introCutscene.screenCenter();
+        });
+        introCutscene.addCallback('onEnd',()->{
+            game.camHUD.visible = true;
+            game.camGame.visible = true;
+            game.startCountdown();
+            introCutscene.kill();
+        });
+        introCutscene.load(Paths.video('cutscenes/CaptivatedIntro'));
+        introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    }
+
+    transition = new PsychVideoSprite();
+    transition.scale.set(0.7, 0.675);
+    transition.addCallback('onFormat',()->{
+        transition.cameras = [game.camOther];
+        transition.updateHitbox();
+        transition.screenCenter();
+    });
+    transition.addCallback('onEnd',()->{
+		// transition.kill();
+    });
+    transition.load(Paths.video('transitions/CaptivatedTransition'), [PsychVideoSprite.muted]);
+    transition.antialiasing = ClientPrefs.globalAntialiasing;
+    // transition.alpha = 0;
+    add(transition);
+
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+	blackout.visible = false;
+    blackout.cameras = [game.camOther];
+    add(blackout);
+}
+
+function onCreatePost(){
+	bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-100);
+    oppShadow.setPosition(game.dad.x+50, game.dad.y+game.dad.frameHeight-175);
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+        game.camGame.visible = false;
+
+        add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "captivated" + Std.string(FlxG.random.int(1, 2));
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+    return Function_Continue;
+}
+
+function onCountdownTick(swagCounter) {
+    if (swagCounter % 2 == 0) REANIMATE();
+}
+
+function onBeatHit() {
+    if (game.curBeat % 2 == 0) REANIMATE();
+
+    if (game.curBeat % 4 == 0 && blackStarted) {
+        darkBg.color = 0xFFFF5555;
+        darkLight.color = 0xFFFF5555;
+        FlxTween.color(darkBg, 1, 0xFFFF5555, FlxColor.WHITE);
+        FlxTween.color(darkLight, 1, 0xFFFF5555, FlxColor.WHITE);
+        for (s in [noob, fifi, crap, speaky, idiom, Bboy, DJoe]) {
+            s.color = 0xFF7D545C;
+            FlxTween.color(s, 0.5, 0xFF7D545C, 0xFF49545C);
+        }
+        for (s in [game.dad, game.boyfriend, game.gf]) {
+            s.color = 0xFFC0AEC5;
+            FlxTween.color(s, 0.5, 0xFFC0AEC5, 0xFFAEAEC5);
+        }
+    }
+
+    warning.animation.play("idle", true);
+    if (needToPress) {
+        beatsCounted += 1;
+
+        if (beatsCounted == 2) {
+            game.dad.specialAnim = true;
+            game.dad.playAnim("prep" + Std.string(FlxG.random.int(1, 2)), true);
+        }
+
+        if (beatsCounted == 3) {
+            game.dad.specialAnim = true;
+            game.dad.playAnim("attack" + Std.string(FlxG.random.int(1, 2)), true);
+
+            warning.visible = false;
+
+            if (!pressedSpace) {
+                FlxG.sound.play(Paths.sound('captivated/knifeHit' + Std.string(FlxG.random.int(1, 2))));
+                FlxG.sound.play(Paths.sound('captivated/bfBleeding'));
+                
+                if (ClientPrefs.easyMechanics)
+                    game.health -= 1.15 * Math.pow((game.health / 2), 1.1);
+                else
+                    game.health -= 1.5 * Math.pow((game.health / 2), 1.1);
+                game.boyfriend.specialAnim = true;
+                game.boyfriend.playAnim("hurt", true);
+
+                hitOverlay.visible = true;
+                hitOverlay.alpha = 1;
+                FlxTween.tween(hitOverlay, {"alpha": 0}, 1);
+
+                game.camOther.flash(0x88FF0000, 0.5);
+
+                bleedTimer = ClientPrefs.easyMechanics ? 4 : 7;
+
+                game.songMisses += 1;
+            }
+            else {
+                FlxG.sound.play(Paths.sound('captivated/knifeSwing'));
+                game.boyfriend.specialAnim = false;
+                game.boyfriend.playAnim("dodge", true);
+            }
+
+            needToPress = false;
+        }
+    }
+}
+
+function onUpdate(elapsed:Float) {
+    if (needToPress) {
+        if (FlxG.keys.justPressed.SPACE) {
+            pressedSpace = true;
+            warning.color = 0xFF67B280;
+            FlxTween.color(warning, 0.5, 0xFF67B280, FlxColor.WHITE);
+        }
+    }
+
+    if (bleedTimer > 0) {
+        bleedTimer -= elapsed;
+        bleedOverlay.alpha = bleedTimer > 0.5 ? bleedTimer / 7 : 0;
+        game.health -= 0.05 * elapsed;
+    }
+}
+
+function onGameOver() {
+    if (!pressedSpace) {
+        var actualfuckingswoon = new FlxSprite().loadGraphic(Paths.image('stages/captivated/swoon'));
+        actualfuckingswoon.antialiasing = false;
+        actualfuckingswoon.cameras = [game.camOther];
+        add(actualfuckingswoon);
+    }
+}
+
+function onEvent(n, v1, v2) {
+    if (n == "dodgemechanic") {
+        warning.visible = true;
+        needToPress = true;
+        pressedSpace = false;
+        beatsCounted = 0;
+    }
+    if (n == "Song Events") {
+        trace(v1);
+        switch (v1) {
+            case "blackStart":
+                if (!ClientPrefs.lowQuality) 
+                    for (s in [noob, fifi, crap, speaky, idiom, Bboy, DJoe]) {
+                        FlxTween.color(s, 0.5, FlxColor.WHITE, 0xFF49545C);
+                    }
+
+                for (s in [game.dad, game.boyfriend, game.gf]) {
+                    FlxTween.color(s, 0.5, FlxColor.WHITE, 0xFFAEAEC5);
+                }
+                FlxTween.tween(bg, {"alpha": 0}, 0.5);
+                FlxTween.tween(light, {"alpha": 0}, 0.5);
+                FlxTween.tween(darkBg, {"alpha": 1}, 0.5);
+                FlxTween.tween(darkLight, {"alpha": 1}, 0.5);
+
+                for (s in [bfShadow, gfShadow, oppShadow]) {
+                    FlxTween.color(s, 0.5, FlxColor.WHITE, 0xFFAEAEC5);
+                    FlxTween.tween(s, {"alpha": 0.5}, 0.5);
+                }
+
+                blackStarted = true;
+            case "blackEnd":
+                if (!ClientPrefs.lowQuality) 
+                    for (s in [noob, fifi, crap, speaky, idiom, Bboy, DJoe]) {
+                        FlxTween.color(s, 0.5, 0xFF49545C, FlxColor.WHITE);
+                    }
+                    
+                for (s in [game.dad, game.boyfriend, game.gf]) {
+                    FlxTween.color(s, 0.5, 0xFFAEAEC5, FlxColor.WHITE);
+                }
+                FlxTween.tween(bg, {"alpha": 1}, 0.5);
+                FlxTween.tween(light, {"alpha": 1}, 0.5);
+                FlxTween.tween(darkBg, {"alpha": 0}, 0.5);
+                FlxTween.tween(darkLight, {"alpha": 0}, 0.5);          
+                
+                for (s in [bfShadow, gfShadow, oppShadow]) {
+                    FlxTween.color(s, 0.5, 0xFFAEAEC5, FlxColor.WHITE);
+                    FlxTween.tween(s, {"alpha": 1}, 0.5);
+                }
+
+            case "makeitstopplease":
+                blackStarted = false;
+            case "playCutscene":
+                transition.play();
+            case "black":
+                blackout.visible = true;
+                bleedTimer = 0;
+        }
+    }
+}
+
+function REANIMATE() {
+    if (ClientPrefs.lowQuality) return;
+
+    noob.animation.play("idle");
+    fifi.animation.play("idle");
+    crap.animation.play("idle");
+    speaky.animation.play("idle");
+    idiom.animation.play("idle");
+    Bboy.animation.play("idle");
+    DJoe.animation.play("idle");
+}

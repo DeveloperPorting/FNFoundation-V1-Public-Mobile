@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="genericbuttonlikexeightwanted.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="widebutton0000" x="20" y="20" width="528" height="144"/>
+	<SubTexture name="widebutton_press0000" x="568" y="20" width="396" height="108" frameX="-32" frameY="-9" frameWidth="460" frameHeight="125"/>
+	<SubTexture name="widebutton_press0001" x="568" y="20" width="396" height="108" frameX="-32" frameY="-9" frameWidth="460" frameHeight="125"/>
+	<SubTexture name="widebutton_press0002" x="20" y="184" width="460" height="125"/>
+	<SubTexture name="widebutton_press0003" x="20" y="184" width="460" height="125"/>
+	<SubTexture name="widebutton_press0004" x="20" y="184" width="460" height="125"/>
+	<SubTexture name="widebutton_press0005" x="20" y="184" width="460" height="125"/>
+	<SubTexture name="widebutton_press0006" x="20" y="184" width="460" height="125"/>
+	<SubTexture name="widebutton_press0007" x="20" y="184" width="460" height="125"/>
+	<SubTexture name="widebutton_press0008" x="20" y="184" width="460" height="125"/>
+	<SubTexture name="widebutton_press0009" x="20" y="184" width="460" height="125"/>
+</TextureAtlas>

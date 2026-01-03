@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "id": "idCard",
+            "name": "Identification Card",
+            "sprite": "IDcard",
+            "offsetY": 20
+        },
+        {
+            "id": "clipboard",
+            "name": "Clipboard",
+            "sprite": "clipboard",
+            "offsetY": 0
+        },
+        {
+            "id": "usb",
+            "name": "USB",
+            "sprite": "USB",
+            "offsetY": 15
+        }
+    ]
+}

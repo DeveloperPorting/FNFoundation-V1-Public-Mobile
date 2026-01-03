@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BlinkBar.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="173-10000" x="2" y="2" width="129" height="227"/>
+	<SubTexture name="173-20000" x="133" y="2" width="130" height="227" frameX="0" frameY="-2" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20001" x="133" y="2" width="130" height="227" frameX="0" frameY="-2" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20002" x="133" y="2" width="130" height="227" frameX="0" frameY="-2" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20003" x="133" y="2" width="130" height="227" frameX="0" frameY="-2" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20004" x="133" y="2" width="130" height="227" frameX="0" frameY="-2" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20005" x="265" y="2" width="130" height="231" frameX="0" frameY="0" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20006" x="265" y="2" width="130" height="231" frameX="0" frameY="0" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20007" x="265" y="2" width="130" height="231" frameX="0" frameY="0" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20008" x="265" y="2" width="130" height="231" frameX="0" frameY="0" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20009" x="265" y="2" width="130" height="231" frameX="0" frameY="0" frameWidth="131" frameHeight="231"/>
+	<SubTexture name="173-20010" x="397" y="2" width="131" height="231"/>
+	<SubTexture name="173-20011" x="397" y="2" width="131" height="231"/>
+	<SubTexture name="173-20012" x="397" y="2" width="131" height="231"/>
+	<SubTexture name="173-20013" x="397" y="2" width="131" height="231"/>
+	<SubTexture name="173-20014" x="397" y="2" width="131" height="231"/>
+	<SubTexture name="173-30000" x="530" y="2" width="128" height="227"/>
+	<SubTexture name="173-30001" x="660" y="2" width="128" height="227"/>
+	<SubTexture name="Bitmap 58" x="643" y="235" width="315" height="55"/>
+	<SubTexture name="BlinkBar0000" x="2" y="235" width="639" height="278"/>
+	<SubTexture name="BlinkMeter0000" x="643" y="235" width="315" height="55"/>
+</TextureAtlas>

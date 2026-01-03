@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="zenko.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="zenko0000" x="3" y="3" width="1162" height="1002" frameX="-6" frameY="-4" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0001" x="3" y="3" width="1162" height="1002" frameX="-6" frameY="-4" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0002" x="1168" y="3" width="1149" height="1005" frameX="-4" frameY="-1" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0003" x="1168" y="3" width="1149" height="1005" frameX="-4" frameY="-1" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0004" x="2320" y="3" width="1147" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0005" x="2320" y="3" width="1147" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0006" x="3" y="1012" width="1144" height="1005" frameX="0" frameY="-1" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0007" x="3" y="1012" width="1144" height="1005" frameX="0" frameY="-1" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0008" x="1150" y="1012" width="1144" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0009" x="1150" y="1012" width="1144" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0010" x="2297" y="1012" width="1144" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0011" x="2297" y="1012" width="1144" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0012" x="2297" y="1012" width="1144" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+	<SubTexture name="zenko0013" x="2297" y="1012" width="1144" height="1006" frameX="0" frameY="0" frameWidth="1168" frameHeight="1006"/>
+</TextureAtlas>

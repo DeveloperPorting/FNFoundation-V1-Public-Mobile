@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="303door.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="door0000" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0000" x="399" y="2" width="497" height="1095" frameX="-26" frameY="-42" frameWidth="523" frameHeight="1209"/>
+	<SubTexture name="doorbang0001" x="399" y="2" width="497" height="1095" frameX="-26" frameY="-42" frameWidth="523" frameHeight="1209"/>
+	<SubTexture name="doorbang0002" x="898" y="2" width="497" height="1115" frameX="-8" frameY="-34" frameWidth="523" frameHeight="1209"/>
+	<SubTexture name="doorbang0003" x="898" y="2" width="497" height="1115" frameX="-8" frameY="-34" frameWidth="523" frameHeight="1209"/>
+	<SubTexture name="doorbang0004" x="1397" y="2" width="384" height="1179" frameX="-27" frameY="-30" frameWidth="523" frameHeight="1209"/>
+	<SubTexture name="doorbang0005" x="1397" y="2" width="384" height="1179" frameX="-27" frameY="-30" frameWidth="523" frameHeight="1209"/>
+	<SubTexture name="doorbang0006" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0007" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0008" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0009" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0010" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0011" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0012" x="2" y="2" width="395" height="1157"/>
+	<SubTexture name="doorbang0013" x="2" y="2" width="395" height="1157"/>
+</TextureAtlas>

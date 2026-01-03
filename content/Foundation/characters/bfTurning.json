@@ -1,0 +1,53 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				4
+			],
+			"cameraOffset": [
+				30,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "ulgrin",
+			"indices": [],
+			"name": "turn_ulgrin"
+		},
+		{
+			"offsets": [
+				3,
+				15
+			],
+			"cameraOffset": [
+				30,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "willy",
+			"indices": [],
+			"name": "turn_willy"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bfturninglikeagayboy",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		200,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,4 @@
+Changes list of character who will sing on each side
+
+Value 1: Side (0 - Opponent, 1 - Player)
+Value 2: Comma-separated list of characters (Consult your nearest stage coder). The first character of the list will have the camera focussed on them.

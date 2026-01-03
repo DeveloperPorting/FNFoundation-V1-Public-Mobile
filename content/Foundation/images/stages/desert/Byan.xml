@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Byan.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="byan0000" x="2" y="2" width="329" height="458" frameX="0" frameY="-9" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0001" x="2" y="2" width="329" height="458" frameX="0" frameY="-9" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0002" x="333" y="2" width="332" height="466" frameX="-2" frameY="-1" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0003" x="333" y="2" width="332" height="466" frameX="-2" frameY="-1" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0004" x="667" y="2" width="328" height="467" frameX="-2" frameY="0" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0005" x="667" y="2" width="328" height="467" frameX="-2" frameY="0" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0006" x="2" y="471" width="324" height="466" frameX="-2" frameY="-1" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0007" x="2" y="471" width="324" height="466" frameX="-2" frameY="-1" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0008" x="328" y="471" width="324" height="465" frameX="-2" frameY="-2" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0009" x="328" y="471" width="324" height="465" frameX="-2" frameY="-2" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0010" x="328" y="471" width="324" height="465" frameX="-2" frameY="-2" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0011" x="328" y="471" width="324" height="465" frameX="-2" frameY="-2" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0012" x="328" y="471" width="324" height="465" frameX="-2" frameY="-2" frameWidth="334" frameHeight="467"/>
+	<SubTexture name="byan0013" x="328" y="471" width="324" height="465" frameX="-2" frameY="-2" frameWidth="334" frameHeight="467"/>
+</TextureAtlas>

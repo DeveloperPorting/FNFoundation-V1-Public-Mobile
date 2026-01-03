@@ -1,0 +1,48 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				136,
+				585
+			],
+			"anim": "what",
+			"fps": 24,
+			"name": "gravity",
+			"indices": []
+		},
+		{
+			"offsets": [
+				136,
+				585
+			],
+			"indices": [
+				1,
+				1
+			],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "gravity"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/LarryDip",
+	"position": [
+		-120,
+		45
+	],
+	"healthicon": "106",
+	"flip_x": false,
+	"healthbar_colors": [
+		70,
+		70,
+		70
+	],
+	"camera_position": [
+		65,
+		-422
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

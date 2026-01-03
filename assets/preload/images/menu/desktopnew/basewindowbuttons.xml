@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="basewindowbuttons.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="basewindow_close0000" x="2" y="2" width="84" height="84"/>
+	<SubTexture name="basewindow_closeclick0000" x="88" y="2" width="84" height="84"/>
+	<SubTexture name="basewindow_max0000" x="174" y="2" width="84" height="84"/>
+	<SubTexture name="basewindow_maxclick0000" x="260" y="2" width="84" height="84"/>
+	<SubTexture name="basewindow_min0000" x="346" y="2" width="84" height="84"/>
+	<SubTexture name="basewindow_minclick0000" x="2" y="88" width="83" height="84"/>
+</TextureAtlas>

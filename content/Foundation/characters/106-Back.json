@@ -1,0 +1,38 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"cameraOffset": [
+				30,
+				0
+			],
+			"offsets": [
+				800,
+				100
+			],
+			"anim": "ouch",
+			"fps": 24,
+			"name": "cracker",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/106/106BackHurts",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="speaky.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="speaky0000" x="2" y="2" width="726" height="864" frameX="0" frameY="0" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0001" x="2" y="2" width="726" height="864" frameX="0" frameY="0" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0002" x="730" y="2" width="756" height="833" frameX="-1" frameY="-31" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0003" x="730" y="2" width="756" height="833" frameX="-1" frameY="-31" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0004" x="1488" y="2" width="754" height="808" frameX="0" frameY="-56" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0005" x="1488" y="2" width="754" height="808" frameX="0" frameY="-56" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0006" x="2244" y="2" width="741" height="775" frameX="0" frameY="-89" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0007" x="2244" y="2" width="741" height="775" frameX="0" frameY="-89" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0008" x="2987" y="2" width="742" height="774" frameX="0" frameY="-90" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0009" x="2987" y="2" width="742" height="774" frameX="0" frameY="-90" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0010" x="2" y="868" width="742" height="773" frameX="0" frameY="-91" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0011" x="2" y="868" width="742" height="773" frameX="0" frameY="-91" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0012" x="2" y="868" width="742" height="773" frameX="0" frameY="-91" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0013" x="2" y="868" width="742" height="773" frameX="0" frameY="-91" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0014" x="746" y="868" width="754" height="845" frameX="0" frameY="-19" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0015" x="746" y="868" width="754" height="845" frameX="0" frameY="-19" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0016" x="1502" y="868" width="737" height="843" frameX="-1" frameY="-21" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0017" x="1502" y="868" width="737" height="843" frameX="-1" frameY="-21" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0018" x="2241" y="868" width="713" height="822" frameX="0" frameY="-42" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0019" x="2241" y="868" width="713" height="822" frameX="0" frameY="-42" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0020" x="2956" y="868" width="704" height="801" frameX="0" frameY="-63" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0021" x="2956" y="868" width="704" height="801" frameX="0" frameY="-63" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0022" x="2" y="1715" width="704" height="798" frameX="0" frameY="-66" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0023" x="2" y="1715" width="704" height="798" frameX="0" frameY="-66" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0024" x="708" y="1715" width="704" height="797" frameX="0" frameY="-67" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0025" x="708" y="1715" width="704" height="797" frameX="0" frameY="-67" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0026" x="708" y="1715" width="704" height="797" frameX="0" frameY="-67" frameWidth="757" frameHeight="864"/>
+	<SubTexture name="speaky0027" x="708" y="1715" width="704" height="797" frameX="0" frameY="-67" frameWidth="757" frameHeight="864"/>
+</TextureAtlas>

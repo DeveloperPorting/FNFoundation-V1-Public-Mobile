@@ -1,0 +1,142 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"cameraOffset": [
+				-30,
+				0
+			],
+			"offsets": [
+				82,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-7,
+				-208
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				16,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				120,
+				49
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				156,
+				68
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "attack1",
+			"loop": false,
+			"name": "attack10"
+		},
+		{
+			"offsets": [
+				244,
+				4
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "prep1",
+			"loop": false,
+			"name": "prep10"
+		},
+		{
+			"offsets": [
+				181,
+				-44
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "prep2",
+			"loop": false,
+			"name": "prep20"
+		},
+		{
+			"offsets": [
+				116,
+				57
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "attack2",
+			"loop": false,
+			"name": "attack20"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Valorant",
+	"position": [
+		0,
+		-240
+	],
+	"healthicon": "valerie",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		114,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

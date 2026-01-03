@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="literalnoise.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="noise0000" x="0" y="0" width="404" height="204" frameX="2" frameY="2" frameWidth="400" frameHeight="200"/>
+	<SubTexture name="noise0001" x="0" y="204" width="404" height="204" frameX="2" frameY="2" frameWidth="400" frameHeight="200"/>
+	<SubTexture name="noise0002" x="404" y="0" width="404" height="204" frameX="2" frameY="2" frameWidth="400" frameHeight="200"/>
+	<SubTexture name="noise0003" x="404" y="204" width="404" height="204" frameX="2" frameY="2" frameWidth="400" frameHeight="200"/>
+</TextureAtlas>

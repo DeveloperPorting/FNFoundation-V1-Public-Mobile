@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="049whippinit.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="shank0000" x="5" y="5" width="760" height="1127" frameX="-493" frameY="-6" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0001" x="5" y="5" width="760" height="1127" frameX="-493" frameY="-6" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0002" x="5" y="5" width="760" height="1127" frameX="-493" frameY="-6" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0003" x="5" y="5" width="760" height="1127" frameX="-493" frameY="-6" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0004" x="865" y="5" width="760" height="1127" frameX="-493" frameY="-6" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0005" x="865" y="5" width="760" height="1127" frameX="-493" frameY="-6" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0006" x="1725" y="5" width="760" height="1130" frameX="-493" frameY="-3" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0007" x="1725" y="5" width="760" height="1130" frameX="-493" frameY="-3" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0008" x="2585" y="5" width="760" height="1133" frameX="-493" frameY="0" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0009" x="2585" y="5" width="760" height="1133" frameX="-493" frameY="0" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0010" x="3445" y="5" width="764" height="1132" frameX="-493" frameY="-1" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0011" x="3445" y="5" width="764" height="1132" frameX="-493" frameY="-1" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0012" x="4309" y="5" width="786" height="1128" frameX="-493" frameY="-12" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0013" x="5195" y="5" width="813" height="1150" frameX="-484" frameY="-21" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0014" x="6108" y="5" width="1235" height="1170" frameX="0" frameY="-114" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0015" x="6108" y="5" width="1235" height="1170" frameX="0" frameY="-114" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0016" x="5" y="1275" width="1171" height="1184" frameX="-35" frameY="-80" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0017" x="5" y="1275" width="1171" height="1184" frameX="-35" frameY="-80" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0018" x="1276" y="1275" width="1162" height="1182" frameX="-44" frameY="-82" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0019" x="1276" y="1275" width="1162" height="1182" frameX="-44" frameY="-82" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0020" x="2538" y="1275" width="1156" height="1182" frameX="-50" frameY="-82" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0021" x="2538" y="1275" width="1156" height="1182" frameX="-50" frameY="-82" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0022" x="3794" y="1275" width="1155" height="1182" frameX="-51" frameY="-82" frameWidth="1297" frameHeight="1284"/>
+	<SubTexture name="shank0023" x="3794" y="1275" width="1155" height="1182" frameX="-51" frameY="-82" frameWidth="1297" frameHeight="1284"/>
+</TextureAtlas>

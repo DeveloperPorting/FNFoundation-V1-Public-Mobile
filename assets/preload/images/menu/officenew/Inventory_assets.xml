@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Inventory_assets.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="IDcard0000" x="2" y="2" width="334" height="174"/>
+	<SubTexture name="USB0000" x="338" y="2" width="289" height="210"/>
+	<SubTexture name="clipboard0000" x="629" y="2" width="305" height="295"/>
+	<SubTexture name="downthingasset0000" x="2" y="299" width="1793" height="241"/>
+	<SubTexture name="hand_cursor0000" x="2" y="542" width="367" height="314"/>
+	<SubTexture name="inventory_box0000" x="371" y="542" width="257" height="265"/>
+</TextureAtlas>

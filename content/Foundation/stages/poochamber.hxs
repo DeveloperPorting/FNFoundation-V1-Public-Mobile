@@ -1,0 +1,417 @@
+addHaxeLibrary('BlurFilter' ,'openfl.filters');
+var agitation:Float = 0;
+var maxAgitation:Float = 45;
+var clipConvert = 300/maxAgitation; // Used to convert agitation to the cliprect width
+var doAgitation:Bool = false;
+
+var bg:FlxSprite;
+var bg2:FlxBackdrop;
+var light:FlxSprite;
+var light2:FlxSprite;
+var kino:FlxSprite;
+
+var scrollBg:Bool = false;
+
+var bbarBg:FlxSprite;
+var bbarBar:FlxSprite;
+var bbarClip:FlxRect;
+
+var blackout:FlxSprite;
+
+var charlie:FNFSprite;
+var daisy:FNFSprite;
+var elliot:FNFSprite;
+var dStage:Int = 0;
+
+var cCanIdle:Bool = false;
+var dCanIdle:Bool = false;
+var eCanIdle:Bool = false;
+
+var ogLocation:FlxPoint;
+
+var blur:BlurFilter;
+
+var introCutscene:PsychVideoSprite;
+var transitionCutscene:PsychVideoSprite;
+
+var blackout:FlxSprite;
+
+function onLoad() {
+	bg = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/173/poopoo"));
+	bg.antialiasing = ClientPrefs.globalAntialiasing;
+
+	light = new FlxSprite(-1300, -800).loadGraphic(Paths.image("stages/173/light"));
+	light.antialiasing = ClientPrefs.globalAntialiasing;
+
+	bg2 = new FlxSprite(100, -375).loadGraphic(Paths.image("stages/173/lognbg"));
+	bg2.antialiasing = ClientPrefs.globalAntialiasing;
+	bg2.scale.set(1.35, 1.35);
+	bg2.updateHitbox();
+	bg2.alpha = 0;
+
+	light2 = new FlxSprite(100, -375).loadGraphic(Paths.image("stages/173/lognthing"));
+	light2.antialiasing = ClientPrefs.globalAntialiasing;
+	light2.scale.set(1.35, 1.35);
+	light2.updateHitbox();
+	light2.alpha = 0;
+
+	kino = new FlxSprite(0, -150).loadGraphic(Paths.image("stages/173/kino"));
+	kino.scale.set(5, 1.75);
+	kino.updateHitbox();
+	kino.visible = false;
+
+	charlie = new FNFSprite(3500, 100);
+	charlie.antialiasing = ClientPrefs.globalAntialiasing;
+	charlie.loadFromJson("li-charlie", true);
+
+	daisy = new FNFSprite(3500, -50);
+	daisy.antialiasing = ClientPrefs.globalAntialiasing;
+	daisy.loadFromJson("li-daisy", true);
+
+	elliot = new FNFSprite(3500, -25);
+	elliot.antialiasing = ClientPrefs.globalAntialiasing;
+	elliot.loadFromJson("li-elliot", true);
+
+	bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+
+	if (ClientPrefs.shaders) {
+		blur = new BlurFilter(0, 0, 3);
+		game.camGame.setFilters([blur]);
+		game.camHUD.setFilters([blur]);
+	}
+
+	add(bg);
+	add(bg2);
+	// foreground.add(charlie);
+	add(bfShadow);
+    add(gfShadow);
+    // add(oppShadow);
+
+	foreground.add(light);
+	foreground.add(light2);
+	foreground.add(kino);
+
+	if (ClientPrefs.cutscenes) {
+		introCutscene = new PsychVideoSprite();
+		introCutscene.canSkip = true;
+		introCutscene.scale.set(0.7, 0.675);
+		introCutscene.addCallback('onFormat',()->{
+			introCutscene.cameras = [game.camOther];
+			introCutscene.updateHitbox();
+			introCutscene.screenCenter();
+		});
+		introCutscene.addCallback('onEnd',()->{
+			game.camHUD.visible = true;
+			game.camGame.visible = true;
+			game.startCountdown();
+			introCutscene.kill();
+		});
+		introCutscene.load(Paths.video('cutscenes/LockedInIntro'));
+		introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+	}	
+
+	blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+	blackout.visible = false;
+    blackout.cameras = [game.camOther];
+    add(blackout);
+	
+	transitionCutscene = new PsychVideoSprite();
+	transitionCutscene.scale.set(0.7, 0.675);
+	transitionCutscene.addCallback('onFormat',()->{
+        transitionCutscene.cameras = [game.camOther];
+        transitionCutscene.updateHitbox();
+        transitionCutscene.screenCenter();
+    });
+    transitionCutscene.addCallback('onEnd',()->{
+		transitionCutscene.kill();
+    });
+    transitionCutscene.load(Paths.video('transitions/LockedInTransition'), [PsychVideoSprite.muted]);
+    transitionCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    add(transitionCutscene);
+	// transitionCutscene.play();
+	// transitionCutscene.pause();
+	// transitionCutscene.visible = false;
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+		game.camGame.visible = false;
+
+		add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "locked in" + Std.string(FlxG.random.int(1, 2));
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+	return Function_Continue;
+}
+function onCreate() {
+	bbarClip = new FlxRect(0, 0, 0, 100);
+
+	bbarBar = new FlxSprite(65, ClientPrefs.downScroll ? 25 : FlxG.height - 190);
+	bbarBar.scale.set(0.55, 0.55);
+	bbarBar.frames = Paths.getSparrowAtlas("stages/173/BlinkBar");
+	bbarBar.animation.addByPrefix("bar", "BlinkMeter", 1, true);
+	bbarBar.animation.play("bar", true);
+	bbarBar.cameras = [game.camHUD];
+	bbarBar.alpha = 0.5;
+	bbarBar.clipRect = bbarClip;
+	bbarBar.clipRect = bbarBar.clipRect;
+	add(bbarBar);
+
+	bbarBg = new FlxSprite(bbarBar.x - 10, bbarBar.y - 57);
+	bbarBg.antialiasing = ClientPrefs.globalAntialiasing;
+	bbarBg.scale.set(0.5, 0.5);
+	bbarBg.frames = Paths.getSparrowAtlas("stages/173/BlinkBar");
+	bbarBg.animation.addByPrefix("bg", "BlinkBar", 1, true);
+	bbarBg.animation.play("bg", true);
+	bbarBg.cameras = [game.camHUD];
+	bbarBg.alpha = 0.5;
+	add(bbarBg);
+
+	blackout = new FlxSprite(-1000, -1000).makeGraphic(1, 1, FlxColor.BLACK);
+	blackout.scale.set(10000, 10000);
+	blackout.updateHitbox();
+	blackout.alpha = 0;
+	foreground.add(blackout);
+
+	ogPoint = dad.getPosition();
+}
+
+function onCreatePost(){
+	bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-200);
+    // oppShadow.setPosition(game.dad.x-50, game.dad.y+game.dad.frameHeight-550);
+}
+
+function onAddSpriteGroups() {
+	game.dadGroup.insert(0, charlie);
+	game.dadGroup.insert(0, daisy);
+	game.dadGroup.insert(0, elliot);
+}
+
+function onSongStart() {
+	doAgitation = true;
+
+	charlie.playAnim("walk", true);
+	FlxTween.tween(charlie, {"x": 1000}, 10, {startDelay: 5, onComplete: (twn) -> {
+		charlie.playAnim("idle", true);
+		cCanIdle = true;
+	}});
+}
+
+function onBeatHit() {
+    if (curBeat % 2 == 0) {
+        if (cCanIdle) charlie.playAnim("idle");
+		if (dCanIdle) daisy.playAnim("idle");
+		if (eCanIdle) elliot.playAnim("idle");
+    }
+}
+
+
+
+function onUpdate(delta:Float) {
+	if (doAgitation) {
+		agitation += delta;
+		if (agitation > maxAgitation) agitation = maxAgitation;
+
+		if (ClientPrefs.shaders) {
+			if (agitation > 25)
+				var b = (agitation-25)/5;
+			else
+				var b = 0;
+			blur.blurX = b;
+			blur.blurY = b;
+		}
+
+		bbarClip.width = agitation * clipConvert;
+		bbarBar.clipRect = bbarBar.clipRect;
+		
+		if (agitation >= 18 && bbarBar.alpha != 1) {
+			FlxTween.tween(bbarBar, {"alpha": 1}, 0.5);
+			FlxTween.tween(bbarBg , {"alpha": 1}, 0.5);
+		}
+		else if (agitation < 18 && bbarBar.alpha != 0.5) {
+			FlxTween.tween(bbarBar, {"alpha": 0.5}, 0.5);
+			FlxTween.tween(bbarBg , {"alpha": 0.5}, 0.5);
+		}
+	}
+
+	if (scrollBg) {
+		bg2.x -= delta * 100;
+		light2.x -= delta * 100;
+	}
+}
+
+function noteMiss(note) {
+	if (note.noteType == "Blink Note") {
+		agitation += 10;
+		justFuckingDoIt();
+		if (ClientPrefs.easyMechanics) {
+			game.health -= 0.5;
+			if (game.health <= 0.1)
+				game.health = 0.1;
+		}
+		else
+			game.health = 0.15; 
+		FlxG.sound.play(Paths.sound('173/bfHurt173'));
+	}
+}
+
+function justFuckingDoIt() {
+	FlxG.camera.flash(FlxColor.BLACK, 0.5);
+		
+	switch (dStage) {
+		case 1:
+			dad.setPosition(charlie.x - 200, charlie.y - 300);
+		case 2:
+			dad.setPosition(ogPoint);
+		case 4:
+			dad.setPosition(daisy.x - 200, daisy.y - 300);
+		case 5:
+			dad.setPosition(ogPoint);
+		case 7:
+			dad.setPosition(elliot.x - 200, elliot.y - 300);
+		case 8:
+			dad.setPosition(ogPoint);
+	}
+
+	// oppShadow.setPosition(game.dad.x-50, game.dad.y+game.dad.frameHeight-550);
+}
+
+function goodNoteHit(note) {
+	if (note.noteType == "Blink Note") {
+		agitation -= 15;
+		if (agitation < 0) agitation = 0;
+		justFuckingDoIt();
+	}
+}
+
+// if you are ever gonna try and ask me why it looks like ass then i will let you know i spent way too much time coding this song -xeight
+function onEvent(name, value1, value2) {
+	if (name == "Song Events") {
+		switch (value1) {
+			// 0 - Charlie fucks around
+			// 1 - 173 kills
+			// 2 - 173 returns and Daisy walks out
+			// 3 - Daisy fucks around
+			// 4 - 173 kills
+			// 5 - 173 returns
+			// 6 - Elliot walks out
+			// 7 - Elliot fucks around
+			// 8 - 173 kills
+			// 9 - 173 returns
+			case "progressDstage":
+				switch (dStage) {
+					case 0:
+						charlie.playAnim("bitedust", true);
+						cCanIdle = false;
+						charlie.animation.finishCallback = (anim) -> { // Causes THE MOST bizarre graphic bug if i dont do this -xeight
+							charlie.visible = false;
+						};
+						dStage = 1;
+					case 1:
+						dStage = 2;
+					case 2:
+						daisy.playAnim("walk", true);
+						FlxTween.tween(daisy, {"x": 900}, 5, {startDelay: 2, onComplete: (twn) -> {
+							daisy.playAnim("idle", true);
+							dCanIdle = true;
+						}});
+						dStage = 3;
+					case 3:
+						daisy.playAnim("bitedust", true);
+						dCanIdle = false;
+						daisy.animation.finishCallback = (anim) -> { // Causes THE MOST bizarre graphic bug if i dont do this -xeight
+							daisy.visible = false;
+						};
+						dStage = 4;
+					case 4:
+						dStage = 5;
+					case 5:
+						elliot.playAnim("walk", true);
+						FlxTween.tween(elliot, {"x": 900}, 8, {onComplete: (twn) -> {
+							elliot.playAnim("idle", true);
+							eCanIdle = true;
+						}});
+						dStage = 6;
+					case 6:
+						elliot.playAnim("bitedust", true);
+						eCanIdle = false;
+						elliot.animation.finishCallback = (anim) -> { // Causes THE MOST bizarre graphic bug if i dont do this -xeight
+							elliot.visible = false;
+						};
+						dStage = 7;
+					case 7:
+						dStage = 8;
+
+				}
+			case "lightsOut":
+				blackout.alpha = 1;
+				doAgitation = false;
+
+				if (ClientPrefs.shaders) {
+					blur.blurX = 0;
+					blur.blurY = 0;
+				}
+
+				bbarBar.visible = false;
+				bbarBg.visible = false;
+
+				game.camHUD.alpha = 0;
+
+				// oppShadow.visible = false;
+				bfShadow.visible = false;
+				gfShadow.visible = false;
+
+				transitionCutscene.play();
+			case "changeStage":
+                FoundationGameOverSubstate.videoOverride = "locked in-h" + Std.string(FlxG.random.int(1, 3));
+				FoundationGameOverSubstate.deathMessageOverride = "locked in-h";
+
+				bg.alpha = 0;
+				light.alpha = 0;
+
+				bg2.alpha = 1;
+				light2.alpha = 1;
+				kino.visible = true;
+
+				game.camGame.zoom = 0.6; // idfk why it doesnt work regularly -xeight
+				game.defaultCamZoom = 0.6;
+				
+				game.isCameraOnForcedPos = true;
+				game.camFollow.set(1500, 500);
+			case "reposition":
+				dad.y += 400;
+				boyfriend.x += 250;
+				boyfriend.y -= 50;
+
+				scrollBg = true;
+			case "lightsOn":
+				blackout.visible = false;
+				game.camOther.flash(FlxColor.BLACK, 3);
+				FlxTween.tween(game.camHUD, {"alpha": 1}, 3);
+			case "blackbruh":
+				blackout.cameras = [game.camOther];
+				blackout.visible = true;
+				blackout.alpha = 0;
+				FlxTween.tween(blackout, {"alpha": 1}, 2);
+
+
+		}
+	}
+}

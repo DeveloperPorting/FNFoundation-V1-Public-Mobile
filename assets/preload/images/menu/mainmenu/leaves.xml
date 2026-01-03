@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="leaves.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="leaves0000" x="5" y="5" width="1885" height="1679" frameX="-80" frameY="-95" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0001" x="5" y="5" width="1885" height="1679" frameX="-80" frameY="-95" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0002" x="1896" y="5" width="1961" height="1730" frameX="-34" frameY="-50" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0003" x="1896" y="5" width="1961" height="1730" frameX="-34" frameY="-50" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0004" x="3863" y="5" width="1994" height="1763" frameX="0" frameY="-25" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0005" x="3863" y="5" width="1994" height="1763" frameX="0" frameY="-25" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0006" x="5863" y="5" width="1971" height="1792" frameX="-15" frameY="-1" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0007" x="5863" y="5" width="1971" height="1792" frameX="-15" frameY="-1" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0008" x="5" y="1803" width="1970" height="1795" frameX="-12" frameY="0" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0009" x="5" y="1803" width="1970" height="1795" frameX="-12" frameY="0" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0010" x="1981" y="1803" width="1889" height="1795" frameX="-91" frameY="-6" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0011" x="1981" y="1803" width="1889" height="1795" frameX="-91" frameY="-6" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0012" x="3876" y="1803" width="1870" height="1776" frameX="-114" frameY="-28" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0013" x="3876" y="1803" width="1870" height="1776" frameX="-114" frameY="-28" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0014" x="5752" y="1803" width="1882" height="1743" frameX="-98" frameY="-57" frameWidth="1995" frameHeight="1804"/>
+	<SubTexture name="leaves0015" x="5752" y="1803" width="1882" height="1743" frameX="-98" frameY="-57" frameWidth="1995" frameHeight="1804"/>
+</TextureAtlas>

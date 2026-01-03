@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="aviva.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="aviva0000" x="3" y="3" width="718" height="856" frameX="-8" frameY="-5" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0001" x="3" y="3" width="718" height="856" frameX="-8" frameY="-5" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0002" x="724" y="3" width="718" height="866" frameX="-4" frameY="0" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0003" x="724" y="3" width="718" height="866" frameX="-4" frameY="0" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0004" x="1445" y="3" width="720" height="851" frameX="0" frameY="-4" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0005" x="1445" y="3" width="720" height="851" frameX="0" frameY="-4" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0006" x="2168" y="3" width="713" height="842" frameX="-5" frameY="-6" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0007" x="2168" y="3" width="713" height="842" frameX="-5" frameY="-6" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0008" x="2884" y="3" width="705" height="839" frameX="-12" frameY="-7" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0009" x="2884" y="3" width="705" height="839" frameX="-12" frameY="-7" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0010" x="3" y="872" width="703" height="839" frameX="-14" frameY="-7" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0011" x="3" y="872" width="703" height="839" frameX="-14" frameY="-7" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0012" x="3" y="872" width="703" height="839" frameX="-14" frameY="-7" frameWidth="726" frameHeight="866"/>
+	<SubTexture name="aviva0013" x="3" y="872" width="703" height="839" frameX="-14" frameY="-7" frameWidth="726" frameHeight="866"/>
+</TextureAtlas>

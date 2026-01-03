@@ -1,0 +1,295 @@
+var dutch:Character;
+var rookie:Character;
+
+var introCutscene:PsychVideoSprite;
+var startCutscene:PsychVideoSprite;
+
+var blackout:FlxSprite;
+
+// all of these need to be loaded in advance since otherwise the game will stutter when loading them -xeight
+var preloadies = [
+    "recont-rookie2",
+    "recont-dutch2",
+    "recont-dutch-wakeup",
+    "recont-ryan2",
+    "recont-ryan-visor",
+    "recont-ryan-rooklines",
+    "recont-ryan-bampot",
+    "recont-ryan-going"
+];
+
+function onLoad() {
+    if (ClientPrefs.lowQuality)
+        preloadies = [
+            "recont-dutch2",
+            "recont-rookie2"
+        ];
+        
+    // just in case
+    for (pre in preloadies) {
+        Character.preload(pre);
+        var preloads = PlayState.instance.returnCharacterPreload(pre);
+        for (load in preloads) {
+            Paths.image(load.path);
+        }
+    }
+
+    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stages/gateB/gateBg'));
+    bg.antialiasing = ClientPrefs.globalAntialiasing;
+    bg.updateHitbox();
+    add(bg);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(oppShadow);
+
+    dutchShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(dutchShadow);
+
+    rookieShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(rookieShadow);
+
+    dutch = new Character(1250, 200, "recont-dutch1");
+    dutch.antialiasing = ClientPrefs.globalAntialiasing;
+    add(dutch);
+
+    rookie = new Character(450, 650, "recont-rookie1");
+    rookie.antialiasing = ClientPrefs.globalAntialiasing;
+    foreground.add(rookie); // my boy is all grown up and can now stand in front of ryan -xeight
+
+    if (ClientPrefs.lowQuality) {
+        dutch.load("recont-dutch2");
+        rookie.load("recont-rookie2");
+    }
+
+    var light:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stages/gateB/light'));
+    light.antialiasing = ClientPrefs.globalAntialiasing;
+    light.updateHitbox();
+    foreground.add(light);
+
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    add(blackout);
+
+    PlayState.instance.useSingArrays = true;
+    FoundationGameOverSubstate.videoOverride = "recontainment";
+
+    if (ClientPrefs.cutscenes) {
+        introCutscene = new PsychVideoSprite();
+        introCutscene.canSkip = true;
+        introCutscene.scale.set(0.7, 0.675);
+        introCutscene.addCallback('onFormat',()->{
+            introCutscene.cameras = [game.camOther];
+            introCutscene.updateHitbox();
+            introCutscene.screenCenter();
+        });
+        introCutscene.addCallback('onEnd',()->{
+            game.camHUD.visible = true;
+            game.camGame.visible = true;
+            game.startCountdown();
+            introCutscene.kill();
+        });
+        introCutscene.load(Paths.video('cutscenes/RecontainmentIntro'));
+        introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    }
+
+    startCutscene = new PsychVideoSprite();
+    startCutscene.addCallback('onFormat',()->{
+        startCutscene.cameras = [game.camOther];
+        startCutscene.scale.set(0.7, 0.675);
+        startCutscene.updateHitbox();
+        startCutscene.screenCenter();
+    });
+    startCutscene.addCallback('onEnd',()->{
+        camOther.flash(FlxColor.BLACK, 3);
+		startCutscene.kill();
+        blackout.visible = false;
+    });
+    startCutscene.load(Paths.video('transitions/RecontainmentTransition'), [PsychVideoSprite.muted]);
+    startCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    add(startCutscene);
+    // startCutscene.play();
+    // startCutscene.pause();
+    // startCutscene.visible = false;
+}
+
+function onCreatePost() {
+    game.hud.style = "Recon";
+    game.hud.icon.x -= 15;
+    game.hud.icon.y -= 15;
+    game.health = 2;
+
+    PlayState.instance.healthGain = 0;
+    if (ClientPrefs.easyMechanics) 
+        PlayState.instance.healthLoss = 0.5;
+    else
+        PlayState.instance.healthLoss = 0.85;
+
+    bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-100);
+    oppShadow.setPosition(game.dad.x+150, game.dad.y+game.dad.frameHeight-200);
+    dutchShadow.setPosition(dutch.x, dutch.y+dutch.frameHeight-200);
+    rookieShadow.setPosition(rookie.x+50, rookie.y+rookie.frameHeight-175);
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+        game.camGame.visible = false;
+        
+        add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onSongStart() {
+    game.camOther.flash(FlxColor.BLACK, 1);
+
+    startCutscene.visible = true;
+    startCutscene.play();
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "recontainment" + Std.string(FlxG.random.int(1, 2));
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+    return Function_Continue;
+}
+
+function onBeatHit() {
+    if (curBeat % 2 == 0) {
+        if (dutch.animation.curAnim != null) if (!StringTools.startsWith(dutch.animation.curAnim.name, 'sing')) dutch.dance();
+        if (rookie.animation.curAnim != null) if (!StringTools.startsWith(rookie.animation.curAnim.name, 'sing')) rookie.dance();
+    }
+}
+
+function onCountdownTick(swagCounter) {
+    if (swagCounter % 2 == 0) {
+        dutch.dance();
+        rookie.dance();
+    }
+}
+
+function onEvent(name, value1, value2) {
+    if (name == "Change Singers") {
+        var rawSingers = value2.split(",");
+        var singers = [];
+
+        switch (rawSingers[0]) {
+            case "ryan":
+                FoundationGameOverSubstate.videoOverride = "recontainment";
+            case "dutch":
+                FoundationGameOverSubstate.videoOverride = "recontainment-dutch";
+            case "rookie":
+                FoundationGameOverSubstate.videoOverride = "recontainment-rookie";
+        }
+        for (sing in rawSingers) {
+            switch (sing) {
+                case "ryan":
+                    singers.push(dad);
+                case "dutch":
+                    singers.push(dutch);
+                case "rookie":
+                    singers.push(rookie);
+            }
+        }
+
+        if (value1 == "0") 
+            PlayState.instance.opponentSingArray = singers;
+        else if (value1 == "1")
+            PlayState.instance.playerSingArray = singers;
+    }
+    else if (name == "Song Events") {
+        switch (value1) {
+            case "rookIntro":
+                if (ClientPrefs.lowQuality) return;
+
+                rookie.playAnim("lockIn", true);
+                rookie.specialAnim = true;
+            case "rookChar":
+                if (ClientPrefs.lowQuality) return;
+
+                rookie.load("recont-rookie2");
+            case "rookCheer":
+                rookie.playAnim("cheer", true);
+                rookie.specialAnim = true;
+            
+            case "dutchIntro":
+                if (ClientPrefs.lowQuality) return;
+
+                dutch.load("recont-dutch-wakeup");
+                dutch.playAnim("wakeUp", true);
+                dutch.specialAnim = true;
+            case "dutchSnooze":
+                if (ClientPrefs.lowQuality) return;
+
+                dutch.playAnim("sleep", true);
+                dutch.specialAnim = true;
+            case "dutchChar":
+                if (ClientPrefs.lowQuality) return;
+
+                dutch.load("recont-dutch2");
+
+            case "ryanRook":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("recont-ryan-rooklines");
+                dad.playAnim("rook", true);
+                dad.specialAnim = true;
+            case "ryanNoTime":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("recont-ryan-rooklines");
+                dad.playAnim("noTime", true);
+                dad.specialAnim = true;
+            case "ryanGoing":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("recont-ryan-going");
+                dad.playAnim("going", true);
+                dad.specialAnim = true;
+            case "ryanBampot":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("recont-ryan-bampot");
+                dad.playAnim("bampot", true);
+                dad.specialAnim = true;
+            case "ryanBack1":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("recont-ryan1");
+                dad.playAnim("idle", true);
+            case "ryanBack2":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("recont-ryan2");
+                dad.playAnim("idle", true);
+            case "ryanVisorOn":
+                if (ClientPrefs.lowQuality) return;
+
+                dad.load("recont-ryan-visor");
+                dad.playAnim("visorOn", true);
+            case "ryanVisorOff":
+                if (ClientPrefs.lowQuality) return;
+                
+                dad.load("recont-ryan-visor");
+                dad.playAnim("visorOff", true);
+
+            case "black":
+                blackout.visible = true;
+        }
+    }
+}

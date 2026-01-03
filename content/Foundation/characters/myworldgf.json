@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-34,
+				-125
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "sad",
+			"indices": [],
+			"name": "gfcrouchcombobreak"
+		},
+		{
+			"offsets": [
+				162,
+				-91
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "teleport",
+			"indices": [],
+			"name": "gfteleport"
+		},
+		{
+			"offsets": [
+				-26,
+				-118
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "gfcrouchdance"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GFmyworld",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="heart2521.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="heart0000" x="5" y="5" width="423" height="445" frameX="-303" frameY="-313" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0001" x="433" y="5" width="423" height="445" frameX="-303" frameY="-313" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0002" x="861" y="5" width="424" height="445" frameX="-303" frameY="-313" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0003" x="1290" y="5" width="424" height="445" frameX="-303" frameY="-313" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0004" x="1719" y="5" width="424" height="445" frameX="-303" frameY="-313" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0005" x="2148" y="5" width="424" height="447" frameX="-303" frameY="-312" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0006" x="2577" y="5" width="429" height="451" frameX="-302" frameY="-311" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0007" x="3011" y="5" width="431" height="452" frameX="-300" frameY="-310" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0008" x="3447" y="5" width="434" height="457" frameX="-298" frameY="-307" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0009" x="5" y="467" width="440" height="463" frameX="-295" frameY="-304" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0010" x="450" y="467" width="450" height="473" frameX="-290" frameY="-299" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0011" x="905" y="467" width="462" height="487" frameX="-284" frameY="-292" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0012" x="1372" y="467" width="478" height="503" frameX="-276" frameY="-284" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0013" x="1855" y="467" width="500" height="527" frameX="-265" frameY="-272" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0014" x="2360" y="467" width="531" height="557" frameX="-251" frameY="-258" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0015" x="2896" y="467" width="583" height="610" frameX="-225" frameY="-232" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0016" x="5" y="1082" width="659" height="687" frameX="-187" frameY="-193" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0017" x="669" y="1082" width="754" height="786" frameX="-140" frameY="-144" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0018" x="1428" y="1082" width="877" height="913" frameX="-78" frameY="-80" frameWidth="1033" frameHeight="1074"/>
+	<SubTexture name="heart0019" x="2310" y="1082" width="1033" height="1074"/>
+</TextureAtlas>

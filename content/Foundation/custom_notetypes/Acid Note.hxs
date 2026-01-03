@@ -1,0 +1,5 @@
+function setupNote(note) {
+    note.texture = "notes/acidNOTES";
+    note.noteSplashTexture = "notes/acidsplash";
+    note.ignoreNote = true;
+}

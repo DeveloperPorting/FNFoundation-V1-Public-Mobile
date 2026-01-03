@@ -1,0 +1,4 @@
+function setupNote(note) {
+    note.texture = "notes/BlinkNOTE";
+    note.offsetX -= 5;
+}

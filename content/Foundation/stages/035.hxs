@@ -1,0 +1,648 @@
+addHaxeLibrary("Type", "");
+
+var introCutscene:PsychVideoSprite;
+var transitionCutscene:PsychVideoSprite;
+var blackout:FlxSprite;
+var redout:FlxSprite;
+var bloodRain:FlxSprite;
+
+var curtains:FlxSprite;
+var stage:FlxSprite;
+var light:FlxSprite;
+
+var sky:FlxSprite;
+
+var BG1_3:FlxSprite;
+var BG1_2:FlxSprite;
+var BG1_1:FlxSprite;
+
+var BG2_4:FlxSprite;
+var BG2_3:FlxSprite;
+var BG2_2:FlxSprite;
+var BG2_1:FlxSprite;
+
+var BG3_4:FlxSprite;
+var BG3_3:FlxSprite;
+var BG3_2:FlxSprite;
+var BG3_1:FlxSprite;
+
+var P2BG_3:FlxSprite;
+var P2BG_2:FlxSprite;
+var P2BG_1:FlxSprite;
+
+var curtainTransition:FlxSprite;
+var curtaining:Bool = false;
+
+var color = 0xFFD0AEAE;
+
+var tendril:FlxSprite;
+var fuckedNotes:Array<Bool> = [false, false, false, false];
+var noteResetTime:Float = 45;
+var timeSinceLastFuckery:Float = 0;
+var minTimeTillFuckery:Float = 15;
+
+var preloadies = [
+    "035-2",
+    "bf-stick",
+    "035-stick"
+];
+
+function onLoad() {
+    for (pre in preloadies) {
+        Character.preload(pre);
+        var preloads = PlayState.instance.returnCharacterPreload(pre);
+        for (load in preloads) {
+            Paths.image(load.path);
+        }
+    }
+
+    sky = new FlxSprite(-700, -700).loadGraphic(Paths.image("stages/035/sky"));
+    sky.antialiasing = ClientPrefs.globalAntialiasing;
+    sky.updateHitbox();
+
+    // First BG
+    BG1_3 = new FlxSprite(-1000, -700).loadGraphic(Paths.image("stages/035/BG1_3"));
+    BG1_3.color = color;
+    BG1_3.antialiasing = ClientPrefs.globalAntialiasing;
+    BG1_3.scale.set(0.75, 0.75);
+    BG1_3.updateHitbox();
+    // BG1_3.visible = false;
+    
+    BG1_2 = new FlxSprite(-650, -450).loadGraphic(Paths.image("stages/035/BG1_2"));
+    BG1_2.color = color;
+    BG1_2.antialiasing = ClientPrefs.globalAntialiasing;
+    BG1_2.scale.set(0.75, 0.75);
+    BG1_2.updateHitbox();
+    // BG1_2.visible = false;
+
+    BG1_1 = new FlxSprite(-1000, -1000).loadGraphic(Paths.image("stages/035/BG1_1"));
+    BG1_1.color = color;
+    BG1_1.antialiasing = ClientPrefs.globalAntialiasing;
+    BG1_1.scale.set(0.75, 0.75);
+    BG1_1.updateHitbox();
+    // BG1_1.visible = false;
+
+    // Second stage
+    BG2_4 = new FlxSprite(2250, -750 - 700).loadGraphic(Paths.image("stages/035/BG2_4"));
+    BG2_4.color = color;
+    BG2_4.antialiasing = ClientPrefs.globalAntialiasing;
+    BG2_4.scale.set(0.65, 0.65);
+    BG2_4.updateHitbox();
+    // BG2_4.visible = false;
+
+    BG2_3 = new FlxSprite(500 + BG1_3.width, -750).loadGraphic(Paths.image("stages/035/BG2_3"));
+    BG2_3.color = color;
+    BG2_3.antialiasing = ClientPrefs.globalAntialiasing;
+    BG2_3.scale.set(0.65, 0.65);
+    BG2_3.updateHitbox();
+    // BG2_3.visible = false;
+    
+    BG2_2 = new FlxSprite(-950 + BG1_2.width, -800).loadGraphic(Paths.image("stages/035/BG2_2"));
+    BG2_2.color = color;
+    BG2_2.antialiasing = ClientPrefs.globalAntialiasing;
+    BG2_2.scale.set(0.75, 0.75);
+    BG2_2.updateHitbox();
+    // BG2_2.visible = false;
+    
+    BG2_1 = new FlxSprite(-850 + BG1_1.width, -500).loadGraphic(Paths.image("stages/035/BG2_1"));
+    BG2_1.color = color;
+    BG2_1.antialiasing = ClientPrefs.globalAntialiasing;
+    BG2_1.scale.set(0.75, 0.75);
+    BG2_1.updateHitbox();
+    // BG2_1.visible = false;
+
+    // Third stage
+    BG3_4 = new FlxSprite(1500, -1400 - 700).loadGraphic(Paths.image("stages/035/BG3_4"));
+    BG3_4.color = color;
+    BG3_4.antialiasing = ClientPrefs.globalAntialiasing;
+    BG3_4.scale.set(0.75, 0.75);
+    BG3_4.updateHitbox();
+    // BG3_4.visible = false;
+
+    BG3_3 = new FlxSprite(300 + BG2_2.x + BG2_2.width, -1300).loadGraphic(Paths.image("stages/035/BG3_3"));
+    BG3_3.color = color;
+    BG3_3.antialiasing = ClientPrefs.globalAntialiasing;
+    BG3_3.updateHitbox();
+    // BG3_3.visible = false;
+
+    BG3_2 = new FlxSprite(-1000 + BG2_2.x + BG2_2.width, -100).loadGraphic(Paths.image("stages/035/BG3_2"));
+    BG3_2.color = color;
+    BG3_2.antialiasing = ClientPrefs.globalAntialiasing;
+    BG3_2.scale.set(0.75, 0.75);
+    BG3_2.updateHitbox();
+    // BG3_2.visible = false;
+
+    BG3_1 = new FlxSprite(-950 + BG2_1.x + BG2_1.width, -250).loadGraphic(Paths.image("stages/035/BG3_1"));
+    BG3_1.color = color;
+    BG3_1.antialiasing = ClientPrefs.globalAntialiasing;
+    BG3_1.scale.set(0.75, 0.75);
+    BG3_1.updateHitbox();
+    // BG3_1.visible = false;
+
+    // Phase 2 stage
+    P2BG_3 = new FlxSprite(-550, -600).loadGraphic(Paths.image("stages/035/Phase2_3"));
+    P2BG_3.antialiasing = ClientPrefs.globalAntialiasing;
+    // P2BG_3.scale.set(0.75, 0.75);
+    P2BG_3.updateHitbox();
+    P2BG_3.visible = false;
+    // P2BG_3.alpha = 0.5;
+
+    P2BG_2 = new FlxSprite(-550, -600).loadGraphic(Paths.image("stages/035/Phase2_2"));
+    P2BG_2.antialiasing = ClientPrefs.globalAntialiasing;
+    // P2BG_2.scale.set(0.75, 0.75);
+    P2BG_2.updateHitbox();
+    P2BG_2.visible = false;
+
+    P2BG_1 = new FlxSprite(-550, -600).loadGraphic(Paths.image("stages/035/Phase2_1"));
+    P2BG_1.antialiasing = ClientPrefs.globalAntialiasing;
+    // P2BG_1.scale.set(0.75, 0.75);
+    P2BG_1.updateHitbox();
+    P2BG_1.visible = false;
+
+    add(sky);
+
+    add(P2BG_2);
+    add(P2BG_3);
+    add(P2BG_1);
+
+    add(BG1_3);
+    add(BG1_2);
+    add(BG1_1);
+
+    add(BG2_3);
+    add(BG2_2);
+    add(BG2_1);
+    add(BG2_4);
+    
+    add(BG3_3);
+    add(BG3_2);
+    add(BG3_1);
+    add(BG3_4);
+
+    stage = new FlxSprite(-1500, 400).loadGraphic(Paths.image("stages/035/stage"));
+    stage.antialiasing = ClientPrefs.globalAntialiasing;
+    stage.updateHitbox();
+    // stage.visible = false;
+    add(stage);
+
+    bfShadow = new FlxSprite().loadGraphic(Paths.image("BFShadow"));
+    add(bfShadow);
+
+    gfShadow = new FlxSprite().loadGraphic(Paths.image("GFShadow"));
+    add(gfShadow);
+
+    oppShadow = new FlxSprite().loadGraphic(Paths.image("OppShadow"));
+    add(oppShadow);
+
+    tendril = new FlxSprite(50000, 50000);
+    tendril.antialiasing = ClientPrefs.globalAntialiasing;
+    tendril.cameras = [game.camOther];
+    tendril.frames = Paths.getSparrowAtlas('stages/035/NOTEtendrils');
+    tendril.animation.addByPrefix("pull", "NOTEtendril_pull", 24, false);
+    tendril.animation.addByPrefix("push", "NOTEtendril_push", 24, false);
+    tendril.animation.addByPrefix("swoop", "NOTEtendril_swoop", 24, false);
+    tendril.animation.play("pull", true);
+    tendril.visible = false;
+    if (!ClientPrefs.downScroll)
+        tendril.flipY = true;
+    add(tendril);
+
+    curtainTransition = new FlxSprite();
+    curtainTransition.antialiasing = ClientPrefs.globalAntialiasing;
+    curtainTransition.cameras = [game.camOther];
+    curtainTransition.frames = Paths.getSparrowAtlas("stages/035/curtainAnimated");
+    curtainTransition.animation.addByPrefix("enter", "Curtain_enter", 24, false);
+    curtainTransition.animation.addByPrefix("exit", "Curtain_exit", 24, false);
+    curtainTransition.scale.set(0.7, 0.7);
+    curtainTransition.updateHitbox();
+    curtainTransition.screenCenter();
+    curtainTransition.animation.play("enter", true, 19);
+    curtainTransition.animation.paused = true;
+    add(curtainTransition);
+
+    bloodRain = new FlxSprite(-1000, -200);
+    bloodRain.antialiasing = ClientPrefs.globalAntialiasing;
+    bloodRain.cameras = [game.camOther];
+    bloodRain.frames = Paths.getSparrowAtlas('stages/035/Bloodrain');
+    bloodRain.animation.addByPrefix('rain', 'bloodyahhrainahh', 24);
+    bloodRain.alpha = 0;
+    add(bloodRain);
+
+    redout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.RED);
+    redout.cameras = [game.camOther];
+    redout.alpha = 0;
+    add(redout);
+
+    blackout = new FlxSprite(-200, -200).makeGraphic(FlxG.width*2, FlxG.height*2, FlxColor.BLACK);
+    blackout.cameras = [game.camOther];
+    add(blackout);
+
+    if (ClientPrefs.cutscenes) {
+        introCutscene = new PsychVideoSprite();
+        introCutscene.canSkip = true;
+        introCutscene.scale.set(0.7, 0.675);
+        introCutscene.addCallback('onFormat',()->{
+            introCutscene.cameras = [game.camOther];
+            introCutscene.updateHitbox();
+            introCutscene.screenCenter();
+        });
+        introCutscene.addCallback('onEnd',()->{
+            game.camHUD.visible = true;
+            game.camGame.visible = true;
+            game.startCountdown();
+            introCutscene.kill();
+        });
+        introCutscene.load(Paths.video('cutscenes/HarlequinIntro'));
+        introCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    }
+
+    transitionCutscene = new PsychVideoSprite();
+    transitionCutscene.canSkip = false;
+    transitionCutscene.scale.set(0.7, 0.675);
+    transitionCutscene.addCallback('onFormat',()->{
+        transitionCutscene.cameras = [game.camOther];
+        transitionCutscene.updateHitbox();
+        transitionCutscene.screenCenter();
+    });
+    transitionCutscene.addCallback('onEnd',()->{
+        game.camHUD.visible = true;
+        game.camGame.visible = true;
+        transitionCutscene.kill();
+        blackout.visible = false;
+        camOther.flash(FlxColor.BLACK, 5);
+    });
+    transitionCutscene.load(Paths.video('transitions/HarlequinTransition'), [PsychVideoSprite.muted]);
+    transitionCutscene.antialiasing = ClientPrefs.globalAntialiasing;
+    add(transitionCutscene);
+    // transitionCutscene.play();
+    // transitionCutscene.pause();
+    // transitionCutscene.visible = false;
+}
+
+function onCreatePost() {
+    game.hud.style = "Cardboard";
+    game.hud.healthSegmented = 6;
+
+    gameCurtainTransition = new FlxSprite(-150, -200);
+    gameCurtainTransition.antialiasing = ClientPrefs.globalAntialiasing;
+    gameCurtainTransition.frames = Paths.getSparrowAtlas("stages/035/curtainAnimated");
+    gameCurtainTransition.animation.addByPrefix("enter", "Curtain_enter", 24, false);
+    gameCurtainTransition.animation.addByPrefix("exit", "Curtain_exit", 24, false);
+    gameCurtainTransition.scale.set(1.75, 1.75);
+    gameCurtainTransition.updateHitbox();
+    // gameCurtainTransition.animation.play("enter", true, 19);
+    // gameCurtainTransition.animation.paused = true;
+    gameCurtainTransition.visible = false;
+    insert(members.length, gameCurtainTransition);
+
+    bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-100);
+    oppShadow.setPosition(game.dad.x-150, game.dad.y+game.dad.frameHeight-325);
+}
+
+function tendrilPull(index:Int) {
+    fuckedNotes[index] = true;
+    var targetNote = playerStrums.members[index];
+
+    tendril.visible = true;
+    var offset = ClientPrefs.downScroll ? 35 : - 35;
+    if (ClientPrefs.downScroll) 
+        tendril.setPosition(targetNote.x-10, targetNote.y+5);
+    else
+        tendril.setPosition(targetNote.x-10, targetNote.y-450);
+    tendril.animation.play("pull", true);
+    tendril.animation.finishCallback = (anim) -> {
+        tendril.visible = false;
+    };
+
+    new FlxTimer().start(0.5, () -> {
+        function updateNotePosition(newPos) {
+            game.modManager.setValue("transform" + Std.string(index) + "Y", newPos.value, 0);
+        }
+        FlxTween.num(0, offset, 0.15, {ease: FlxEase.backOut, onUpdate: updateNotePosition, onComplete: (twn:FlxTween) -> {
+            new FlxTimer().start(noteResetTime, () -> {
+                FlxTween.num(offset, 0, 5, {ease: FlxEase.backOut, onUpdate: updateNotePosition, onComplete: (twn:FlxTween) -> {
+                    fuckedNotes[index] = false;
+                }});                
+            });
+        }});
+    });
+}
+
+function tendrilPush(index:Int) {
+    fuckedNotes[index] = true;
+    var targetNote = playerStrums.members[index];
+
+    tendril.visible = true;
+    var offset = ClientPrefs.downScroll ? -50 : 50;
+    if (ClientPrefs.downScroll)
+        tendril.setPosition(targetNote.x-10, targetNote.y-45);
+    else
+        tendril.setPosition(targetNote.x-10, targetNote.y-515);
+    tendril.animation.play("push", true);
+    tendril.animation.finishCallback = (anim) -> {
+        tendril.visible = false;
+    };
+
+    new FlxTimer().start(0.5, () -> {
+        function updateNotePosition(newPos) {
+            game.modManager.setValue("transform" + Std.string(index) + "Y", newPos.value, 0);
+        }
+        FlxTween.num(0, offset, 0.15, {ease: FlxEase.backOut, onUpdate: updateNotePosition, onComplete: (twn:FlxTween) -> {
+            new FlxTimer().start(noteResetTime, () -> {
+                FlxTween.num(offset, 0, 5, {ease: FlxEase.backOut, onUpdate: updateNotePosition, onComplete: (twn:FlxTween) -> {
+                    fuckedNotes[index] = false;
+                }});                
+            });
+        }});
+    });
+}
+
+function tendrilSwoop(index:Int) {
+    fuckedNotes[index] = true;
+    var targetNote = playerStrums.members[index];
+    tendrilCurrentNote = index;
+
+    // tendril.
+    tendril.visible = true;
+    var angle = ClientPrefs.downScroll ? FlxG.random.int(-80, -120) : FlxG.random.int(80, 120);
+    if (ClientPrefs.downScroll)
+        tendril.setPosition(targetNote.x, targetNote.y-150);
+    else
+        tendril.setPosition(targetNote.x, targetNote.y-350);
+    tendril.animation.play("swoop", true);
+    tendril.animation.finishCallback = (anim) -> {
+        tendril.visible = false;
+    };
+
+    new FlxTimer().start(0.25, () -> {
+        function updateNotePosition(newPos) {
+            game.modManager.setValue("note" + Std.string(index) + "Angle", newPos.value, 0);
+            game.modManager.setValue("receptor" + Std.string(index) + "Angle", newPos.value, 0);
+        }
+        FlxTween.num(0, angle, 0.45, {ease: FlxEase.backOut, onUpdate: updateNotePosition, onComplete: (twn:FlxTween) -> {
+            new FlxTimer().start(noteResetTime, () -> {
+                FlxTween.num(angle, 0, 5, {ease: FlxEase.backOut, onUpdate: updateNotePosition, onComplete: (twn:FlxTween) -> {
+                    fuckedNotes[index] = false;
+                }});                
+            });
+        }});
+    });
+}
+
+function opponentNoteHitAnim() {
+    if (curtaining) return Function_Stop;
+}
+
+function onUpdate(elapsed:Float) {
+    if (PlayState.instance.startingSong) return;
+
+    timeSinceLastFuckery += elapsed;
+    if (timeSinceLastFuckery >= minTimeTillFuckery && !mustHitSection) {
+
+        var ratio:Float = FlxG.updateFramerate/60; // Account for higher/lower refresh rates (hopefully) -xeight
+        var roll = FlxG.random.int(1, 50 * ratio);
+        if (roll == 1) {
+            var tries:Int = 0;
+            while(tries < 5) {
+                tries += 1;
+
+                var victim = FlxG.random.int(0, 3);
+                if (fuckedNotes[victim]) continue;
+
+                timeSinceLastFuckery = 0;
+
+                switch (FlxG.random.int(0, 2)) {
+                    case 0:
+                        tendrilPush(victim);
+                        tries = 5;
+                    case 1:
+                        tendrilPull(victim);
+                        tries = 5;
+                    case 2:
+                        tendrilSwoop(victim);
+                        tries = 5;
+                }
+            }
+        }
+    }
+}
+
+function doStartCountdown() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes)
+        return Function_Stop;
+}
+
+function presongCutscene() {
+    if (PlayState.isStoryMode && !PlayState.seenCutscene && ClientPrefs.cutscenes) {
+        game.camHUD.visible = false;
+        game.camGame.visible = false;
+
+        add(introCutscene);
+        game.inCutscene = true;
+        introCutscene.play();
+    }
+}
+
+function onSongStart() {
+    blackout.visible = false;
+    game.camOther.flash(FlxColor.BLACK, 7);
+}
+
+function onEndSong() {
+	if (!PlayState.isStoryMode) {
+		ComputerVoicelines.neededFreeplay = "harlequin" + Std.string(FlxG.random.int(1, 2));
+		ComputerVoicelines.flags.push("freeplay_voiceline");
+	}
+
+    return Function_Continue;
+}
+
+function onEvent(name, v1, v2) {
+    if (name != "Song Events") return;
+
+    switch (v1) {
+        case "black":
+            blackout.visible = true;
+            blackout.alpha = 0;
+            FlxTween.tween(blackout, {"alpha": 1}, 5);
+        // tweening is my passion -xeight
+        case "stageChange":
+            switch v2 {
+                case "1":
+                    game.defaultCamZoom = 0.4;
+                    sky.x = -700;
+
+                    boyfriend.x = 1375;
+                    boyfriend.y = 780;
+
+                    dad.x = 900;
+                    dad.y = 240;
+
+                    bfShadow.visible = true;
+                    gfShadow.visible = true;
+                    oppShadow.visible = true;
+
+                    bfShadow.setPosition(game.boyfriend.x + 50, game.boyfriend.y+game.boyfriend.frameHeight-325);
+                    gfShadow.setPosition(game.gf.x+100, game.gf.y+game.gf.frameHeight-100);
+                    oppShadow.setPosition(game.dad.x-150, game.dad.y+game.dad.frameHeight-325);
+
+                    BG1_1.x = -1000;
+                    BG1_2.x = -650;
+                    BG1_3.x = -1000;
+
+                    P2BG_1.visible = false;
+                    P2BG_2.visible = false;
+                    P2BG_3.visible = false;
+
+                    stage.visible = true;
+
+                    BG1_1.visible = true;
+                    BG1_2.visible = true;
+                    BG1_3.visible = true;
+
+                    boyfriend.visible = true;
+                    gf.visible = true;
+                case "2":
+                    FlxTween.tween(BG1_1, {x: BG1_1.x - BG1_1.width}, 5, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG1_2, {x: BG1_2.x - BG1_2.width}, 5.15, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG1_3, {x: BG1_3.x - BG1_3.width}, 5.25, {ease: FlxEase.backOut});
+
+                    FlxTween.tween(BG2_1, {x: BG2_1.x - BG1_1.width}, 5, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG2_2, {x: BG2_2.x - BG1_2.width}, 5.15, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG2_3, {x: BG2_3.x - BG1_3.width}, 5.25, {ease: FlxEase.backOut});
+
+                    FlxTween.tween(BG2_4, {y: BG2_4.y + 700}, 2.25, {ease: FlxEase.bounceOut});
+                    FlxTween.tween(BG2_4, {x: BG2_4.x - 50}, 3, {ease: FlxEase.sineInOut, type: 4});
+
+                    BG3_1.x = BG2_1.x;
+                    BG3_2.x = BG2_2.x;
+                    BG3_3.x = BG2_3.x;
+                case "3":
+                    var offset = BG2_1.width;
+                    FlxTween.tween(sky, {x: -5000}, 5, {ease: FlxEase.quadOut});
+
+                    FlxTween.tween(BG2_1, {x: BG2_1.x - BG2_1.width}, 5, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG2_2, {x: BG2_2.x - BG2_2.width}, 5.15, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG2_3, {x: BG2_3.x - BG2_3.width * 3.75}, 5.25, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG2_4, {y: BG2_4.y - 700}, 1.25, {ease: FlxEase.backIn});
+
+                    FlxTween.tween(BG3_1, {x: BG3_1.x - BG2_1.width - 250}, 5, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG3_2, {x: BG3_2.x - BG2_2.width - 250}, 5.15, {ease: FlxEase.backOut});
+                    FlxTween.tween(BG3_3, {x: BG3_3.x - BG2_3.width * 3.75 - 250}, 5.25, {ease: FlxEase.backOut});
+
+                    FlxTween.tween(BG3_4, {y: BG3_4.y + 700}, 2.25, {ease: FlxEase.bounceOut});
+                    FlxTween.tween(BG3_4, {x: BG3_4.x - 50}, 3, {ease: FlxEase.sineInOut, type: 4});
+            }
+        case "curtain":
+            if (v2 == "in")
+                curtainTransition.animation.play("enter", true);
+            else
+                curtainTransition.animation.play("exit", true);
+        case "gameCurtain":
+            if (v2 == "in") {
+                gameCurtainTransition.visible = true;
+                gameCurtainTransition.animation.play("enter", true);
+            }
+            else {
+                gameCurtainTransition.animation.play("exit", true);
+                gameCurtainTransition.animation.finishCallback = (t) -> {
+                    PlayState.instance.isCameraOnForcedPos = false;
+                    gameCurtainTransition.visible = false; 
+                }
+                
+                // curtainTransition.animation.play("enter", true, 19);  
+                // curtainTransition.animation.play("exit", true, 19);
+            }
+        case "startRain":
+            FlxTween.tween(redout, {"alpha": 1}, 1);
+            FlxTween.tween(bloodRain, {"alpha": 1}, 0.25);
+            bloodRain.animation.play("rain", true);
+        case "startSticks":
+            PlayState.instance.isCameraOnForcedPos = true;
+            PlayState.instance.camFollow.x = 1400;
+            PlayState.instance.camFollow.y = 600;
+
+            curtaining = true;
+            gameCurtainTransition.visible = true;
+            gameCurtainTransition.animation.play("enter", true);
+            gameCurtainTransition.animation.finishCallback = (t) -> {
+                curtaining = false;
+                remove(gameCurtainTransition);
+                game.boyfriend.load("bf-stick");
+                game.boyfriend.playAnim("idle", true);
+                game.dad.load("035-stick");
+                game.dad.playAnim("idle", true);
+                
+                game.boyfriend.visible = true;
+    
+                game.dad.y = 2000;
+                game.boyfriend.y = 2000;
+                gameCurtainTransition.animation.finishCallback = null;
+
+                add(gameCurtainTransition);
+
+                FlxTween.tween(game.boyfriend, {"y": 400}, 3, {ease: FlxEase.quadInOut});
+                FlxTween.tween(game.dad, {"y": 255}, 3, {ease: FlxEase.quadInOut});
+            }            
+        case "endSticks":
+            FlxTween.tween(game.boyfriend, {"y": 2000}, 2, {ease: FlxEase.quadInOut, onComplete: (t) -> {
+                game.boyfriend.load("dbf");
+                game.boyfriend.playAnim("idle", true);
+
+                // evil ass layering shit -xeight
+                remove(gameCurtainTransition);
+                insert(members.length - 4, gameCurtainTransition);
+            }});
+            FlxTween.tween(game.dad, {"y": 2000}, 2, {ease: FlxEase.quadInOut, onComplete: (t) -> {
+                game.dad.load("035");
+                game.dad.playAnim("idle", true);
+
+                // i cant answer you why i have to do this even if i tried to -xeight
+                game.dad.scale.set(1, 1);
+                game.dad.updateHitbox();
+            }});            
+        case "startTransition":
+            game.defaultCamZoom = 0.5;
+
+            redout.visible = false;
+            bloodRain.visible = false;
+            blackout.visible = true;
+
+            transitionCutscene.visible = true;
+            transitionCutscene.play();
+
+            stage.visible = false;
+
+            BG1_1.visible = false;
+            BG1_2.visible = false;
+            BG1_3.visible = false;
+
+            BG2_1.visible = false;
+            BG2_2.visible = false;
+            BG2_3.visible = false;
+            BG2_4.visible = false;
+
+            BG3_1.visible = false;
+            BG3_2.visible = false;
+            BG3_3.visible = false;
+            BG3_4.visible = false;
+
+            P2BG_3.visible = true;
+            P2BG_2.visible = true;
+            P2BG_1.visible = true;
+
+            bfShadow.visible = false;
+            gfShadow.visible = false;
+            oppShadow.visible = false;
+
+            boyfriend.visible = false;
+            gf.visible = false;
+
+            boyfriend.x = 1375 + 100;
+            boyfriend.y = 800 + 50;
+
+            dad.load("035-2");
+            dad.playAnim("idle", true);
+    }
+}

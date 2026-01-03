@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BongBong.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bbcombobreak0000" x="2" y="2" width="394" height="799" frameX="0" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0001" x="2" y="2" width="394" height="799" frameX="0" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0002" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0003" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0004" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0005" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0006" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0007" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0008" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbcombobreak0009" x="398" y="2" width="393" height="799" frameX="-4" frameY="0" frameWidth="397" frameHeight="799"/>
+	<SubTexture name="bbdance0000" x="793" y="2" width="405" height="791" frameX="0" frameY="-8" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0001" x="793" y="2" width="405" height="791" frameX="0" frameY="-8" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0002" x="1200" y="2" width="397" height="793" frameX="-4" frameY="-6" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0003" x="1200" y="2" width="397" height="793" frameX="-4" frameY="-6" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0004" x="1599" y="2" width="397" height="797" frameX="-8" frameY="-2" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0005" x="1599" y="2" width="397" height="797" frameX="-8" frameY="-2" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0006" x="2" y="803" width="402" height="797" frameX="-4" frameY="-2" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0007" x="2" y="803" width="402" height="797" frameX="-4" frameY="-2" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0008" x="406" y="803" width="399" height="798" frameX="-4" frameY="-1" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0009" x="406" y="803" width="399" height="798" frameX="-4" frameY="-1" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0010" x="807" y="803" width="397" height="799" frameX="-4" frameY="0" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0011" x="807" y="803" width="397" height="799" frameX="-4" frameY="0" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0012" x="807" y="803" width="397" height="799" frameX="-4" frameY="0" frameWidth="406" frameHeight="799"/>
+	<SubTexture name="bbdance0013" x="807" y="803" width="397" height="799" frameX="-4" frameY="0" frameWidth="406" frameHeight="799"/>
+</TextureAtlas>

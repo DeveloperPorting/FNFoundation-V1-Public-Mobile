@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cursor.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cursor0000" x="2" y="2" width="96" height="125"/>
+	<SubTexture name="cursorclick0000" x="100" y="2" width="82" height="106" frameX="-5" frameY="-6" frameWidth="91" frameHeight="118"/>
+	<SubTexture name="cursorclick0001" x="100" y="2" width="82" height="106" frameX="-5" frameY="-6" frameWidth="91" frameHeight="118"/>
+	<SubTexture name="cursorclick0002" x="184" y="2" width="91" height="118"/>
+	<SubTexture name="cursorclick0003" x="184" y="2" width="91" height="118"/>
+	<SubTexture name="cursorclick0004" x="184" y="2" width="91" height="118"/>
+	<SubTexture name="cursoreffect10000" x="277" y="2" width="16" height="15" frameX="-2" frameY="-1" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cursoreffect10001" x="295" y="2" width="18" height="17" frameX="-1" frameY="-1" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cursoreffect10002" x="295" y="2" width="18" height="17" frameX="-1" frameY="-1" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cursoreffect10003" x="315" y="2" width="20" height="19"/>
+	<SubTexture name="cursoreffect10004" x="315" y="2" width="20" height="19"/>
+	<SubTexture name="cursoreffect10005" x="337" y="2" width="20" height="19"/>
+	<SubTexture name="cursoreffect10006" x="337" y="2" width="20" height="19"/>
+	<SubTexture name="cursoreffect10007" x="359" y="2" width="20" height="19"/>
+	<SubTexture name="cursoreffect10008" x="359" y="2" width="20" height="19"/>
+	<SubTexture name="cursoreffect10009" x="381" y="2" width="0" height="0" frameX="28" frameY="-8" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cursoreffect10010" x="381" y="2" width="0" height="0" frameX="28" frameY="-8" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cursoreffect10011" x="381" y="2" width="0" height="0" frameX="28" frameY="-8" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cursoreffect10012" x="381" y="2" width="0" height="0" frameX="28" frameY="-8" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cursoreffect10013" x="381" y="2" width="0" height="0" frameX="28" frameY="-8" frameWidth="20" frameHeight="19"/>
+	<SubTexture name="cusorclickeffect0000" x="383" y="2" width="92" height="92" frameX="-12" frameY="-11" frameWidth="116" frameHeight="115"/>
+	<SubTexture name="cusorclickeffect0001" x="2" y="129" width="104" height="103" frameX="-6" frameY="-6" frameWidth="116" frameHeight="115"/>
+	<SubTexture name="cusorclickeffect0002" x="2" y="129" width="104" height="103" frameX="-6" frameY="-6" frameWidth="116" frameHeight="115"/>
+	<SubTexture name="cusorclickeffect0003" x="108" y="129" width="116" height="115"/>
+	<SubTexture name="cusorclickeffect0004" x="108" y="129" width="116" height="115"/>
+	<SubTexture name="cusorclickeffect0005" x="226" y="129" width="116" height="115"/>
+	<SubTexture name="cusorclickeffect0006" x="226" y="129" width="116" height="115"/>
+	<SubTexture name="cusorclickeffect0007" x="344" y="129" width="116" height="115"/>
+	<SubTexture name="cusorclickeffect0008" x="344" y="129" width="116" height="115"/>
+	<SubTexture name="cusorclickeffect0009" x="462" y="129" width="0" height="0" frameX="1660" frameY="403" frameWidth="116" frameHeight="115"/>
+	<SubTexture name="cusorclickeffect0010" x="462" y="129" width="0" height="0" frameX="1660" frameY="403" frameWidth="116" frameHeight="115"/>
+</TextureAtlas>

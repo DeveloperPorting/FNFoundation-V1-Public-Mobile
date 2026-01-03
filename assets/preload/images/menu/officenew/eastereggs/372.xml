@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="372.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="372_off0000" x="5" y="5" width="2337" height="1276" frameX="0" frameY="-2" frameWidth="2898" frameHeight="1280"/>
+	<SubTexture name="372_off0001" x="2347" y="5" width="2464" height="1280" frameX="-434" frameY="0" frameWidth="2898" frameHeight="1280"/>
+	<SubTexture name="372_off0002" x="2474" y="1290" width="0" height="0" frameX="-681" frameY="-710" frameWidth="2898" frameHeight="1280"/>
+	<SubTexture name="372_on0000" x="4816" y="5" width="2337" height="1276" frameX="0" frameY="-2" frameWidth="2898" frameHeight="1280"/>
+	<SubTexture name="372_on0001" x="5" y="1290" width="2464" height="1280" frameX="-434" frameY="0" frameWidth="2898" frameHeight="1280"/>
+	<SubTexture name="372_on0002" x="2474" y="1290" width="0" height="0" frameX="-681" frameY="-710" frameWidth="2898" frameHeight="1280"/>
+</TextureAtlas>

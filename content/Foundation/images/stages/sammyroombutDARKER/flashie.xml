@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="flashie.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="flashie0000" x="5" y="5" width="4000" height="2000"/>
+	<SubTexture name="flashie0001" x="5" y="2010" width="4000" height="2000"/>
+</TextureAtlas>

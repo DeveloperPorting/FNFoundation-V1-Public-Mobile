@@ -1,0 +1,125 @@
+{
+    "segments": [
+        {
+            "name": "intro",
+            "messages": [
+                {
+                    "text": "Before you ask, Doctor, I know why you are here."
+                },
+                {
+                    "id": "truth",
+                    "type": "question",
+                    "text": "I hold important information and documents that the Foundation, no, the 05-Council wants… Is that correct?"
+                }
+            ]
+        },
+
+        {
+            "name": "honest",
+            "messages": [
+                {
+                    "text": "I see, I see, very well then… I'll humor you."
+                },
+                {
+                    "type": "question",
+                    "id": "openOptions",
+                    "text": "Before we continue onwards… You will be given the option to configure any settings you wish to alter to your desired preferences. Do you wish to do so?"
+                }
+            ]
+        },
+        {
+            "name": "lying",
+            "messages": [
+                {
+                    "text": "The look on your face tells me otherwise. Don't play dumb, investigator; I know you too, too well."
+                },
+                {
+                    "type": "question",
+                    "id": "openOptions",
+                    "text": "Before you make more of a fool of yourself… You will be able to tweak and configure any settings you wish to alter to your desired preferences. Do you accept?"
+                }
+            ]
+        },
+
+        {
+            "name": "disclaimer",
+            "messages": [
+                {
+                    "text": "Configuring…"
+                },
+                {
+                    "text": "..."
+                },
+                {
+                    "clear": true,
+                    "text": "The footage you are about to witness will contain the following:"
+                },
+                {
+                    "text": "- Flashing lights and potential risk for those with epilepsy.\n- Use of sudden and loud noises.\n- Use of heavy language, profanity, and inappropriate content.\n- Many dark themes and horror elements, such as violence, body horror, and gore."
+                },
+                {
+                    "text": "If you are prone to such risks, it is recommended to avoid continuing further."
+                },
+                {
+                    "type": "question",
+                    "id": "acceptDisclaimer",
+                    "text": "Do you wish to continue?"
+                }
+            ]
+        },
+
+        {
+            "name": "accepted",
+            "messages": [
+                {
+                    "text": "Configuring…"
+                },
+                {
+                    "text": "…"
+                },
+                {
+                    "type": "delay",
+                    "length": 5
+                },
+                {
+                    "type": "action",
+                    "id": "fadeMusic"
+                },
+                {
+                    "clear": true,
+                    "text": "Configuration Complete."
+                },
+                {
+                    "text": "Welcome, Dr. Yong. The footage will begin shortly. Please stand by…"
+                },
+                {
+                    "type": "delay",
+                    "length": 3
+                },
+                {
+                    "type": "action",
+                    "id": "startGauche"
+                }
+            ]
+        },
+        {
+            "name": "denied",
+            "messages": [
+                {
+                    "text": "I am unable to continue further. Return when you feel like you’re ready, Doctor."
+                },
+                {
+                    "text": "Shutting down…"
+                },
+                {
+                    "type": "delay",
+                    "length": 2
+                },
+                {
+                    "type": "action",
+                    "id": "close"
+                }
+            ]
+        }
+    ]
+}

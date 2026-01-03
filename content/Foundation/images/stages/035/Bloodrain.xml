@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Bloodrain.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bloodyahhrainahh0000" x="2" y="2" width="3389" height="1267" frameX="0" frameY="0" frameWidth="3390" frameHeight="1267"/>
+	<SubTexture name="bloodyahhrainahh0001" x="2" y="1271" width="3389" height="1267" frameX="0" frameY="0" frameWidth="3390" frameHeight="1267"/>
+	<SubTexture name="bloodyahhrainahh0002" x="2" y="2540" width="3389" height="1266" frameX="-1" frameY="0" frameWidth="3390" frameHeight="1267"/>
+	<SubTexture name="bloodyahhrainahh0003" x="2" y="2" width="3389" height="1267" frameX="0" frameY="0" frameWidth="3390" frameHeight="1267"/>
+	<SubTexture name="bloodyahhrainahh0004" x="2" y="1271" width="3389" height="1267" frameX="0" frameY="0" frameWidth="3390" frameHeight="1267"/>
+	<SubTexture name="bloodyahhrainahh0005" x="2" y="2540" width="3389" height="1266" frameX="-1" frameY="0" frameWidth="3390" frameHeight="1267"/>
+</TextureAtlas>
