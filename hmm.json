@@ -18,6 +18,16 @@
       "version": "5.2.2"
     },
     {
+      "name": "format",
+      "type": "haxelib",
+      "version": null
+    },
+    {
+      "name": "hxp",
+      "type": "haxelib",
+      "version": null
+    },
+    {
       "name": "flixel-addons",
       "type": "haxelib",
       "version": "3.2.2"

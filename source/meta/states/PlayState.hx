@@ -2437,15 +2437,10 @@ class PlayState extends MusicBeatState
 					};
 					if(!shouldPush(subEvent))continue;
 					events.push(subEvent);
-				}
-			}
-		// this is mainly to shut my syntax highlighting up
-		#if MODS_ALLOWED
+				 }
+			  }
+		   }
 		}
-		#else
-		}
-		#end
-
 		for (event in songData.events) //Event Notes
 		{
 			for (i in 0...event[1].length)

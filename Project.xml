@@ -48,7 +48,7 @@
 	<define name="LUA_ALLOWED" if="desktop || mobile" />
 	<!-- <define name="ACHIEVEMENTS_ALLOWED" /> FUCK YOUUUU-->
 	<define name="VIDEOS_ALLOWED" if="cpp" />
-	<define name="DISCORD_ALLOWED" if="cpp" unless="mobile"/>
+	<define name="DISCORD_ALLOWED" unless="mobile"/>
 
 	<!-- <define name="EMBED_FILES"/> -->
 
