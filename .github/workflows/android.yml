@@ -30,7 +30,6 @@ jobs:
          haxelib install hmm --quiet
          haxelib run hmm setup --quiet
          haxelib run hmm install --quiet
-         haxelib run lime rebuild hxcpp
 
       - name: Configure Android
         run: |
