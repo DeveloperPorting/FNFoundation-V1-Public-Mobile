@@ -92,7 +92,7 @@
 	<lime version="8.1.1"/>
 	<haxelib name="openfl" version="9.2.2"/>
 
-	<haxelib name="flixel" version="5.2.2" />
+	<haxelib name="flixel" version="5.3.0" />
 	<haxelib name="flixel-addons" version="3.2.2"/>
 	<haxelib name="flixel-ui" version="2.5.0"/>
 	<haxelib name="flixel-tools" version="1.5.1"/>
