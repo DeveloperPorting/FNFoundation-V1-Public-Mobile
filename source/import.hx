@@ -21,6 +21,10 @@ import Init;
 
 import hxvlc.flixel.*;
 
+#if mobile
+import mobile.meta.StorageSystem;
+#end
+
 import meta.data.Paths;
 import meta.data.ClientPrefs;
 import meta.data.Conductor;
