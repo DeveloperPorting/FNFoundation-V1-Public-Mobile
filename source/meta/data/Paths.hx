@@ -612,7 +612,7 @@ class Paths
 	#if MODS_ALLOWED
 	inline static public function mods(key:String = '')
 	{
-		return StorageSystem.getStorageDirectory() + 'content/' + key;
+		return #if mobile StorageSystem.getDirectory() + #end'content/' + key;
 	}
 
 	inline static public function modsFont(key:String)
@@ -680,7 +680,7 @@ class Paths
 			if (FileSystem.exists(fileToCheck))
 				return fileToCheck;
 		}
-		return StorageSystem.getStorageDirectory() + 'content/' + key;
+		return #if mobile StorageSystem.getDirectory() + #end 'content/' + key;
 	}
 
 	public static var globalMods:Array<String> = [];
