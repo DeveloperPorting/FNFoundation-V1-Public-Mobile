@@ -1,5 +1,5 @@
 package meta.data;
-
+#if DISCORD_ALLOWED
 import hxdiscord_rpc.Types;
 import hxdiscord_rpc.Discord;
 import sys.thread.Thread;
@@ -75,3 +75,4 @@ class DiscordClient {
 		Sys.println('[Discord] Error ($errorCode:$message)');
 	}
 }
+#end
