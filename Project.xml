@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Foundation" file="Foundation" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="1.0.1" company="FoolsForHire" />
+	<app title="Friday Night Foundation" file="Foundation" packageName="com.foolsforhire.foundation" package="com.foolsforhire.foundation" main="Main" version="1.0.1" company="FoolsForHire" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
