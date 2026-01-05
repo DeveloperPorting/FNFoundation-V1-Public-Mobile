@@ -25,7 +25,7 @@ class ClientPrefs {
 	public static var gpuCaching:Bool = true;
 	public static var loadingThreads:Int = Math.floor(Std.parseInt(Sys.getEnv("NUMBER_OF_PROCESSORS"))/2);
 	public static var multicoreLoading:Bool = false;
-	public static var shaders:Bool = true;
+	public static var shaders:Bool = false;
 	public static var mechanicExplanations:Bool = true;
 	public static var easyMechanics:Bool = false;
 	public static var subtitles:Bool = true;
