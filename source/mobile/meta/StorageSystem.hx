@@ -6,20 +6,24 @@ import extension.androidtools.Settings;
 import extension.androidtools.Permissions;
 import extension.androidtools.os.Build.VERSION;
 import extension.androidtools.os.Build.VERSION_CODES;
+import extension.androidtools.Tools;
 #end
 import lime.app.Application;
+import haxe.io.Path;
 
-using StringTools;
-
-/** 
-* @Authors StarNova (Cream.BR)
-* @version: 0.1.0 (Under Development)
-**/
-
+/**
+ * @Authors StarNova (Cream.BR)
+ * @version: 0.1.1 (Improved)
+ **/
 class StorageSystem {
-  
+
+    private static var folderName(get, never):String;
+    private static function get_folderName():String {
+        return Application.current.meta.get('file');
+    }
+
     public static inline function getStorageDirectory():String
-	  	return #if android haxe.io.Path.addTrailingSlash(Environment.getExternalStorageDirectory() + '/.' + Application.current.meta.get('file')) #elseif ios lime.system.System.documentsDirectory #else Sys.getCwd() #end;
+	  	return #if android Path.addTrailingSlash(Environment.getExternalStorageDirectory() + '/.' + folderName) #elseif ios lime.system.System.documentsDirectory #else Sys.getCwd() #end;
 	
 	public static function getDirectory():String
 	{
@@ -32,27 +36,35 @@ class StorageSystem {
 		#end
 	}
 
-	/**
+    /**
 	 * Request permission to access the files
 	 */
-	public static function getPermissions():Void {
-		if (VERSION.SDK_INT >= VERSION_CODES.TIRAMISU) {
-			Permissions.requestPermissions([
-				'READ_MEDIA_IMAGES',
-				'READ_MEDIA_VIDEO',
-				'READ_MEDIA_AUDIO',
-				'READ_MEDIA_VISUAL_USER_SELECTED'
-			]);
-		}
-		else {
-			Permissions.requestPermissions(['READ_EXTERNAL_STORAGE', 'WRITE_EXTERNAL_STORAGE']);
-	  }
+    public static function getPermissions():Void {
+        #if android
+        if (VERSION.SDK_INT >= VERSION_CODES.TIRAMISU) {
+            Permissions.requestPermissions([
+                'READ_MEDIA_IMAGES',
+                'READ_MEDIA_VIDEO',
+                'READ_MEDIA_AUDIO',
+                'READ_MEDIA_VISUAL_USER_SELECTED'
+            ]);
+        } else {
+            Permissions.requestPermissions([
+                'READ_EXTERNAL_STORAGE', 
+                'WRITE_EXTERNAL_STORAGE'
+            ]);
+        }
 
-		/**
-     * For Android 11
-     */
-		if (!Environment.isExternalStorageManager()) {
-            Settings.requestSetting('MANAGE_APP_ALL_FILES_ACCESS_PERMISSION');
-		}
-	}
+        // Android 11+
+        if (VERSION.SDK_INT >= VERSION_CODES.R) { // SDK 30 = Android 11
+            if (!Environment.isExternalStorageManager()) {
+                Settings.requestSetting('MANAGE_APP_ALL_FILES_ACCESS_PERMISSION');
+            }
+        }
+
+		Tools.showAlertDialog("Requires permissions", "Please allow the necessary permissions to play.\nPress OK & let's see what happens", {name: "OK", func: null}, null);
+        #else
+        trace("Permissions request not required or not implemented for this platform.");
+        #end
+    }
 }
