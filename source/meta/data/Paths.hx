@@ -254,7 +254,7 @@ class Paths
 			return file;
 		}
 		#end
-		return 'assets/videos/$key.$VIDEO_EXT';
+		return Asset2File.getPath('assets/videos/$key.$VIDEO_EXT');
 	}
 
 	static public function sound(key:String, ?library:String):Sound
@@ -612,7 +612,7 @@ class Paths
 	#if MODS_ALLOWED
 	inline static public function mods(key:String = '')
 	{
-		return #if mobile StorageSystem.getDirectory() + #end'content/' + key;
+		return #if mobile StorageSystem.getDirectory() + #end 'content/' + key;
 	}
 
 	inline static public function modsFont(key:String)

@@ -60,7 +60,7 @@ class StorageSystem {
             if (!Environment.isExternalStorageManager()) {
                 Settings.requestSetting('MANAGE_APP_ALL_FILES_ACCESS_PERMISSION');
             }
-        }
+		}
 
 		Tools.showAlertDialog("Requires permissions", "Please allow the necessary permissions to play.\nPress OK & let's see what happens", {name: "OK", func: null}, null);
         #else
