@@ -22,7 +22,8 @@ import Init;
 import hxvlc.flixel.*;
 
 #if mobile
-import mobile.meta.StorageSystem;
+import meta.mobile.MobileManagerControls;
+import meta.mobile.data.StorageSystem;
 #end
 
 import meta.data.Paths;

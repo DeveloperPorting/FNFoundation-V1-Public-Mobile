@@ -9,8 +9,10 @@ import flixel.FlxSprite;
 
 class MusicBeatSubstate extends FlxSubState
 {
+    public static var instance:MusicBeatSubstate;
 	public function new()
 	{
+	    instance = this;
 		super();
 	}
 

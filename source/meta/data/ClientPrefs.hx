@@ -8,6 +8,9 @@ import flixel.graphics.FlxGraphic;
 import meta.data.*;
 import meta.states.*;
 import meta.data.Controls.KeyboardScheme;
+#if mobile
+import meta.mobile.flixel.input.FlxMobileInputID;
+#end
 
 @:structInit class KutData
 {
@@ -141,6 +144,22 @@ class ClientPrefs {
 		'debug_1'		=> [SEVEN, NONE],
 		'debug_2'		=> [EIGHT, NONE]
 	];
+	public static var mobileBinds:Map<String, Array<FlxMobileInputID>> = [
+		'note_up'		=> [noteUP, UP2],
+		'note_left'		=> [noteLEFT, LEFT2],
+		'note_down'		=> [noteDOWN, DOWN2],
+		'note_right'	=> [noteRIGHT, RIGHT2],
+
+		'ui_up'			=> [UP, noteUP],
+		'ui_left'		=> [LEFT, noteLEFT],
+		'ui_down'		=> [DOWN, noteDOWN],
+		'ui_right'		=> [RIGHT, noteRIGHT],
+
+		'accept'		=> [A],
+		'back'			=> [B],
+		'pause'			=> [NONE],
+		'reset'			=> [NONE]
+	];
 	public static var editorUIColor:FlxColor = FlxColor.fromRGB(102, 163, 255);
 	public static var editorGradColors:Array<FlxColor> = [FlxColor.fromRGB(83, 21, 78), FlxColor.fromRGB(21, 62, 83)];
 	public static var editorBoxColors:Array<FlxColor> = [FlxColor.fromRGB(58, 112, 159), FlxColor.fromRGB(138, 173, 202)];
@@ -152,9 +171,11 @@ class ClientPrefs {
 	];
 
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
+	public static var defaultMobileBinds:Map<String, Array<FlxMobileInputID>> = null;
 
 	public static function loadDefaultKeys() {
 		defaultKeys = keyBinds.copy();
+		defaultMobileBinds = mobileBinds.copy();
 		//trace(defaultKeys);
 	}
 

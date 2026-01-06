@@ -35,6 +35,21 @@ class MusicBeatState extends FlxUIState
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
+		
+	#if mobile
+	public var mobileManager:MobileManagerControls;
+	
+	public function new() {
+		super();
+		mobileManager = new MobileManagerControls(this);
+	}
+
+	override function destroy()
+	{
+		if (mobileManager != null) mobileManager.destroy();
+		super.destroy();
+	}
+	#end
 
 	override function create() {
 		camBeat = FlxG.camera;
