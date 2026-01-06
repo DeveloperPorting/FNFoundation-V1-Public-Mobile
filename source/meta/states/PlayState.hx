@@ -4971,10 +4971,10 @@ class PlayState extends MusicBeatState
 	private function keyShit():Void
 	{
 		// HOLDING
-		var up = controls.NOTE_UP;
-		var right = controls.NOTE_RIGHT;
-		var down = controls.NOTE_DOWN;
-		var left = controls.NOTE_LEFT;
+		var up = controls.NOTE_UP || mobileManager.hitbox.buttonUp.pressed;
+		var right = controls.NOTE_RIGHT || mobileManager.hitbox.buttonRight.pressed;
+		var down = controls.NOTE_DOWN || mobileManager.hitbox.buttonDown.pressed;
+		var left = controls.NOTE_LEFT || mobileManager.hitbox.buttonLeft.pressed;
 		var dodge = controls.NOTE_DODGE;
 
 		var controlHoldArray:Array<Bool> = [left, down, up, right,dodge];
