@@ -7,12 +7,12 @@ import flixel.graphics.frames.FlxTileFrames;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxPoint;
 import flixel.util.FlxDestroyUtil;
-import mobile.flixel.FlxButton;
+import meta.mobile.flixel.FlxButton;
 import openfl.display.BitmapData;
 import openfl.utils.Assets;
 import meta.mobile.flixel.input.FlxMobileInputManager;
 import meta.mobile.flixel.input.FlxMobileInputID;
-import states.PlayState;
+
 enum MobileDPadMode
 {
 	UP_DOWN;
