@@ -919,23 +919,30 @@ class Controls extends FlxActionSet
 	
     private function checkMobileInput(id:FlxMobileInputID, checkFn:Dynamic -> FlxMobileInputID -> Bool):Bool
     {
-       final state = MusicBeatState.getState();
-       final substate = MusicBeatSubstate.instance;
+    final state = MusicBeatState.getState();
+    final substate = MusicBeatSubstate.instance;
 
-       if (state != null)
-       {
-           if (state.mobileManager.virtualPad != null && checkFn(state.mobileManager.virtualPad, id)) return true;
-           if (state.mobileManager.hitbox != null && checkFn(state.mobileManager.hitbox, id)) return true;
-       }
-
-       if (substate != null)
-       {
-           if (substate.mobileManager.virtualPad != null && checkFn(substate.mobileManager.virtualPad, id)) return true;
-           if (substate.mobileManager.hitbox != null && checkFn(substate.mobileManager.hitbox, id)) return true;
-        }
-
-        return false;
+    if (state?.mobileManager != null)
+    {
+        var pad = state.mobileManager.virtualPad;
+        var box = state.mobileManager.hitbox;
+        
+        if (pad != null && checkFn(pad, id)) return true;
+        if (box != null && checkFn(box, id)) return true;
     }
+
+    if (substate?.mobileManager != null)
+    {
+        var sPad = substate.mobileManager.virtualPad;
+        var sBox = substate.mobileManager.hitbox;
+        
+        if (sPad != null && checkFn(sPad, id)) return true;
+        if (sBox != null && checkFn(sBox, id)) return true;
+    }
+
+    return false;
+    }
+
 
      public function mobileControlsJustPressed(id:FlxMobileInputID):Bool
      {
