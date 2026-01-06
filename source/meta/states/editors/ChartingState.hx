@@ -2585,6 +2585,7 @@ class ChartingState extends MusicBeatState
 		var st:Float = sectionStartTime();
 		var et:Float = st + (Conductor.stepCrotchet * steps);
 
+        #if !desktop // sla pq isso n tava buildando no pc dx assim por enquanto
 		if (FlxG.save.data.chart_waveformInst) {
 			var sound:FlxSound = FlxG.sound.music;
 			if (sound._sound != null && sound._sound.__buffer != null) {
@@ -2618,6 +2619,7 @@ class ChartingState extends MusicBeatState
 				);
 			}
 		}
+		#end
 
 		// Draws
 		var gSize:Int = Std.int(GRID_SIZE * 8);
