@@ -1,4 +1,4 @@
-package mobile.meta;
+package meta.mobile.data;
 
 #if android
 import extension.androidtools.os.Environment;

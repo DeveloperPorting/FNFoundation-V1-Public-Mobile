@@ -10,6 +10,9 @@ import flixel.input.actions.FlxActionSet;
 import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
+#if mobile
+import meta.mobile.flixel.input.FlxMobileInputID;
+#end
 
 enum abstract Action(String) to String from String
 {
@@ -914,4 +917,83 @@ class Controls extends FlxActionSet
 	{
 		return input.device == GAMEPAD && (deviceID == FlxInputDeviceID.ALL || input.deviceID == deviceID);
 	}
+	
+    private function checkMobileInput(id:FlxMobileInputID, checkFn:Dynamic -> FlxMobileInputID -> Bool):Bool
+    {
+       final state = MusicBeatState.getState();
+       final substate = MusicBeatSubstate.instance;
+
+       if (state != null)
+       {
+           if (state.mobileManager.virtualPad != null && checkFn(state.mobileManager.virtualPad, id)) return true;
+           if (state.mobileManager.hitbox != null && checkFn(state.mobileManager.hitbox, id)) return true;
+       }
+
+       if (substate != null)
+       {
+           if (substate.mobileManager.virtualPad != null && checkFn(substate.mobileManager.virtualPad, id)) return true;
+           if (substate.mobileManager.hitbox != null && checkFn(substate.mobileManager.hitbox, id)) return true;
+        }
+
+        return false;
+    }
+
+     public function mobileControlsJustPressed(id:FlxMobileInputID):Bool
+     {
+         #if mobile
+         return checkMobileInput(id, (device, i) -> device.buttonJustPressed(i));
+         #else
+         return false;
+         #end
+     }
+
+    public function mobileControlsJustReleased(id:FlxMobileInputID):Bool
+    {
+        #if mobile
+        return checkMobileInput(id, (device, i) -> device.buttonJustReleased(i));
+        #else
+        return false;
+        #end
+    }
+
+    public function mobileControlsPressed(id:FlxMobileInputID):Bool
+    {
+        #if mobile
+        return checkMobileInput(id, (device, i) -> device.buttonPressed(i));
+        #else
+        return false;
+        #end
+    }
+
+    public function mobileControlsReleased(id:FlxMobileInputID):Bool
+    {
+        #if mobile
+        return checkMobileInput(id, (device, i) -> device.buttonReleased(i));
+        #else
+        return false;
+        #end
+    }
+
+    public function getMobileIDFromControl(control:Control):FlxMobileInputID
+    {
+        #if mobile
+        return switch (control)
+        {
+            case UP: UP;
+            case DOWN: DOWN;
+            case LEFT: LEFT;
+            case RIGHT: RIGHT;
+            case NOTE_UP: HITBOX_UP;
+            case NOTE_DOWN: HITBOX_DOWN;
+            case NOTE_LEFT: HITBOX_LEFT;
+            case NOTE_RIGHT: HITBOX_RIGHT;
+            case ACCEPT: A;
+            case BACK: B;
+            case PAUSE: P;
+            default: NONE;
+        }
+        #else
+        return null;
+        #end
+    }
 }
