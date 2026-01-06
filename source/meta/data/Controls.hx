@@ -14,6 +14,13 @@ import flixel.input.keyboard.FlxKey;
 import meta.mobile.flixel.input.FlxMobileInputID;
 #end
 
+interface IMobileInput {
+    function buttonJustPressed(id:FlxMobileInputID):Bool;
+    function buttonJustReleased(id:FlxMobileInputID):Bool;
+    function buttonPressed(id:FlxMobileInputID):Bool;
+    function buttonReleased(id:FlxMobileInputID):Bool;
+}
+
 enum abstract Action(String) to String from String
 {
 	var UI_UP = "ui_up";
@@ -917,31 +924,33 @@ class Controls extends FlxActionSet
 		return input.device == GAMEPAD && (deviceID == FlxInputDeviceID.ALL || input.deviceID == deviceID);
 	}
 	
-    private function checkMobileInput(id:FlxMobileInputID, checkFn:Dynamic -> FlxMobileInputID -> Bool):Bool
+    private function checkMobileInput(id:FlxMobileInputID, type:Int):Bool
     {
     final state = MusicBeatState.getState();
     final substate = MusicBeatSubstate.instance;
 
-    if (state?.mobileManager != null)
-    {
-        var pad = state.mobileManager.virtualPad;
-        var box = state.mobileManager.hitbox;
-        
-        if (pad != null && checkFn(pad, id)) return true;
-        if (box != null && checkFn(box, id)) return true;
-    }
+    var managers = [];
+    if (state?.mobileManager != null) managers.push(state.mobileManager);
+    if (substate?.mobileManager != null) managers.push(substate.mobileManager);
 
-    if (substate?.mobileManager != null)
-    {
-        var sPad = substate.mobileManager.virtualPad;
-        var sBox = substate.mobileManager.hitbox;
-        
-        if (sPad != null && checkFn(sPad, id)) return true;
-        if (sBox != null && checkFn(sBox, id)) return true;
-    }
+    for (manager in managers) {
+        var devices:Array<IMobileInput> = [];
+        if (manager.virtualPad != null) devices.push(cast manager.virtualPad);
+        if (manager.hitbox != null) devices.push(cast manager.hitbox);
 
+        for (device in devices) {
+            var result = switch(type) {
+                case 0: device.buttonJustPressed(id);
+                case 1: device.buttonJustReleased(id);
+                case 2: device.buttonPressed(id);
+                case 3: device.buttonReleased(id);
+                default: false;
+            }
+            if (result) return true;
+        }
+    }
     return false;
-    }
+}
 
 
      public function mobileControlsJustPressed(id:FlxMobileInputID):Bool
