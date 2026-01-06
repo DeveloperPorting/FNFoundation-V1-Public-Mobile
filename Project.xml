@@ -170,7 +170,7 @@
 	<config:android permission="android.permission.CAPTURE_AUDIO_OUTPUT" />
 	<android target-sdk-version="34" />
 	<android min-sdk-version="19" />
-	<!--certificate path="key.keystore" password="foundation" alias="foundation" alias-password="foundation" unless="test" /-->
+	<certificate path="key.keystore" password="foundation" alias="foundation" alias-password="foundation" unless="test" />
     </section>
 
 	<!-- _________________________________ Custom _______________________________ -->
