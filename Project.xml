@@ -68,6 +68,7 @@
 	<library name="shared"        preload="true" />
 	
 	<assets path="assets/videos"        library='videos' if="VIDEOS_ALLOWED"/>
+	<assets Path="assets/mobile"        if="mobile"/>
 	<assets path="assets/songs"         library="songs"/>
 	<assets path="assets/shared"        library="shared"/>
 
