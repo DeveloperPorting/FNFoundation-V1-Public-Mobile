@@ -930,7 +930,7 @@ class Controls extends FlxActionSet
 				bools[0] = state.mobileManager.virtualPad.buttonJustPressed(id);
 
 			if (state.mobileManager.hitbox != null)
-				bools[1] = state.mobileManager.hitbox..buttonJustPressed(id);
+				bools[1] = state.mobileManager.hitbox.buttonJustPressed(id);
 		}
 
 		if (substate != null)
