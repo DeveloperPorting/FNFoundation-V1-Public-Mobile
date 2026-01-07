@@ -1020,19 +1020,19 @@ class Controls extends FlxActionSet
 		if (state != null)
 		{
 			if (state.mobileManager.virtualPad != null)
-				bools[0] = state.mobileManager.virtualPad.buttonReleased(id);
+				bools[0] = state.mobileManager.virtualPad.buttonJustReleased(id);
 
 			if (state.mobileManager.hitbox != null)
-				bools[1] = state.mobileManager.hitbox.buttonReleased(id);
+				bools[1] = state.mobileManager.hitbox.buttonJustReleased(id);
 		}
 
 		if (substate != null)
 		{
 			if (substate.mobileManager.virtualPad != null)
-				bools[2] = substate.mobileManager.virtualPad.buttonReleased(id);
+				bools[2] = substate.mobileManager.virtualPad.buttonJustReleased(id);
 
 			if (substate.mobileManager.hitbox != null)
-				bools[3] = substate.mobileManager.hitbox.buttonReleased(id);
+				bools[3] = substate.mobileManager.hitbox.buttonJustReleased(id);
 		}	
 
 		return bools.contains(true);
