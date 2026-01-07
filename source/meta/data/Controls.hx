@@ -12,6 +12,7 @@ import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
 #if mobile
 import meta.mobile.flixel.input.FlxMobileInputID;
+import meta.states.substate.MusicBeatSubstate;
 #end
 
 enum abstract Action(String) to String from String
