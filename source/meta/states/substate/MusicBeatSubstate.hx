@@ -14,6 +14,7 @@ class MusicBeatSubstate extends FlxSubState
 	{
 	    instance = this;
 		super();
+		mobileManager = new MobileManagerControls(this);
 	}
 
 	private var lastBeat:Float = 0;
@@ -28,6 +29,16 @@ class MusicBeatSubstate extends FlxSubState
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
+
+	#if mobile
+	public var mobileManager:MobileManagerControls;
+
+	override function destroy()
+	{
+		if (mobileManager != null) mobileManager.destroy();
+		super.destroy();
+	}
+	#end
 
 	override function update(elapsed:Float)
 	{
