@@ -529,7 +529,7 @@ class PlayState extends MusicBeatState
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('dodge')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex1')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex2'))
-
+			
 		];
 
 

@@ -10,9 +10,6 @@ import flixel.input.actions.FlxActionSet;
 import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
-#if mobile
-import meta.mobile.flixel.input.FlxMobileInputID;
-#end
 
 enum abstract Action(String) to String from String
 {
@@ -142,139 +139,139 @@ class Controls extends FlxActionSet
 	public var UI_UP(get, never):Bool;
 
 	inline function get_UI_UP()
-		return _ui_up.check() #if mobile || mobileControlsPressed(FlxMobileInputID.UP) #end;
+		return _ui_up.check();
 
 	public var UI_LEFT(get, never):Bool;
 
 	inline function get_UI_LEFT()
-		return _ui_left.check() #if mobile || mobileControlsPressed(FlxMobileInputID.LEFT) #end;
+		return _ui_left.check();
 
 	public var UI_RIGHT(get, never):Bool;
 
 	inline function get_UI_RIGHT()
-		return _ui_right.check() #if mobile || mobileControlsPressed(FlxMobileInputID.RIGHT) #end;
+		return _ui_right.check();
 
 	public var UI_DOWN(get, never):Bool;
 
 	inline function get_UI_DOWN()
-		return _ui_down.check() #if mobile || mobileControlsPressed(FlxMobileInputID.DOWN) #end;
+		return _ui_down.check();
 
 	public var UI_UP_P(get, never):Bool;
 
 	inline function get_UI_UP_P()
-		return _ui_upP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.UP) #end;
+		return _ui_upP.check();
 
 	public var UI_LEFT_P(get, never):Bool;
 
 	inline function get_UI_LEFT_P()
-		return _ui_leftP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.LEFT) #end;
+		return _ui_leftP.check();
 
 	public var UI_RIGHT_P(get, never):Bool;
 
 	inline function get_UI_RIGHT_P()
-		return _ui_rightP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.RIGHT) #end;
+		return _ui_rightP.check();
 
 	public var UI_DOWN_P(get, never):Bool;
 
 	inline function get_UI_DOWN_P()
-		return _ui_downP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.DOWN) #end;
+		return _ui_downP.check();
 
 	public var UI_UP_R(get, never):Bool;
 
 	inline function get_UI_UP_R()
-		return _ui_upR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.UP) #end;
+		return _ui_upR.check();
 
 	public var UI_LEFT_R(get, never):Bool;
 
 	inline function get_UI_LEFT_R()
-		return _ui_leftR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.LEFT) #end;
+		return _ui_leftR.check();
 
 	public var UI_RIGHT_R(get, never):Bool;
 
 	inline function get_UI_RIGHT_R()
-		return _ui_rightR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.RIGHT) #end;
+		return _ui_rightR.check();
 
 	public var UI_DOWN_R(get, never):Bool;
 
 	inline function get_UI_DOWN_R()
-		return _ui_downR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.DOWN) #end;
+		return _ui_downR.check();
 
 	public var NOTE_UP(get, never):Bool;
 
 	inline function get_NOTE_UP()
-		return _note_up.check() #if mobile || mobileControlsPressed(FlxMobileInputID.hitboxUP) #end;
+		return _note_up.check();
 
 	public var NOTE_LEFT(get, never):Bool;
 
 	inline function get_NOTE_LEFT()
-		return _note_left.check() #if mobile || mobileControlsPressed(FlxMobileInputID.hitboxLEFT) #end;
+		return _note_left.check();
 
 	public var NOTE_RIGHT(get, never):Bool;
 
 	inline function get_NOTE_RIGHT()
-		return _note_right.check() #if mobile || mobileControlsPressed(FlxMobileInputID.hitboxRIGHT) #end;
+		return _note_right.check();
 
 	public var NOTE_DOWN(get, never):Bool;
 
 	inline function get_NOTE_DOWN()
-		return _note_down.check() #if mobile || mobileControlsPressed(FlxMobileInputID.hitboxDOWN) #end;
+		return _note_down.check();
 
 	public var NOTE_UP_P(get, never):Bool;
 
 	inline function get_NOTE_UP_P()
-		return _note_upP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.hitboxUP) #end;
+		return _note_upP.check();
 
 	public var NOTE_LEFT_P(get, never):Bool;
 
 	inline function get_NOTE_LEFT_P()
-		return _note_leftP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.hitboxLEFT) #end;
+		return _note_leftP.check();
 
 	public var NOTE_RIGHT_P(get, never):Bool;
 
 	inline function get_NOTE_RIGHT_P()
-		return _note_rightP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.hitboxRIGHT) #end;
+		return _note_rightP.check();
 
 	public var NOTE_DOWN_P(get, never):Bool;
 
 	inline function get_NOTE_DOWN_P()
-		return _note_downP.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.hitboxDOWN) #end;
+		return _note_downP.check();
 
 	public var NOTE_UP_R(get, never):Bool;
 
 	inline function get_NOTE_UP_R()
-		return _note_upR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.hitboxUP) #end;
+		return _note_upR.check();
 
 	public var NOTE_LEFT_R(get, never):Bool;
 
 	inline function get_NOTE_LEFT_R()
-		return _note_leftR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.hitboxLEFT) #end;
+		return _note_leftR.check();
 
 	public var NOTE_RIGHT_R(get, never):Bool;
 
 	inline function get_NOTE_RIGHT_R()
-		return _note_rightR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.hitboxRIGHT) #end;
+		return _note_rightR.check();
 
 	public var NOTE_DOWN_R(get, never):Bool;
 
 	inline function get_NOTE_DOWN_R()
-		return _note_downR.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.hitboxDOWN) #end;
+		return _note_downR.check();
 
 	public var ACCEPT(get, never):Bool;
 	inline function get_ACCEPT()
-		return _accept.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.A) #end;
+		return _accept.check();
 
 	public var ACCEPT_HOLD(get, never):Bool;
 	inline function get_ACCEPT_HOLD()
-		return _accept_hold.check() #if mobile || mobileControlsPressed(FlxMobileInputID.A) #end;
+		return _accept_hold.check();
 
 	public var ACCEPT_RELEASE(get, never):Bool;
 	inline function get_ACCEPT_RELEASE()
-		return _accept_release.check() #if mobile || mobileControlsJustReleased(FlxMobileInputID.A) #end;
+		return _accept_release.check();
 
 	public var BACK(get, never):Bool;
 
 	inline function get_BACK()
-		return _back.check() #if mobile || mobileControlsJustPressed(FlxMobileInputID.B) #end;
+		return _back.check();
 
 	public var PAUSE(get, never):Bool;
 
@@ -285,6 +282,7 @@ class Controls extends FlxActionSet
 
 	inline function get_RESET()
 		return _reset.check();
+
 
 	public var NOTE_DODGE(get, never):Bool;
 	inline function get_NOTE_DODGE() return _note_dodge.check();
@@ -916,89 +914,4 @@ class Controls extends FlxActionSet
 	{
 		return input.device == GAMEPAD && (deviceID == FlxInputDeviceID.ALL || input.deviceID == deviceID);
 	}
-	
-    private function checkMobileInput(id:FlxMobileInputID, checkFn:Dynamic -> FlxMobileInputID -> Bool):Bool
-    {
-    final state = MusicBeatState.getState();
-    final substate = MusicBeatSubstate.instance;
-
-    if (state?.mobileManager != null)
-    {
-        var pad = state.mobileManager.virtualPad;
-        var box = state.mobileManager.hitbox;
-        
-        if (pad != null && checkFn(pad, id)) return true;
-        if (box != null && checkFn(box, id)) return true;
-    }
-
-    if (substate?.mobileManager != null)
-    {
-        var sPad = substate.mobileManager.virtualPad;
-        var sBox = substate.mobileManager.hitbox;
-        
-        if (sPad != null && checkFn(sPad, id)) return true;
-        if (sBox != null && checkFn(sBox, id)) return true;
-    }
-
-    return false;
-    }
-
-
-     public function mobileControlsJustPressed(id:FlxMobileInputID):Bool
-     {
-         #if mobile
-         return checkMobileInput(id, (device, i) -> device.buttonJustPressed(i));
-         #else
-         return false;
-         #end
-     }
-
-    public function mobileControlsJustReleased(id:FlxMobileInputID):Bool
-    {
-        #if mobile
-        return checkMobileInput(id, (device, i) -> device.buttonJustReleased(i));
-        #else
-        return false;
-        #end
-    }
-
-    public function mobileControlsPressed(id:FlxMobileInputID):Bool
-    {
-        #if mobile
-        return checkMobileInput(id, (device, i) -> device.buttonPressed(i));
-        #else
-        return false;
-        #end
-    }
-
-    public function mobileControlsReleased(id:FlxMobileInputID):Bool
-    {
-        #if mobile
-        return checkMobileInput(id, (device, i) -> device.buttonReleased(i));
-        #else
-        return false;
-        #end
-    }
-
-    public function getMobileIDFromControl(control:Control):FlxMobileInputID
-    {
-        #if mobile
-        return switch (control)
-        {
-            case UI_UP: UP;
-            case UI_DOWN: DOWN;
-            case UI_LEFT: LEFT;
-            case UI_RIGHT: RIGHT;
-            case NOTE_UP: hitboxUP;
-            case NOTE_DOWN: hitboxDOWN;
-            case NOTE_LEFT: hitboxLEFT;
-            case NOTE_RIGHT: hitboxRIGHT;
-            case ACCEPT: A;
-            case BACK: B;
-            default: NONE;
-        }
-        #else
-        return null;
-        #end
-    }
 }
