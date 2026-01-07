@@ -522,13 +522,14 @@ class PlayState extends MusicBeatState
 		PauseSubState.songName = null; //Reset to default
 
 		keysArray = [
-			mobileManager.hitbox.buttonLeft,
-			mobileManager.hitbox.buttonDown,
-			mobileManager.hitbox.buttonUp,
-			mobileManager.hitbox.buttonRight,
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_left')),
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_down')),
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_up')),
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_right')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('dodge')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex1')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex2'))
+			
 		];
 
 
@@ -4970,10 +4971,10 @@ class PlayState extends MusicBeatState
 	private function keyShit():Void
 	{
 		// HOLDING
-		var up = controls.NOTE_UP || mobileManager.hitbox.buttonUp.pressed;
-		var right = controls.NOTE_RIGHT || mobileManager.hitbox.buttonRight.pressed;
-		var down = controls.NOTE_DOWN || mobileManager.hitbox.buttonDown.pressed;
-		var left = controls.NOTE_LEFT || mobileManager.hitbox.buttonLeft.pressed;
+		var up = controls.NOTE_UP;
+		var right = controls.NOTE_RIGHT;
+		var down = controls.NOTE_DOWN;
+		var left = controls.NOTE_LEFT;
 		var dodge = controls.NOTE_DODGE;
 
 		var controlHoldArray:Array<Bool> = [left, down, up, right,dodge];
@@ -4981,7 +4982,7 @@ class PlayState extends MusicBeatState
 		// TO DO: Find a better way to handle controller inputs, this should work for now
 		if(ClientPrefs.controllerMode)
 		{
-			var controlArray:Array<Bool> = [mobileManager.hitbox.buttonLeft.justPressed, mobileManager.hitbox.buttonDown.justPressed, mobileManager.hitbox.buttonUp.justPressed, mobileManager.hitbox.buttonRight.justPressed];
+			var controlArray:Array<Bool> = [controls.NOTE_LEFT_P, controls.NOTE_DOWN_P, controls.NOTE_UP_P, controls.NOTE_RIGHT_P];
 			if(controlArray.contains(true))
 			{
 				for (i in 0...controlArray.length)
@@ -5025,7 +5026,7 @@ class PlayState extends MusicBeatState
 		// TO DO: Find a better way to handle controller inputs, this should work for now
 		if(ClientPrefs.controllerMode)
 		{
-			var controlArray:Array<Bool> = [mobileManager.hitbox.buttonLeft.justReleased, mobileManager.hitbox.buttonDown.justReleased, mobileManager.hitbox.buttonUp.justReleased, mobileManager.hitbox.buttonRight.justReleased];
+			var controlArray:Array<Bool> = [controls.NOTE_LEFT_R, controls.NOTE_DOWN_R, controls.NOTE_UP_R, controls.NOTE_RIGHT_R];
 			if(controlArray.contains(true))
 			{
 				for (i in 0...controlArray.length)
