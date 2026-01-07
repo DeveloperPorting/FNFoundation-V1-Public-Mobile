@@ -132,6 +132,10 @@ class Main extends Sprite
 		FlxG.mouse.visible = false;
 		#end
 
+		#if android
+		FlxG.android.preventDefaultKeys = [BACK];
+		#end
+
 		FlxG.signals.gameResized.add(onResize);
 		FlxG.signals.preStateSwitch.add(onStateSwitch);
 		FlxG.scaleMode = scaleMode = new FunkinRatioScaleMode();
