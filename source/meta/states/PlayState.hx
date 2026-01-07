@@ -522,10 +522,10 @@ class PlayState extends MusicBeatState
 		PauseSubState.songName = null; //Reset to default
 
 		keysArray = [
-			ClientPrefs.copyKey(ClientPrefs.mobileBinds.get('note_left')),
-			ClientPrefs.copyKey(ClientPrefs.mobileBinds.get('note_down')),
-			ClientPrefs.copyKey(ClientPrefs.mobileBinds.get('note_up')),
-			ClientPrefs.copyKey(ClientPrefs.mobileBinds.get('note_right')),
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_left')),
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_down')),
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_up')),
+			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_right')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('dodge')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex1')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex2'))
