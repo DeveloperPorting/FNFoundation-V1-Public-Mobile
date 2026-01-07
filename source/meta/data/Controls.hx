@@ -1046,17 +1046,16 @@ class Controls extends FlxActionSet
 		#if mobile
 		return switch (control)
 		{
-			case UP: FlxMobileInputID.UP;
-			case DOWN: FlxMobileInputID.DOWN;
-			case LEFT: FlxMobileInputID.LEFT;
-			case RIGHT: FlxMobileInputID.RIGHT;
-			case NOTE_UP: FlxMobileInputID.HITBOX_UP;
-			case NOTE_DOWN: FlxMobileInputID.HITBOX_DOWN;
-			case NOTE_LEFT: FlxMobileInputID.HITBOX_LEFT;
-			case NOTE_RIGHT: FlxMobileInputID.HITBOX_RIGHT;
+			case UI_UP: FlxMobileInputID.UP;
+			case UI_DOWN: FlxMobileInputID.DOWN;
+			case UI_LEFT: FlxMobileInputID.LEFT;
+			case UI_RIGHT: FlxMobileInputID.RIGHT;
+			case NOTE_UP: FlxMobileInputID.hitboxUP;
+			case NOTE_DOWN: FlxMobileInputID.hitboxDOWN;
+			case NOTE_LEFT: FlxMobileInputID.hitboxLEFT;
+			case NOTE_RIGHT: FlxMobileInputID.hitboxRIGHT;
 			case ACCEPT: FlxMobileInputID.A;
 			case BACK: FlxMobileInputID.B;
-			case PAUSE: FlxMobileInputID.P;
 			default: FlxMobileInputID.NONE;
 		}
 		#else
