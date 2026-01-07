@@ -3236,7 +3236,7 @@ class PlayState extends MusicBeatState
 		// 	botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		// }
 
-		if (controls.PAUSE && startedCountdown && canPause && (explainedMechanic || !ClientPrefs.mechanicExplanations))
+		if (controls.PAUSE || FlxG.android.justReleased.BACK && startedCountdown && canPause && (explainedMechanic || !ClientPrefs.mechanicExplanations))
 		{
 			var ret:Dynamic = callOnScripts('onPause', []);
 			if(ret != Globals.Function_Stop) {
