@@ -1269,8 +1269,8 @@ class PlayState extends MusicBeatState
 		timeBarBG.sprTracker = timeBar;
 		
 		#if mobile
-		    mobileManager.addMobileControls(false);
-			mobileManager.hitbox.visible = false;
+		    addMobileControls(false);
+			hitbox.visible = false;
 		#end
 
 		playFields = new FlxTypedGroup<PlayField>();
@@ -2002,7 +2002,7 @@ class PlayState extends MusicBeatState
 	public function startCountdown():Void
 	{
 	    #if mobile
-		mobileManager.hitbox.visible = true;
+		hitbox.visible = true;
 		#end
 		if (!explainedMechanic && ClientPrefs.mechanicExplanations) {
 			// i dont know why, i dont want to know why, i shouldnt
@@ -4480,7 +4480,7 @@ class PlayState extends MusicBeatState
 		// }
 		
 		#if mobile
-		mobileManager.hitbox.visible = false;
+		hitbox.visible = false;
 		#end
 
 		timeBarBG.visible = false;

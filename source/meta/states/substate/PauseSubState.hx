@@ -148,8 +148,8 @@ class PauseSubState extends MusicBeatSubstate
 		add(grpMenuShit);
 
 	    #if mobile
-		mobileManager.addVirtualPad(UP_DOWN, A_B);
-	    mobileManager.addVirtualPadCamera();
+		addVirtualPad(UP_DOWN, A_B);
+	    addVirtualPadCamera();
 		#end
 
 		regenMenu();

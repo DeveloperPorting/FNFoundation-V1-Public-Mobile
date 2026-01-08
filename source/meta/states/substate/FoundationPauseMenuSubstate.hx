@@ -54,8 +54,8 @@ class FoundationPauseMenuSubstate extends MusicBeatSubstate
 		add(arrow);
 
 		#if mobile
-		mobileManager.addVirtualPad(UP_DOWN, A_B);
-		mobileManager.addVirtualPadCamera();
+		addVirtualPad(UP_DOWN, A_B);
+		addVirtualPadCamera();
 		#end
 
 		changeOption(0, true);
