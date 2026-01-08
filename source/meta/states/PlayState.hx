@@ -404,6 +404,7 @@ class PlayState extends MusicBeatState
 
 	// Less laggy controls
 	private var keysArray:Array<Dynamic>;
+	private var mobileKeysArray:Array<String>;
 	public var focusedChar:Character;
 
 	var precacheList:Map<String, String> = new Map<String, String>();
@@ -530,6 +531,13 @@ class PlayState extends MusicBeatState
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex1')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex2'))
 			
+		];
+		
+		mobileKeysArray = [
+			'hitboxLEFT',
+			'hitboxDOWN',
+			'hitboxUP',
+			'hitboxRIGHT'
 		];
 
 
@@ -4985,9 +4993,9 @@ class PlayState extends MusicBeatState
 			var controlArray:Array<Bool> = [controls.NOTE_LEFT_P, controls.NOTE_DOWN_P, controls.NOTE_UP_P, controls.NOTE_RIGHT_P];
 			if(controlArray.contains(true))
 			{
-				for (i in 0...controlArray.length)
+				for (i in 0...mobileKeysArray.length)
 				{
-					if(controlArray[i])
+					if(mobileKeysArray[i])
 						onKeyPress(new KeyboardEvent(KeyboardEvent.KEY_DOWN, true, true, -1, keysArray[i][0]));
 				}
 			}
@@ -5029,9 +5037,9 @@ class PlayState extends MusicBeatState
 			var controlArray:Array<Bool> = [controls.NOTE_LEFT_R, controls.NOTE_DOWN_R, controls.NOTE_UP_R, controls.NOTE_RIGHT_R];
 			if(controlArray.contains(true))
 			{
-				for (i in 0...controlArray.length)
+				for (i in 0...mobileKeysArray.length)
 				{
-					if(controlArray[i])
+					if(mobileKeysArray[i])
 						onKeyRelease(new KeyboardEvent(KeyboardEvent.KEY_UP, true, true, -1, keysArray[i][0]));
 				}
 			}
