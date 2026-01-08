@@ -4991,11 +4991,12 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.controllerMode)
 		{
 			var controlArray:Array<Bool> = [controls.NOTE_LEFT_P, controls.NOTE_DOWN_P, controls.NOTE_UP_P, controls.NOTE_RIGHT_P];
-			if(controlArray.contains(true))
+			var mobileArray:Array<Bool> = [mobileManager.hitbox.buttonLeft.justPressed, mobileManager.hitbox.buttonDown.justPressed, mobileManager.hitbox.buttonUp.justPressed, mobileManager.hitbox.buttonRight.justPressed];
+			if(mobileArray.contains(true))
 			{
-				for (i in 0...mobileKeysArray.length)
+				for (i in 0...mobileArray.length)
 				{
-					if(mobileKeysArray[i])
+					if(mobileArray[i])
 						onKeyPress(new KeyboardEvent(KeyboardEvent.KEY_DOWN, true, true, -1, keysArray[i][0]));
 				}
 			}
@@ -5035,11 +5036,12 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.controllerMode)
 		{
 			var controlArray:Array<Bool> = [controls.NOTE_LEFT_R, controls.NOTE_DOWN_R, controls.NOTE_UP_R, controls.NOTE_RIGHT_R];
-			if(controlArray.contains(true))
+			var mobileArray:Array<Bool> = [mobileManager.hitbox.buttonLeft.justReleased, mobileManager.hitbox.buttonDown.justReleased, mobileManager.hitbox.buttonUp.justReleased, mobileManager.hitbox.buttonRight.justReleased];
+			if(mobileArray.contains(true))
 			{
-				for (i in 0...mobileKeysArray.length)
+				for (i in 0...mobileArray.length)
 				{
-					if(mobileKeysArray[i])
+					if(mobileArray[i])
 						onKeyRelease(new KeyboardEvent(KeyboardEvent.KEY_UP, true, true, -1, keysArray[i][0]));
 				}
 			}
