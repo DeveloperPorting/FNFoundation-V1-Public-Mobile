@@ -4988,15 +4988,14 @@ class PlayState extends MusicBeatState
 		var controlHoldArray:Array<Bool> = [left, down, up, right,dodge];
 
 		// TO DO: Find a better way to handle controller inputs, this should work for now
-		if(!ClientPrefs.controllerMode)
+		if(ClientPrefs.controllerMode)
 		{
 			var controlArray:Array<Bool> = [controls.NOTE_LEFT_P, controls.NOTE_DOWN_P, controls.NOTE_UP_P, controls.NOTE_RIGHT_P];
-			var mobileArray:Array<Bool> = [mobileManager.hitbox.buttonLeft.justPressed, mobileManager.hitbox.buttonDown.justPressed, mobileManager.hitbox.buttonUp.justPressed, mobileManager.hitbox.buttonRight.justPressed];
-			if(mobileArray.contains(true))
+			if(controlArray.contains(true))
 			{
-				for (i in 0...mobileArray.length)
+				for (i in 0...controlArray.length)
 				{
-					if(mobileArray[i])
+					if(controlArray[i])
 						onKeyPress(new KeyboardEvent(KeyboardEvent.KEY_DOWN, true, true, -1, keysArray[i][0]));
 				}
 			}
@@ -5033,15 +5032,14 @@ class PlayState extends MusicBeatState
 		}
 
 		// TO DO: Find a better way to handle controller inputs, this should work for now
-		if(!ClientPrefs.controllerMode)
+		if(ClientPrefs.controllerMode)
 		{
 			var controlArray:Array<Bool> = [controls.NOTE_LEFT_R, controls.NOTE_DOWN_R, controls.NOTE_UP_R, controls.NOTE_RIGHT_R];
-			var mobileArray:Array<Bool> = [mobileManager.hitbox.buttonLeft.justReleased, mobileManager.hitbox.buttonDown.justReleased, mobileManager.hitbox.buttonUp.justReleased, mobileManager.hitbox.buttonRight.justReleased];
-			if(mobileArray.contains(true))
+			if(controlArray.contains(true))
 			{
-				for (i in 0...mobileArray.length)
+				for (i in 0...controlArray.length)
 				{
-					if(mobileArray[i])
+					if(controlArray[i])
 						onKeyRelease(new KeyboardEvent(KeyboardEvent.KEY_UP, true, true, -1, keysArray[i][0]));
 				}
 			}

@@ -927,20 +927,20 @@ class Controls extends FlxActionSet
 
 		if (state != null)
 		{
-			if (state.mobileManager.virtualPad != null)
-				bools[0] = state.mobileManager.virtualPad.buttonJustPressed(id);
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonJustPressed(id);
 
 			if (state.mobileManager.hitbox != null)
-				bools[1] = state.mobileManager.hitbox.buttonJustPressed(id);
+				bools[1] = state.hitbox.buttonJustPressed(id);
 		}
 
 		if (substate != null)
 		{
-			if (substate.mobileManager.virtualPad != null)
-				bools[2] = substate.mobileManager.virtualPad.buttonJustPressed(id);
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonJustPressed(id);
 
-			if (substate.mobileManager.hitbox != null)
-				bools[3] = substate.mobileManager.hitbox.buttonJustPressed(id);
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonJustPressed(id);
 		}	
 
 		return bools.contains(true);
@@ -958,20 +958,20 @@ class Controls extends FlxActionSet
 
 		if (state != null)
 		{
-			if (state.mobileManager.virtualPad != null)
-				bools[0] = state.mobileManager.virtualPad.buttonJustReleased(id);
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonJustReleased(id);
 
-			if (state.mobileManager.hitbox != null)
-				bools[1] = state.mobileManager.hitbox.buttonJustReleased(id);
+			if (state.hitbox != null)
+				bools[1] = state.hitbox.buttonJustReleased(id);
 		}
 
 		if (substate != null)
 		{
-			if (substate.mobileManager.virtualPad != null)
-				bools[2] = substate.mobileManager.virtualPad.buttonJustReleased(id);
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonJustReleased(id);
 
-			if (substate.mobileManager.hitbox != null)
-				bools[3] = substate.mobileManager.hitbox.buttonJustReleased(id);
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonJustReleased(id);
 		}	
 
 		return bools.contains(true);
@@ -989,20 +989,20 @@ class Controls extends FlxActionSet
 
 		if (state != null)
 		{
-			if (state.mobileManager.virtualPad != null)
-				bools[0] = state.mobileManager.virtualPad.buttonPressed(id);
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonPressed(id);
 
-			if (state.mobileManager.hitbox != null)
-				bools[1] = state.mobileManager.hitbox.buttonPressed(id);
+			if (state.hitbox != null)
+				bools[1] = state.hitbox.buttonPressed(id);
 		}
 
 		if (substate != null)
 		{
-			if (substate.mobileManager.virtualPad != null)
-				bools[2] = substate.mobileManager.virtualPad.buttonPressed(id);
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonPressed(id);
 
-			if (substate.mobileManager.hitbox != null)
-				bools[3] = substate.mobileManager.hitbox.buttonPressed(id);
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonPressed(id);
 		}	
 
 		return bools.contains(true);
@@ -1020,20 +1020,20 @@ class Controls extends FlxActionSet
 
 		if (state != null)
 		{
-			if (state.mobileManager.virtualPad != null)
-				bools[0] = state.mobileManager.virtualPad.buttonJustReleased(id);
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonJustReleased(id);
 
-			if (state.mobileManager.hitbox != null)
-				bools[1] = state.mobileManager.hitbox.buttonJustReleased(id);
+			if (state.hitbox != null)
+				bools[1] = state.hitbox.buttonJustReleased(id);
 		}
 
 		if (substate != null)
 		{
-			if (substate.mobileManager.virtualPad != null)
-				bools[2] = substate.mobileManager.virtualPad.buttonJustReleased(id);
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonJustReleased(id);
 
-			if (substate.mobileManager.hitbox != null)
-				bools[3] = substate.mobileManager.hitbox.buttonJustReleased(id);
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonJustReleased(id);
 		}	
 
 		return bools.contains(true);
