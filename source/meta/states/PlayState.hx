@@ -404,6 +404,7 @@ class PlayState extends MusicBeatState
 
 	// Less laggy controls
 	private var keysArray:Array<Dynamic>;
+	private var mobileKeysArray:Array<String>;
 	public var focusedChar:Character;
 
 	var precacheList:Map<String, String> = new Map<String, String>();
@@ -530,6 +531,13 @@ class PlayState extends MusicBeatState
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex1')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_ex2'))
 			
+		];
+		
+		mobileKeysArray = [
+			'hitboxLEFT',
+			'hitboxDOWN',
+			'hitboxUP',
+			'hitboxRIGHT'
 		];
 
 
@@ -1261,8 +1269,8 @@ class PlayState extends MusicBeatState
 		timeBarBG.sprTracker = timeBar;
 		
 		#if mobile
-		    mobileManager.addMobileControls(false);
-			mobileManager.hitbox.visible = false;
+		    addMobileControls(false);
+			hitbox.visible = false;
 		#end
 
 		playFields = new FlxTypedGroup<PlayField>();
@@ -1994,7 +2002,7 @@ class PlayState extends MusicBeatState
 	public function startCountdown():Void
 	{
 	    #if mobile
-		mobileManager.hitbox.visible = true;
+		hitbox.visible = true;
 		#end
 		if (!explainedMechanic && ClientPrefs.mechanicExplanations) {
 			// i dont know why, i dont want to know why, i shouldnt
@@ -3236,7 +3244,7 @@ class PlayState extends MusicBeatState
 		// 	botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		// }
 
-		if (controls.PAUSE && startedCountdown && canPause && (explainedMechanic || !ClientPrefs.mechanicExplanations))
+		if (controls.PAUSE || FlxG.android.justReleased.BACK && startedCountdown && canPause && (explainedMechanic || !ClientPrefs.mechanicExplanations))
 		{
 			var ret:Dynamic = callOnScripts('onPause', []);
 			if(ret != Globals.Function_Stop) {
@@ -4472,7 +4480,7 @@ class PlayState extends MusicBeatState
 		// }
 		
 		#if mobile
-		mobileManager.hitbox.visible = false;
+		hitbox.visible = false;
 		#end
 
 		timeBarBG.visible = false;

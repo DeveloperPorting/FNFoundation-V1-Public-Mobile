@@ -12,6 +12,7 @@ import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
 #if mobile
 import meta.mobile.flixel.input.FlxMobileInputID;
+import meta.states.substate.MusicBeatSubstate;
 #end
 
 enum abstract Action(String) to String from String
@@ -917,81 +918,149 @@ class Controls extends FlxActionSet
 		return input.device == GAMEPAD && (deviceID == FlxInputDeviceID.ALL || input.deviceID == deviceID);
 	}
 	
-    private function checkMobileInput(id:FlxMobileInputID, checkFn:Dynamic -> FlxMobileInputID -> Bool):Bool
-    {
-       final state = MusicBeatState.getState();
-       final substate = MusicBeatSubstate.instance;
+    public function mobileControlsJustPressed(id:FlxMobileInputID):Bool
+	{
+		#if mobile
+		final state:MusicBeatState = MusicBeatState.getState();
+		final substate:MusicBeatSubstate = MusicBeatSubstate.instance;
+		var bools:Array<Bool> = [false, false, false, false];
 
-       if (state != null)
-       {
-           if (state.mobileManager.virtualPad != null && checkFn(state.mobileManager.virtualPad, id)) return true;
-           if (state.mobileManager.hitbox != null && checkFn(state.mobileManager.hitbox, id)) return true;
-       }
+		if (state != null)
+		{
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonJustPressed(id);
 
-       if (substate != null)
-       {
-           if (substate.mobileManager.virtualPad != null && checkFn(substate.mobileManager.virtualPad, id)) return true;
-           if (substate.mobileManager.hitbox != null && checkFn(substate.mobileManager.hitbox, id)) return true;
-        }
+			if (state.hitbox != null)
+				bools[1] = state.hitbox.buttonJustPressed(id);
+		}
 
-        return false;
-    }
+		if (substate != null)
+		{
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonJustPressed(id);
 
-     public function mobileControlsJustPressed(id:FlxMobileInputID):Bool
-     {
-         #if mobile
-         return checkMobileInput(id, (device, i) -> device.buttonJustPressed(i));
-         #else
-         return false;
-         #end
-     }
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonJustPressed(id);
+		}	
 
-    public function mobileControlsJustReleased(id:FlxMobileInputID):Bool
-    {
-        #if mobile
-        return checkMobileInput(id, (device, i) -> device.buttonJustReleased(i));
-        #else
-        return false;
-        #end
-    }
+		return bools.contains(true);
+		#else
+		return false;
+		#end
+	}
 
-    public function mobileControlsPressed(id:FlxMobileInputID):Bool
-    {
-        #if mobile
-        return checkMobileInput(id, (device, i) -> device.buttonPressed(i));
-        #else
-        return false;
-        #end
-    }
+	public function mobileControlsJustReleased(id:FlxMobileInputID):Bool
+	{
+		#if mobile
+		final state:MusicBeatState = MusicBeatState.getState();
+		final substate:MusicBeatSubstate = MusicBeatSubstate.instance;
+		var bools:Array<Bool> = [false, false, false, false];
 
-    public function mobileControlsReleased(id:FlxMobileInputID):Bool
-    {
-        #if mobile
-        return checkMobileInput(id, (device, i) -> device.buttonReleased(i));
-        #else
-        return false;
-        #end
-    }
+		if (state != null)
+		{
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonJustReleased(id);
 
-    public function getMobileIDFromControl(control:Control):FlxMobileInputID
-    {
-        #if mobile
-        return switch (control)
-        {
-            case UI_UP: UP;
-            case UI_DOWN: DOWN;
-            case UI_LEFT: LEFT;
-            case UI_RIGHT: RIGHT;
-            case NOTE_UP: hitboxUP;
-            case NOTE_DOWN: hitboxDOWN;
-            case NOTE_LEFT: hitboxLEFT;
-            case NOTE_RIGHT: hitboxRIGHT;
-            case ACCEPT: A;
-            case BACK: B;
-            default: NONE;
-        }
-        #else
-        return null;
-        #end
-    }
+			if (state.hitbox != null)
+				bools[1] = state.hitbox.buttonJustReleased(id);
+		}
+
+		if (substate != null)
+		{
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonJustReleased(id);
+
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonJustReleased(id);
+		}	
+
+		return bools.contains(true);
+		#else
+		return false;
+		#end
+	}
+
+	public function mobileControlsPressed(id:FlxMobileInputID):Bool
+	{
+		#if mobile
+		final state:MusicBeatState = MusicBeatState.getState();
+		final substate:MusicBeatSubstate = MusicBeatSubstate.instance;
+		var bools:Array<Bool> = [false, false, false, false];
+
+		if (state != null)
+		{
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonPressed(id);
+
+			if (state.hitbox != null)
+				bools[1] = state.hitbox.buttonPressed(id);
+		}
+
+		if (substate != null)
+		{
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonPressed(id);
+
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonPressed(id);
+		}	
+
+		return bools.contains(true);
+		#else
+		return false;
+		#end
+	}
+
+	public function mobileControlsReleased(id:FlxMobileInputID):Bool
+	{
+		#if mobile
+		final state:MusicBeatState = MusicBeatState.getState();
+		final substate:MusicBeatSubstate = MusicBeatSubstate.instance;
+		var bools:Array<Bool> = [false, false, false, false];
+
+		if (state != null)
+		{
+			if (state.virtualPad != null)
+				bools[0] = state.virtualPad.buttonJustReleased(id);
+
+			if (state.hitbox != null)
+				bools[1] = state.hitbox.buttonJustReleased(id);
+		}
+
+		if (substate != null)
+		{
+			if (substate.virtualPad != null)
+				bools[2] = substate.virtualPad.buttonJustReleased(id);
+
+			if (substate.hitbox != null)
+				bools[3] = substate.hitbox.buttonJustReleased(id);
+		}	
+
+		return bools.contains(true);
+		#else
+		return false;
+		#end
+	}
+
+	public function getMobileIDFromControl(control:Control):FlxMobileInputID
+	{
+		#if mobile
+		return switch (control)
+		{
+			case UI_UP: FlxMobileInputID.UP;
+			case UI_DOWN: FlxMobileInputID.DOWN;
+			case UI_LEFT: FlxMobileInputID.LEFT;
+			case UI_RIGHT: FlxMobileInputID.RIGHT;
+			case NOTE_UP: FlxMobileInputID.hitboxUP;
+			case NOTE_DOWN: FlxMobileInputID.hitboxDOWN;
+			case NOTE_LEFT: FlxMobileInputID.hitboxLEFT;
+			case NOTE_RIGHT: FlxMobileInputID.hitboxRIGHT;
+			case ACCEPT: FlxMobileInputID.A;
+			case BACK: FlxMobileInputID.B;
+			default: FlxMobileInputID.NONE;
+		}
+		#else
+		return null; // jumpscare
+		#end
+	}
 }

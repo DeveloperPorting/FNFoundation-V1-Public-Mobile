@@ -53,6 +53,11 @@ class FoundationPauseMenuSubstate extends MusicBeatSubstate
 		arrow.updateHitbox();
 		add(arrow);
 
+		#if mobile
+		addVirtualPad(UP_DOWN, A_B);
+		addVirtualPadCamera();
+		#end
+
 		changeOption(0, true);
 	}
 

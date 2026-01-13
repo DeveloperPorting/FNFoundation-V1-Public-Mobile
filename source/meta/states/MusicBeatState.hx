@@ -16,6 +16,12 @@ import flixel.FlxState;
 import flixel.FlxBasic;
 import meta.data.*;
 import gameObjects.*;
+#if mobile
+import flixel.group.FlxGroup;
+import flixel.util.FlxDestroyUtil;
+import meta.mobile.controls.MobileHitbox;
+import meta.mobile.controls.MobileVirtualPad;
+#end
 
 import meta.data.scripts.*;
 import meta.data.scripts.Globals;
@@ -37,17 +43,78 @@ class MusicBeatState extends FlxUIState
 		return PlayerSettings.player1.controls;
 		
 	#if mobile
-	public var mobileManager:MobileManagerControls;
+	public var hitbox:MobileHitbox;
+	public var virtualPad:MobileVirtualPad;
+
+	public var virtualPadCam:FlxCamera;
+	public var hitboxCam:FlxCamera;
 	
-	public function new() {
-		super();
-		mobileManager = new MobileManagerControls(this);
+    public function addVirtualPad(DPad:MobileDPadMode, Action:MobileActionMode)
+	{
+		virtualPad = new MobileVirtualPad(DPad, Action);
+		add(virtualPad);
+	}
+	
+	public function addVirtualPadCamera(DefaultDrawTarget:Bool = false)
+	{
+		if (virtualPad != null)
+		{
+			virtualPadCam = new FlxCamera();
+			virtualPadCam.bgColor.alpha = 0;
+			FlxG.cameras.add(virtualPadCam, DefaultDrawTarget);
+			
+			virtualPad.cameras = [virtualPadCam];
+		}
+	}
+
+	public function removeVirtualPad()
+	{
+		if (virtualPad != null)
+		{
+			remove(virtualPad);
+			virtualPad = FlxDestroyUtil.destroy(virtualPad);
+		}
+
+		if(virtualPadCam != null)
+		{
+			FlxG.cameras.remove(virtualPadCam);
+			virtualPadCam = FlxDestroyUtil.destroy(virtualPadCam);
+		}
+	}
+
+	public function addMobileControls(DefaultDrawTarget:Bool = false)
+	{
+		hitbox = new MobileHitbox();
+
+		hitboxCam = new FlxCamera();
+		hitboxCam.bgColor.alpha = 0;
+		FlxG.cameras.add(hitboxCam, DefaultDrawTarget);
+
+		hitbox.cameras = [hitboxCam];
+		hitbox.visible = false;
+		add(hitbox);
+	}
+
+	public function removeMobileControls()
+	{
+		if (hitbox != null)
+		{
+			remove(hitbox);
+			hitbox = FlxDestroyUtil.destroy(hitbox);
+		}
+
+		if(hitboxCam != null)
+		{
+			FlxG.cameras.remove(hitboxCam);
+			hitboxCam = FlxDestroyUtil.destroy(hitboxCam);
+		}
 	}
 
 	override function destroy()
-	{
-		if (mobileManager != null) mobileManager.destroy();
-		super.destroy();
+    {
+        super.destroy();
+		removeVirtualPad();
+		removeMobileControls();
 	}
 	#end
 
