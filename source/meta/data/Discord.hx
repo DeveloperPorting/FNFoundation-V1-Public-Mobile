@@ -1,5 +1,5 @@
 package meta.data;
-#if DISCORD_ALLOWED
+#if desktop
 import hxdiscord_rpc.Types;
 import hxdiscord_rpc.Discord;
 import sys.thread.Thread;

@@ -22,7 +22,7 @@ import lime.app.Application;
 import gameObjects.*;
 import meta.data.*;
 import meta.data.Achievements.AchievementObject;
-#if DISCORD_ALLOWED
+#if desktop
 import meta.data.Discord.DiscordClient;
 #end
 import meta.data.options.*;

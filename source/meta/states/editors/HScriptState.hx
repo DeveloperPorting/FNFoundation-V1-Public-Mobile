@@ -1,6 +1,6 @@
 package meta.states.editors;
 
-#if DISCORD_ALLOWED
+#if desktop
 import meta.data.Discord;
 import meta.data.Discord.DiscordClient;
 #end

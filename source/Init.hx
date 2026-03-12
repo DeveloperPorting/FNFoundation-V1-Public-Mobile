@@ -10,7 +10,7 @@ import flixel.FlxG;
 import flixel.input.keyboard.FlxKey;
 import flixel.addons.transition.FlxTransitionableState;
 import lime.app.Application;
-#if DISCORD_ALLOWED
+#if desktop
 import meta.data.Discord.DiscordClient;
 #end
 
